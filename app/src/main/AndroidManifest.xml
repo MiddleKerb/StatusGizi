@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.fbasegizi.statusgizi">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:fullBackupContent="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".main.MenuActivity" />
+        <activity android:name=".SignIn" />
+        <activity android:name=".SignUp" />
+        <activity android:name=".main.GiziCount" />
+        <activity android:name=".child.DaftarAnak" />
+        <activity android:name=".BaseActivity" />
+        <activity android:name=".count.BBUMain" />
+        <activity android:name=".count.BBUCount" />
+        <activity android:name=".history.ChildHistory" />
+        <activity android:name=".history.HistoryChoose" />
+        <activity android:name=".history.HistoryDetail" />
+        <activity android:name=".count.TBUMain" />
+        <activity android:name=".count.TBUCount" />
+        <activity android:name=".child.ListAnak" />
+        <activity android:name=".history.HistoryBulan" />
+        <activity android:name=".count.BBTBMain" />
+        <activity android:name=".count.BBTBCount" />
+        <activity android:name=".count.IMTUMain" />
+        <activity android:name=".count.IMTUCount" />
+        <activity android:name=".graph.LineGraphChild" />
+        <activity android:name=".graph.ChildGraph" />
+        <activity android:name=".graph.GraphChoose" />
+        <activity android:name=".Help" />
+        <activity android:name=".graph.PieGraphChild" />
+        <activity android:name=".parent.ParentList" />
+        <activity android:name=".parent.ParentDetailAdd" />
+        <activity android:name=".child.EditAnak" />
+        <activity android:name=".UbahPassword" />
+    </application>
+
+</manifest>

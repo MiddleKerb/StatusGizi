@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "68355538160",
+    "firebase_url": "https://statusgizi.firebaseio.com",
+    "project_id": "statusgizi",
+    "storage_bucket": "statusgizi.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:68355538160:android:e3aa8c1463e9d3bd",
+        "android_client_info": {
+          "package_name": "com.fbasegizi.statusgizi"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "68355538160-85mvrc3kdcvnmvjovmg14kmbok73j9cl.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fbasegizi.statusgizi",
+            "certificate_hash": "29e65a4c9286defa93edf80f676a3be9f9ae2f88"
+          }
+        },
+        {
+          "client_id": "68355538160-7ap0udprtgv9ktsf33074g2ak2hja3v2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA4BLfrK3EdZhojMR_MNS_F-FpMXAykEMI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "68355538160-7ap0udprtgv9ktsf33074g2ak2hja3v2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

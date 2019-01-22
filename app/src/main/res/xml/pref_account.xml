@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:icon="@drawable/ic_vpn_key_black_24dp"
+        android:key="@string/key_password"
+        android:summary="Ubah kata sandi"
+        android:title="Kata Sandi" />
+    <Preference
+        android:icon="@drawable/ic_person_black_24dp"
+        android:key="@string/key_name"
+        android:summary="Ubah nama akun"
+        android:title="Nama" />
+</PreferenceScreen>

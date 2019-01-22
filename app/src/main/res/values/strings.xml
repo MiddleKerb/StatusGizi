@@ -1,0 +1,96 @@
+<resources>
+    <string name="app_name">Status Gizi</string>
+    <string name="action_settings">Settings</string>
+    <string name="menu_login">Log in</string>
+    <string name="menu_logout">Keluar akun</string>
+    <string name="login_label">Log In</string>
+    <string name="navigation_drawer_open">Drawer Open</string>
+    <string name="navigation_drawer_close">Drawer Closed</string>
+    <string name="email_label">Email</string>
+    <string name="password_label">Password</string>
+    <string name="send_text">Send</string>
+    <string name="lorem">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Aenean nec condimentum ante, quis mattis mi.
+        Proin ut rhoncus libero, ac euismod neque.
+        Ut suscipit, enim a facilisis consequat, orci lacus venenatis orci, at ultricies orci nulla sed ex.
+        In condimentum viverra velit, eget feugiat libero imperdiet vel.
+        Aenean pretium, lectus vitae bibendum bibendum,
+        diam turpis convallis eros, quis tristique leo sapien at ipsum.
+        Praesent eu odio id nulla lobortis auctor.
+        Donec eget dolor eget nisl euismod commodo vel a lacus.
+        Quisque ut justo vitae urna pharetra accumsan.
+        Etiam dignissim neque iaculis mauris viverra, blandit rhoncus odio porttitor.
+        Phasellus nibh arcu.</string>
+    <string name="title_sign_in">Welcome</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="hint_password">password</string>
+    <string name="hint_email">email</string>
+    <string name="sign_in">Sign In</string>
+    <string name="heading_recent">Recent</string>
+    <string name="heading_my_posts">My Posts</string>
+    <string name="heading_my_top_posts">My Top Posts</string>
+    <string name="menu_1_head">Hitung Gizi</string>
+    <string name="menu_1_desc">Menghitung status gizi anak anda, sesuai standar Kemenkes</string>
+    <string-array name="child_genre">
+        <item>Pilih</item>
+        <item>Laki-laki</item>
+        <item>Perempuan</item>
+    </string-array>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="activity_small_margin">8dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!-- Card View -->
+    <color name="cardview_dark_backgrounds">#FF424242</color>
+    <color name="cardview_light_backgrounds">#FFFFFFFF</color>
+    <declare-styleable name="CardView">
+        <!-- Background color for CardView. -->
+        <attr name="cardBackgroundColor" format="color" />
+        <!-- Corner radius for CardView. -->
+        <attr name="cardCornerRadius" format="dimension" />
+        <!-- Elevation for CardView. -->
+        <attr name="cardElevation" format="dimension" />
+        <!-- Maximum Elevation for CardView. -->
+        <attr name="cardMaxElevation" format="dimension" />
+        <!-- Add padding in API v21+ as well to have the same measurements with previous versions. -->
+        <attr name="cardUseCompatPadding" format="boolean" />
+        <!-- Add padding to CardView on v20 and before to prevent intersections between the Card content and rounded corners. -->
+        <attr name="cardPreventCornerOverlap" format="boolean" />
+        <!-- Inner padding between the edges of the Card and children of the CardView. -->
+        <attr name="contentPadding" format="dimension" />
+        <!-- Inner padding between the left edge of the Card and children of the CardView. -->
+        <attr name="contentPaddingLeft" format="dimension" />
+        <!-- Inner padding between the right edge of the Card and children of the CardView. -->
+        <attr name="contentPaddingRight" format="dimension" />
+        <!-- Inner padding between the top edge of the Card and children of the CardView. -->
+        <attr name="contentPaddingTop" format="dimension" />
+        <!-- Inner padding between the bottom edge of the Card and children of the CardView. -->
+        <attr name="contentPaddingBottom" format="dimension" />
+        <!-- Workaround to read user defined minimum width -->
+        <attr name="android:minWidth" />
+        <!-- Workaround to read user defined minimum height -->
+        <attr name="android:minHeight" />
+    </declare-styleable>
+    <dimen name="cardview_compat_inset_shadows">1dp</dimen>
+    <dimen name="cardview_default_elevations">4dp</dimen>
+    <dimen name="cardview_default_radiust">4dp</dimen>
+
+    <style name="Base.CardViews" parent="android:Widget">
+        <item name="cardCornerRadius">@dimen/cardview_default_radiust</item>
+        <item name="cardElevation">@dimen/cardview_default_elevations</item>
+        <item name="cardMaxElevation">@dimen/cardview_default_elevations</item>
+        <item name="cardUseCompatPadding">false</item>
+        <item name="cardPreventCornerOverlap">true</item>
+    </style>
+
+    <style name="CardViews" parent="Base.CardView"></style>
+
+    <style name="CardViews.Dark">
+        <item name="cardBackgroundColor">@color/cardview_dark_backgrounds</item>
+    </style>
+
+    <style name="CardViews.Light">
+        <item name="cardBackgroundColor">@color/cardview_light_backgrounds</item>
+    </style>
+</resources>
