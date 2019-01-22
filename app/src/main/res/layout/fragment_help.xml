@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Help">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/fredoka_regular"
+            android:gravity="center"
+            android:text="Tata Cara Penggunaan"
+            android:textAllCaps="true"
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:fontFamily="@font/fredoka_regular"
+            android:text="1.	Pertama-tama, masukkan Email dan Password untuk mengakses Aplikasi. Jika belum ada silahkan klik Daftar disini."
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Sebelum anda dapat menghitung Status Gizi, pilih menu Daftar Anak untuk mendaftarkan Data Anak anda."
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/primary_text" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:fontFamily="@font/fredoka_regular"
+            android:text="2.	Pada menu Daftar Anak, pilih Daftar Anak dan masukkan Data Anak anda (Nama Anak, Tanggal lahir, dan Jenis kelamin)."
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:fontFamily="@font/fredoka_regular"
+            android:text="3.	Jika ingin menghapus atau mengubah Data Anak, anda dapat memilih Hapus atau ubah daftar anak. Pada menu ini anda dapat mengubah (Nama Anak, Tanggal lahir, Jenis kelamin) setelah selesai mengubah anda dapat menekan tombol Ubah Data."
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/fab_margin"
+            android:fontFamily="@font/fredoka_regular"
+            android:text="4.	Setelah anda selesai menyimpan Data Anak anda, kembali ke menu awal dan pilih Hitung Status Gizi."
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Pada menu Hitung Status Gizi, anda dapat memilih kategori hitung yang ingin anda gunakan."
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/primary_text" />
+    </LinearLayout>
+
+
+</ScrollView>

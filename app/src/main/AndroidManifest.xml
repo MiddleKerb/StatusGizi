@@ -13,7 +13,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity android:name=".count.AnakCount" />
+        <activity
+            android:name=".fragment.AccountSetingsActivity"
+            android:label="Settings"
+            android:parentActivityName=".main.MenuActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".main.MenuActivity" />
+        </activity>
+        <activity
+            android:name=".PengaturanActivity"
+            android:label="@string/title_activity_pengaturan" />
+        <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -21,7 +35,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".main.MenuActivity" />
+        <activity
+            android:name=".main.MenuActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SignIn" />
         <activity android:name=".SignUp" />
         <activity android:name=".main.GiziCount" />
@@ -29,7 +45,7 @@
         <activity android:name=".BaseActivity" />
         <activity android:name=".count.BBUMain" />
         <activity android:name=".count.BBUCount" />
-        <activity android:name=".history.ChildHistory" />
+        <activity android:name=".history.HistoryAnak" />
         <activity android:name=".history.HistoryChoose" />
         <activity android:name=".history.HistoryDetail" />
         <activity android:name=".count.TBUMain" />

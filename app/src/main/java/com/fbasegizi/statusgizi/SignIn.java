@@ -7,14 +7,11 @@ import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.ActionBar;
-import android.text.method.HideReturnsTransformationMethod;
-import android.text.method.PasswordTransformationMethod;
 import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.CheckBox;
-import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -30,10 +27,11 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class SignIn extends BaseActivity implements View.OnClickListener {
 
-    public static final String RESET = "ResetPassword";
     private static final String TAG = "SignInActivity";
-    private static final int TIME_INTERVAL = 2000;
+    public static final String RESET = "ResetPassword";
+
     private FirebaseAuth mAuth;
+
     private EditText mEmailField;
     private EditText mPasswordField;
     private Button mSignInButton;
@@ -41,6 +39,7 @@ public class SignIn extends BaseActivity implements View.OnClickListener {
     private TextInputLayout textInputLayoutEmail;
     private TextInputLayout textInputLayoutPassword;
     private CheckBox checkBox;
+    private static final int TIME_INTERVAL = 2000;
     private long mBackPressed;
 
     @Override
@@ -57,19 +56,6 @@ public class SignIn extends BaseActivity implements View.OnClickListener {
         mSignUpLink = findViewById(R.id.link_signup);
         textInputLayoutEmail = findViewById(R.id.textLayoutEmailIn);
         textInputLayoutPassword = findViewById(R.id.textLayoutPasswordIn);
-        checkBox = findViewById(R.id.checkbox_password_signIn);
-
-        mPasswordField.setTransformationMethod(PasswordTransformationMethod.getInstance());
-        checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
-            @Override
-            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
-                if (isChecked) {
-                    mPasswordField.setTransformationMethod(HideReturnsTransformationMethod.getInstance());
-                } else {
-                    mPasswordField.setTransformationMethod(PasswordTransformationMethod.getInstance());
-                }
-            }
-        });
 
         mSignUpLink.setPaintFlags(mSignUpLink.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         // Click listeners
@@ -98,7 +84,7 @@ public class SignIn extends BaseActivity implements View.OnClickListener {
             super.onBackPressed();
             return;
         } else {
-            Toast.makeText(getBaseContext(), "Klik tombol kembali dua kali, untuk keluar dari aplikasi",
+            Toast.makeText(getBaseContext(), "Tekan sekali lagi untuk keluar",
                     Toast.LENGTH_SHORT).show();
         }
         mBackPressed = System.currentTimeMillis();

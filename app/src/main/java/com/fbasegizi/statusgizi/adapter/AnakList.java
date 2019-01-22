@@ -16,8 +16,8 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class AnakList extends ArrayAdapter<Anak> {
-    List<Anak> anaks;
     private Activity context;
+    List<Anak> anaks;
 
     public AnakList(Activity context, List<Anak> anaks) {
         super(context, R.layout.layout_child_list, anaks);

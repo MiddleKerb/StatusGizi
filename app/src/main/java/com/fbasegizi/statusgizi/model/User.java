@@ -17,12 +17,6 @@ public class User {
 
     }
 
-    public User(String username, String email, String nama) {
-        this.Username = username;
-        this.email = email;
-        this.Nama = nama;
-    }
-
     public String getUsername() {
         return Username;
     }
@@ -44,6 +38,12 @@ public class User {
     }
 
     public void setNama(String nama) {
+        this.Nama = nama;
+    }
+
+    public User(String username, String email, String nama) {
+        this.Username = username;
+        this.email = email;
         this.Nama = nama;
     }
 }

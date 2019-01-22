@@ -36,6 +36,19 @@ public class RecyclerViewHitungAnak extends RecyclerView.Adapter<RecyclerViewHit
         return holder;
     }
 
+    class ViewHolder extends RecyclerView.ViewHolder {
+        TextView textViewName, textViewDate, textViewGender;
+        CardView root;
+
+        ViewHolder(@NonNull View itemView) {
+            super(itemView);
+            textViewName = itemView.findViewById(R.id.textViewName);
+            textViewDate = itemView.findViewById(R.id.textViewDate);
+            textViewGender = itemView.findViewById(R.id.textViewGender);
+            root = itemView.findViewById(R.id.root_child_list);
+        }
+    }
+
     @Override
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         final Anak anak = anaks.get(i);
@@ -69,18 +82,5 @@ public class RecyclerViewHitungAnak extends RecyclerView.Adapter<RecyclerViewHit
         }
 
         return capMatcher.appendTail(capBuffer).toString();
-    }
-
-    class ViewHolder extends RecyclerView.ViewHolder {
-        TextView textViewName, textViewDate, textViewGender;
-        CardView root;
-
-        ViewHolder(@NonNull View itemView) {
-            super(itemView);
-            textViewName = itemView.findViewById(R.id.textViewName);
-            textViewDate = itemView.findViewById(R.id.textViewDate);
-            textViewGender = itemView.findViewById(R.id.textViewGender);
-            root = itemView.findViewById(R.id.root_child_list);
-        }
     }
 }

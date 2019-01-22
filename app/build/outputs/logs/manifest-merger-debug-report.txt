@@ -164,7 +164,7 @@ MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\bo
 	android:theme
 		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:15:9-40
 activity#com.fbasegizi.statusgizi.count.AnakCount
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:16:9-62
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:16:9-53
 	android:name
 		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:16:19-50
 activity#com.fbasegizi.statusgizi.fragment.AccountSetingsActivity

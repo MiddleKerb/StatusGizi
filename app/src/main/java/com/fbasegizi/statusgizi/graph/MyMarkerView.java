@@ -13,7 +13,6 @@ import com.github.mikephil.charting.utils.Utils;
 
 public class MyMarkerView extends MarkerView {
     private TextView tvContent;
-    private MPPointF mOffset;
 
     public MyMarkerView(Context context, int layoutResource) {
         super(context, layoutResource);
@@ -34,6 +33,8 @@ public class MyMarkerView extends MarkerView {
 
         super.refreshContent(e, highlight);
     }
+
+    private MPPointF mOffset;
 
     @Override
     public MPPointF getOffset() {

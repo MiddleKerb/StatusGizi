@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/ScrollSignUp"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
@@ -50,7 +51,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_small_margin"
-            android:layout_marginBottom="@dimen/activity_small_margin">
+            android:layout_marginBottom="@dimen/activity_small_margin"
+            app:passwordToggleEnabled="true"
+            app:passwordToggleTint="@color/colorAccent">
 
             <EditText
                 android:id="@+id/field_password_signUp"
@@ -58,15 +61,8 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/fredoka_regular"
                 android:hint="Password"
-                android:inputType="text" />
+                android:inputType="textPassword" />
         </android.support.design.widget.TextInputLayout>
-
-        <android.support.v7.widget.AppCompatCheckBox
-            android:id="@+id/checkbox_password_signUp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/fredoka_regular"
-            android:text="Lihat Password" />
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/button_sign_up"
@@ -74,7 +70,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
             android:layout_marginBottom="24dp"
-            android:backgroundTint="@color/colorAccent"
+            android:backgroundTint="@color/colorPrimary"
             android:padding="@dimen/fab_margin"
             android:text="Daftar"
             android:textColor="@color/common_google_signin_btn_text_dark"

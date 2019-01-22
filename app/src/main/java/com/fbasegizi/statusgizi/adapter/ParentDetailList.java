@@ -15,8 +15,8 @@ import com.fbasegizi.statusgizi.model.ParentDetail;
 import java.util.List;
 
 public class ParentDetailList extends ArrayAdapter<ParentDetail> {
-    List<ParentDetail> parentDetails;
     private Activity context;
+    List<ParentDetail> parentDetails;
 
     public ParentDetailList(Activity context, List<ParentDetail> parentDetails) {
         super(context, R.layout.activity_parent_detail_list, parentDetails);

@@ -4,8 +4,8 @@
     <string name="menu_login">Log in</string>
     <string name="menu_logout">Keluar akun</string>
     <string name="login_label">Log In</string>
-    <string name="navigation_drawer_open">Drawer Open</string>
-    <string name="navigation_drawer_close">Drawer Closed</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="email_label">Email</string>
     <string name="password_label">Password</string>
     <string name="send_text">Send</string>
@@ -84,7 +84,7 @@
         <item name="cardPreventCornerOverlap">true</item>
     </style>
 
-    <style name="CardViews" parent="Base.CardView"></style>
+    <style name="CardViews" parent="Base.CardView" />
 
     <style name="CardViews.Dark">
         <item name="cardBackgroundColor">@color/cardview_dark_backgrounds</item>
@@ -93,4 +93,8 @@
     <style name="CardViews.Light">
         <item name="cardBackgroundColor">@color/cardview_light_backgrounds</item>
     </style>
+
+    <string name="title_activity_pengaturan">Pengaturan</string>
+    <string name="key_name">key_nama</string>
+    <string name="key_password">key_password</string>
 </resources>

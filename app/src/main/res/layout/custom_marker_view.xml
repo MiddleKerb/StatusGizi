@@ -9,14 +9,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="5dp"
         android:layout_marginTop="7dp"
+        android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:ellipsize="end"
-        android:singleLine="true"
         android:text=""
-        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:ellipsize="end"
         android:textColor="@android:color/white"
+        android:singleLine="true"
+        android:textAppearance="?android:attr/textAppearanceSmall"
         android:textSize="12dp" />
 
 </RelativeLayout>
