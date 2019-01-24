@@ -149,6 +149,26 @@ public class EditAnak extends BaseActivity implements View.OnClickListener {
         if (TextUtils.isEmpty(tanggal)) {
             dLayoutChildDate.setError("Tanggal Tidak Boleh Kosong!");
             return false;
+        } else {
+            //GetMonth
+            Calendar currentDate = Calendar.getInstance();
+            SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
+            Date birthdate = null;
+            try {
+                birthdate = sdf.parse(tanggal);
+            } catch (ParseException e) {
+                e.printStackTrace();
+            }
+            Long time = currentDate.getTime().getTime() / 1000 - birthdate.getTime() / 1000;
+            int years = Math.round(time) / 31536000;
+            int months = years * 12 + (Math.round(time - years * 31536000) / 2628000);
+            //EndGetMonth
+            if (months > 60) {
+                dLayoutChildDate.setError("Umur Anak Maksimal 60 Bulan!");
+                return false;
+            } else {
+                dLayoutChildDate.setErrorEnabled(false);
+            }
         }
 
         if (dSpinnerGender.getSelectedItem().toString().trim().equals("Pilih")) {
@@ -156,28 +176,10 @@ public class EditAnak extends BaseActivity implements View.OnClickListener {
             textView.setVisibility(View.VISIBLE);
             return false;
         } else {
+            textView.setText("");
             textView.setVisibility(View.GONE);
         }
 
-        //GetMonth
-        Calendar currentDate = Calendar.getInstance();
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy", Locale.ENGLISH);
-        Date birthdate = null;
-        try {
-            birthdate = sdf.parse(tanggal);
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
-        Long time = currentDate.getTime().getTime() / 1000 - birthdate.getTime() / 1000;
-        int years = Math.round(time) / 31536000;
-        int months = years * 12 + (Math.round(time - years * 31536000) / 2628000);
-        //EndGetMonth
-        if (months > 60) {
-            dLayoutChildDate.setError("Umur Anak Maksimal 60 Bulan!");
-            return false;
-        } else {
-            dLayoutChildDate.setErrorEnabled(false);
-        }
         return true;
     }
 
