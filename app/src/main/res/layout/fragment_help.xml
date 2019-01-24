@@ -27,9 +27,9 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/fab_margin"
-            android:fontFamily="@font/fredoka_regular"
             android:text="1.	Pertama-tama, masukkan Email dan Password untuk mengakses Aplikasi. Jika belum ada silahkan klik Daftar disini."
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
@@ -42,25 +42,25 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/fab_margin"
-            android:fontFamily="@font/fredoka_regular"
             android:text="2.	Pada menu Daftar Anak, pilih Daftar Anak dan masukkan Data Anak anda (Nama Anak, Tanggal lahir, dan Jenis kelamin)."
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/fab_margin"
-            android:fontFamily="@font/fredoka_regular"
             android:text="3.	Jika ingin menghapus atau mengubah Data Anak, anda dapat memilih Hapus atau ubah daftar anak. Pada menu ini anda dapat mengubah (Nama Anak, Tanggal lahir, Jenis kelamin) setelah selesai mengubah anda dapat menekan tombol Ubah Data."
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_marginTop="@dimen/fab_margin"
-            android:fontFamily="@font/fredoka_regular"
             android:text="4.	Setelah anda selesai menyimpan Data Anak anda, kembali ke menu awal dan pilih Hitung Status Gizi."
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+            android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
