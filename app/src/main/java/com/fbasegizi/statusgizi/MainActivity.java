@@ -24,7 +24,7 @@ public class MainActivity extends BaseActivity {
             actionBar.hide();
         }
 
-        int SPLASH_DISPLAY_LENGTH = 1500;
+        int SPLASH_DISPLAY_LENGTH = 1000;
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
