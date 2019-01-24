@@ -1362,6 +1362,7 @@ id barrier
 id beginning
 id blocking
 id bottom
+id btn_change_profil
 id btn_reset_password
 id buttonAnakCount
 id buttonChildGraph
@@ -1409,6 +1410,7 @@ id dimensions
 id direct
 id disableHome
 id drawer_layout
+id editUbahNama
 id edit_query
 id email_change_pass
 id empty_anak_count
@@ -1458,6 +1460,7 @@ id item_touch_helper_previous_elevation
 id labeled
 id largeLabel
 id layoutChangePass
+id layoutChangeProfile
 id left
 id light
 id line1
@@ -1573,6 +1576,7 @@ id tag_unhandled_key_listeners
 id text
 id text1
 id text2
+id textLayoutChangeName
 id textLayoutChangePass
 id textLayoutChildDate
 id textLayoutChildName
@@ -1694,6 +1698,7 @@ layout activity_pie_graph_child
 layout activity_sign_in
 layout activity_sign_up
 layout activity_ubah_password
+layout activity_ubah_profil
 layout custom_marker_view
 layout custom_spinner
 layout design_bottom_navigation_item
@@ -1841,8 +1846,8 @@ string heading_recent
 string hide_bottom_view_on_scroll_behavior
 string hint_email
 string hint_password
-string key_name
 string key_password
+string key_profil
 string login_label
 string lorem
 string menu_1_desc
@@ -2408,7 +2413,7 @@ style Widget_MaterialComponents_TextInputLayout_OutlinedBox
 style Widget_MaterialComponents_TextInputLayout_OutlinedBox_Dense
 style Widget_MaterialComponents_Toolbar
 style Widget_Support_CoordinatorLayout
-style customfontstyle
+style customfontFredoka
 styleable ActionBar background backgroundSplit backgroundStacked contentInsetEnd contentInsetEndWithActions contentInsetLeft contentInsetRight contentInsetStart contentInsetStartWithNavigation customNavigationLayout displayOptions divider elevation height hideOnContentScroll homeAsUpIndicator homeLayout icon indeterminateProgressStyle itemPadding logo navigationMode popupTheme progressBarPadding progressBarStyle subtitle subtitleTextStyle title titleTextStyle
 styleable ActionBarLayout android_layout_gravity
 styleable ActionMenuItemView android_minWidth

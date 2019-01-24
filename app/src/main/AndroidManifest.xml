@@ -13,18 +13,16 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".UbahProfil" />
         <activity android:name=".count.AnakCount" />
         <activity
             android:name=".fragment.AccountSetingsActivity"
             android:label="Settings"
-            android:parentActivityName=".main.MenuActivity">
+            android:parentActivityName=".fragment.MenuActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".main.MenuActivity" />
+                android:value=".fragment.MenuActivity" />
         </activity>
-        <activity
-            android:name=".PengaturanActivity"
-            android:label="@string/title_activity_pengaturan" />
         <activity
             android:name=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -36,30 +34,25 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".main.MenuActivity"
+            android:name=".fragment.MenuActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".SignIn" />
         <activity android:name=".SignUp" />
-        <activity android:name=".main.GiziCount" />
+        <activity android:name=".count.GiziCount" />
         <activity android:name=".child.DaftarAnak" />
         <activity android:name=".BaseActivity" />
-        <activity android:name=".count.BBUMain" />
         <activity android:name=".count.BBUCount" />
         <activity android:name=".history.HistoryAnak" />
         <activity android:name=".history.HistoryChoose" />
         <activity android:name=".history.HistoryDetail" />
-        <activity android:name=".count.TBUMain" />
         <activity android:name=".count.TBUCount" />
         <activity android:name=".child.ListAnak" />
         <activity android:name=".history.HistoryBulan" />
-        <activity android:name=".count.BBTBMain" />
         <activity android:name=".count.BBTBCount" />
-        <activity android:name=".count.IMTUMain" />
         <activity android:name=".count.IMTUCount" />
         <activity android:name=".graph.LineGraphChild" />
         <activity android:name=".graph.ChildGraph" />
         <activity android:name=".graph.GraphChoose" />
-        <activity android:name=".Help" />
         <activity android:name=".graph.PieGraphChild" />
         <activity android:name=".parent.ParentList" />
         <activity android:name=".parent.ParentDetailAdd" />

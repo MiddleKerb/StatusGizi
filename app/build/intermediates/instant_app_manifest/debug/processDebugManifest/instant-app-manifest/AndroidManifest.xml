@@ -3,7 +3,7 @@
     package="com.fbasegizi.statusgizi"
     android:targetSandboxVersion="2"
     android:versionCode="3"
-    android:versionName="3.3" >
+    android:versionName="3.3.5" >
 
     <uses-sdk
         android:minSdkVersion="23"
@@ -26,14 +26,15 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.fbasegizi.statusgizi.UbahProfil" />
         <activity android:name="com.fbasegizi.statusgizi.count.AnakCount" />
         <activity
             android:name="com.fbasegizi.statusgizi.fragment.AccountSetingsActivity"
             android:label="Settings"
-            android:parentActivityName="com.fbasegizi.statusgizi.main.MenuActivity" >
+            android:parentActivityName="com.fbasegizi.statusgizi.fragment.MenuActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".main.MenuActivity" />
+                android:value=".fragment.MenuActivity" />
         </activity>
         <activity
             android:name="com.fbasegizi.statusgizi.PengaturanActivity"
@@ -49,11 +50,11 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.fbasegizi.statusgizi.main.MenuActivity"
+            android:name="com.fbasegizi.statusgizi.fragment.MenuActivity"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.fbasegizi.statusgizi.SignIn" />
         <activity android:name="com.fbasegizi.statusgizi.SignUp" />
-        <activity android:name="com.fbasegizi.statusgizi.main.GiziCount" />
+        <activity android:name="com.fbasegizi.statusgizi.count.GiziCount" />
         <activity android:name="com.fbasegizi.statusgizi.child.DaftarAnak" />
         <activity android:name="com.fbasegizi.statusgizi.BaseActivity" />
         <activity android:name="com.fbasegizi.statusgizi.count.BBUMain" />
