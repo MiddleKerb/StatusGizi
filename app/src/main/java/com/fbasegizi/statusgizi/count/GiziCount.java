@@ -1,4 +1,4 @@
-package com.fbasegizi.statusgizi.main;
+package com.fbasegizi.statusgizi.count;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,10 +10,6 @@ import android.view.View;
 
 import com.fbasegizi.statusgizi.BaseActivity;
 import com.fbasegizi.statusgizi.R;
-import com.fbasegizi.statusgizi.count.BBTBCount;
-import com.fbasegizi.statusgizi.count.BBUCount;
-import com.fbasegizi.statusgizi.count.IMTUCount;
-import com.fbasegizi.statusgizi.count.TBUCount;
 
 public class GiziCount extends BaseActivity implements View.OnClickListener {
 
