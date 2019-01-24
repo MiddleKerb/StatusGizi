@@ -7,7 +7,7 @@
         android:title="Kata Sandi" />
     <Preference
         android:icon="@drawable/ic_person_black_24dp"
-        android:key="@string/key_name"
-        android:summary="Ubah nama akun"
-        android:title="Nama" />
+        android:key="@string/key_profil"
+        android:summary="Ubah profil akun"
+        android:title="Profil" />
 </PreferenceScreen>

@@ -11,7 +11,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 
 import com.fbasegizi.statusgizi.R;
-import com.fbasegizi.statusgizi.main.GiziCount;
+import com.fbasegizi.statusgizi.count.GiziCount;
 import com.fbasegizi.statusgizi.model.Anak;
 
 import java.util.List;

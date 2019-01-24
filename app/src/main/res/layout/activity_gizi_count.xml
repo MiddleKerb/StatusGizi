@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#E0E0E0"
-    tools:context="com.fbasegizi.statusgizi.main.GiziCount">
+    tools:context="com.fbasegizi.statusgizi.count.GiziCount">
 
     <ScrollView
         android:layout_width="match_parent"

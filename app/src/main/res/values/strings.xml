@@ -95,6 +95,6 @@
     </style>
 
     <string name="title_activity_pengaturan">Pengaturan</string>
-    <string name="key_name">key_nama</string>
+    <string name="key_profil">key_profil</string>
     <string name="key_password">key_password</string>
 </resources>

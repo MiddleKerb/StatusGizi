@@ -15,7 +15,7 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
-    <style name="customfontstyle" parent="@android:style/TextAppearance.Small">
+    <style name="customfontFredoka" parent="@android:style/TextAppearance.Small">
         <item name="android:fontFamily">@font/fredoka</item>
     </style>
 

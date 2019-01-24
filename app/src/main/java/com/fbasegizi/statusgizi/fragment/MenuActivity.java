@@ -1,4 +1,4 @@
-package com.fbasegizi.statusgizi.main;
+package com.fbasegizi.statusgizi.fragment;
 
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -21,9 +21,6 @@ import android.widget.Toast;
 import com.fbasegizi.statusgizi.BaseActivity;
 import com.fbasegizi.statusgizi.R;
 import com.fbasegizi.statusgizi.SignIn;
-import com.fbasegizi.statusgizi.fragment.AccountSetingsActivity;
-import com.fbasegizi.statusgizi.fragment.HelpFragment;
-import com.fbasegizi.statusgizi.fragment.MenuFragment;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
