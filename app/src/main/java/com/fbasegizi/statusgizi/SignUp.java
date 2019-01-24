@@ -18,7 +18,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.fbasegizi.statusgizi.main.MenuActivity;
+import com.fbasegizi.statusgizi.fragment.MenuActivity;
 import com.fbasegizi.statusgizi.model.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -133,7 +133,7 @@ public class SignUp extends BaseActivity implements View.OnClickListener {
         String name = mNameField.getText().toString();
 
         // Write new user
-        writeNewUser(user.getUid(), username, user.getEmail(), name);
+        writeNewUser(user.getUid(), username, user.getEmail(), name.replaceFirst("\\s++$", ""));
 
         // Go to MenuActivity
         startActivity(new Intent(SignUp.this, MenuActivity.class));

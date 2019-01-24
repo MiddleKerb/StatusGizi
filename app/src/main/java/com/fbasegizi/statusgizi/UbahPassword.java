@@ -17,6 +17,7 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 
+import com.fbasegizi.statusgizi.fragment.AccountSetingsActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -33,6 +34,7 @@ public class UbahPassword extends BaseActivity implements View.OnClickListener {
     private Button button;
     private FirebaseAuth mAuth;
     private DatabaseReference databaseReference;
+    private String sign;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,14 +50,15 @@ public class UbahPassword extends BaseActivity implements View.OnClickListener {
 
         button.setOnClickListener(this);
 
-        Intent intent = getIntent();
-        editText.setText(intent.getStringExtra(SignIn.RESET));
-
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.setDisplayHomeAsUpEnabled(true);
             actionBar.setTitle("Ubah Password");
         }
+
+        Intent intent = getIntent();
+        editText.setText(intent.getStringExtra(SignIn.RESET));
+        sign = intent.getStringExtra("reset_pass");
     }
 
     @Override
@@ -72,7 +75,9 @@ public class UbahPassword extends BaseActivity implements View.OnClickListener {
 
                         @Override
                         public void onCancelled(@NonNull DatabaseError databaseError) {
-
+                            Snackbar.make(UbahPassword.this.findViewById(android.R.id.content),
+                                    "Server error, coba ulangi beberapa saat lagi!",
+                                    Snackbar.LENGTH_LONG).show();
                         }
                     });
         }
@@ -84,16 +89,26 @@ public class UbahPassword extends BaseActivity implements View.OnClickListener {
         mAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
-                hideProgressDialog();
                 if (task.isSuccessful()) {
-                    Snackbar mySnackbar = Snackbar.make(findViewById(R.id.layoutChangePass),
-                            "Silahkan cek Email anda! Untuk instruksi selanjutnya",
-                            Snackbar.LENGTH_LONG);
-                    mySnackbar.show();
+                    hideProgressDialog();
+                    if (sign.equals("sign_in")) {
+                        Intent intent = new Intent(getBaseContext(), AccountSetingsActivity.class);
+                        intent.putExtra("password_change", "in_update");
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                        finish();
+                    } else if (sign.equals("sign_out")) {
+                        Intent intent = new Intent(getBaseContext(), SignIn.class);
+                        intent.putExtra("password_change", "out_update");
+                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(intent);
+                        finish();
+                    }
                 } else {
-                    Snackbar mySnackbar = Snackbar.make(findViewById(R.id.layoutChangePass),
-                            "Coba kembali dalam beberapa saat", Snackbar.LENGTH_LONG);
-                    mySnackbar.show();
+                    hideProgressDialog();
+                    Snackbar.make(findViewById(R.id.layoutChangePass),
+                            "Coba kembali dalam beberapa saat",
+                            Snackbar.LENGTH_LONG).show();
                 }
             }
         });

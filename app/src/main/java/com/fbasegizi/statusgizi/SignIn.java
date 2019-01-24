@@ -16,7 +16,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.fbasegizi.statusgizi.main.MenuActivity;
+import com.fbasegizi.statusgizi.fragment.MenuActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -65,6 +65,14 @@ public class SignIn extends BaseActivity implements View.OnClickListener {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
             actionBar.hide();
+        }
+
+        Intent intent = getIntent();
+        intent.getExtras();
+        if (intent.hasExtra("password_change")) {
+            Snackbar.make(SignIn.this.findViewById(android.R.id.content),
+                    "Silahkan cek Email Anda! Untuk instruksi selanjutnya!",
+                    Snackbar.LENGTH_LONG).show();
         }
     }
 
@@ -131,6 +139,7 @@ public class SignIn extends BaseActivity implements View.OnClickListener {
                                             public void onClick(View v) {
                                                 Intent intent = new Intent(getBaseContext(), UbahPassword.class);
                                                 intent.putExtra(RESET, email);
+                                                intent.putExtra("reset_pass", "sign_out");
                                                 startActivity(intent);
                                             }
                                         });
