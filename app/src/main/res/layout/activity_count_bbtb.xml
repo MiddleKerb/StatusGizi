@@ -27,28 +27,29 @@
             android:id="@+id/ChildGenderCountBBTB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
             android:cursorVisible="false"
             android:drawableEnd="@drawable/ic_wc_black_24dp"
             android:focusable="false"
             android:focusableInTouchMode="false"
-            android:fontFamily="@font/fredoka_regular"
             android:hint="Jenis kelamin"
             android:inputType="none" />
     </android.support.design.widget.TextInputLayout>
 
     <android.support.design.widget.TextInputLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_small_margin">
 
         <EditText
             android:id="@+id/ChildDateCountBBTB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
             android:cursorVisible="false"
             android:drawableEnd="@drawable/ic_date_range_black_24dp"
             android:focusable="false"
             android:focusableInTouchMode="false"
-            android:fontFamily="@font/fredoka_regular"
             android:hint="Tanggal Lahir"
             android:inputType="none"
             tools:ignore="TextFields" />
@@ -57,17 +58,18 @@
     <android.support.design.widget.TextInputLayout
         android:id="@+id/AgeFieldBBTB"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/activity_small_margin">
 
         <EditText
             android:id="@+id/ChildMonthCountBBTB"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
             android:cursorVisible="false"
             android:drawableEnd="@drawable/ic_birthday_cake_solid_black"
             android:focusable="false"
             android:focusableInTouchMode="false"
-            android:fontFamily="@font/fredoka_regular"
             android:hint="Umur (Bulan)"
             android:inputType="none" />
     </android.support.design.widget.TextInputLayout>
@@ -82,7 +84,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/ic_weight_solid_black"
-            android:fontFamily="@font/fredoka_regular"
             android:hint="Berat (Kg)"
             android:inputType="numberDecimal" />
     </android.support.design.widget.TextInputLayout>
@@ -97,7 +98,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:drawableEnd="@drawable/ic_ruler_vertical_solid_black"
-            android:fontFamily="@font/fredoka_regular"
             android:hint="Tinggi (Cm)"
             android:inputType="numberDecimal" />
     </android.support.design.widget.TextInputLayout>
