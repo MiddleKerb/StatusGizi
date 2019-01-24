@@ -37,9 +37,6 @@
                 android:value=".fragment.MenuActivity" />
         </activity>
         <activity
-            android:name="com.fbasegizi.statusgizi.PengaturanActivity"
-            android:label="@string/title_activity_pengaturan" />
-        <activity
             android:name="com.fbasegizi.statusgizi.MainActivity"
             android:theme="@style/AppTheme.NoActionBar" >
             <intent-filter>
@@ -57,23 +54,18 @@
         <activity android:name="com.fbasegizi.statusgizi.count.GiziCount" />
         <activity android:name="com.fbasegizi.statusgizi.child.DaftarAnak" />
         <activity android:name="com.fbasegizi.statusgizi.BaseActivity" />
-        <activity android:name="com.fbasegizi.statusgizi.count.BBUMain" />
         <activity android:name="com.fbasegizi.statusgizi.count.BBUCount" />
         <activity android:name="com.fbasegizi.statusgizi.history.HistoryAnak" />
         <activity android:name="com.fbasegizi.statusgizi.history.HistoryChoose" />
         <activity android:name="com.fbasegizi.statusgizi.history.HistoryDetail" />
-        <activity android:name="com.fbasegizi.statusgizi.count.TBUMain" />
         <activity android:name="com.fbasegizi.statusgizi.count.TBUCount" />
         <activity android:name="com.fbasegizi.statusgizi.child.ListAnak" />
         <activity android:name="com.fbasegizi.statusgizi.history.HistoryBulan" />
-        <activity android:name="com.fbasegizi.statusgizi.count.BBTBMain" />
         <activity android:name="com.fbasegizi.statusgizi.count.BBTBCount" />
-        <activity android:name="com.fbasegizi.statusgizi.count.IMTUMain" />
         <activity android:name="com.fbasegizi.statusgizi.count.IMTUCount" />
         <activity android:name="com.fbasegizi.statusgizi.graph.LineGraphChild" />
         <activity android:name="com.fbasegizi.statusgizi.graph.ChildGraph" />
         <activity android:name="com.fbasegizi.statusgizi.graph.GraphChoose" />
-        <activity android:name="com.fbasegizi.statusgizi.Help" />
         <activity android:name="com.fbasegizi.statusgizi.graph.PieGraphChild" />
         <activity android:name="com.fbasegizi.statusgizi.parent.ParentList" />
         <activity android:name="com.fbasegizi.statusgizi.parent.ParentDetailAdd" />
