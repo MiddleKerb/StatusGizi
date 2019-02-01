@@ -48,7 +48,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:fontFamily="@font/fredoka_regular"
+                            android:fontFamily="@font/bungee"
                             android:text="BB/U"
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
@@ -99,7 +99,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:fontFamily="@font/fredoka_regular"
+                            android:fontFamily="@font/bungee"
                             android:text="TB/U"
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
@@ -150,7 +150,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:fontFamily="@font/fredoka_regular"
+                            android:fontFamily="@font/bungee"
                             android:text="BB/TB"
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
@@ -201,7 +201,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:fontFamily="@font/fredoka_regular"
+                            android:fontFamily="@font/bungee"
                             android:text="IMT/U"
                             android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 

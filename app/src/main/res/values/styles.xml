@@ -15,6 +15,12 @@
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
+    <style name="SplashScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowBackground">@drawable/splash_screen_background</item>
+        <!--<item name="android:windowDisablePreview">true</item>
+        <item name="android:windowIsTranslucent">true</item>-->
+    </style>
+
     <style name="customfontFredoka" parent="@android:style/TextAppearance.Small">
         <item name="android:fontFamily">@font/fredoka</item>
     </style>

@@ -33,7 +33,6 @@
             android:id="@+id/textLayoutPasswordIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_small_margin"
             android:layout_marginBottom="@dimen/activity_small_margin"
             app:passwordToggleEnabled="true"
             app:passwordToggleTint="@color/colorAccent">
@@ -58,6 +57,11 @@
             android:text="Masuk"
             android:textColor="@color/common_google_signin_btn_text_dark"
             android:textStyle="bold" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/key_password" />
 
         <TextView
             android:id="@+id/link_signup"

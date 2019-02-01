@@ -30,7 +30,7 @@
     <string name="heading_my_posts">My Posts</string>
     <string name="heading_my_top_posts">My Top Posts</string>
     <string name="menu_1_head">Hitung Gizi</string>
-    <string name="menu_1_desc">Menghitung status gizi anak anda, sesuai standar Kemenkes</string>
+    <string name="menu_1_desc">Menghitung status gizi anak anda, sesuai standar KEMENKES</string>
     <string-array name="child_genre">
         <item>Pilih</item>
         <item>Laki-laki</item>

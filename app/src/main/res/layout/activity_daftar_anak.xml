@@ -17,7 +17,6 @@
             android:id="@+id/ChildName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/fredoka_regular"
             android:hint="Nama Anak"
             android:inputType="textCapWords"
             android:maxLines="3" />
@@ -35,7 +34,6 @@
             android:clickable="true"
             android:cursorVisible="false"
             android:focusable="false"
-            android:fontFamily="@font/fredoka_regular"
             android:hint="Tanggal lahir" />
     </android.support.design.widget.TextInputLayout>
 
@@ -49,13 +47,11 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/fredoka_regular"
                 android:text=" Jenis Kelamin " />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/fredoka_regular"
                 android:text=" : "
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 

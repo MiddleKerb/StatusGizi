@@ -12,7 +12,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:fontFamily="@font/fredoka_regular"
         android:gravity="center"
         android:text="Data Kosong! Hitung status gizi terlebih dahulu pada menu Hitung Status Gizi"
         android:textAllCaps="true"
@@ -36,7 +35,7 @@
         android:id="@+id/JudulHistoryBulan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/fredoka_regular"
+        android:fontFamily="@font/bungee"
         android:gravity="center"
         android:text="Lihat seluruh data riwayat pengukuran"
         android:textColor="@android:color/primary_text_light"
@@ -61,7 +60,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/ButtonAll"
         android:layout_marginTop="@dimen/fab_margin"
-        android:fontFamily="@font/fredoka_regular"
+        android:fontFamily="@font/bungee"
         android:gravity="center"
         android:text="Lihat data riwayat pengukuran berdasarkan umur anak anda (Bulan)"
         android:textAllCaps="true"
@@ -79,7 +78,6 @@
             android:id="@+id/TextHistoryBulanStart"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/fredoka_regular"
             android:hint="Dari umur (Bulan)"
             android:inputType="number" />
     </android.support.design.widget.TextInputLayout>
@@ -89,14 +87,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/LayoutHistoryBulanStart"
-        android:layout_marginTop="8dp"
         android:layout_marginBottom="8dp">
 
         <EditText
             android:id="@+id/TextHistoryBulanEnd"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="@font/fredoka_regular"
             android:hint="Hingga umur (Bulan)"
             android:inputType="number" />
     </android.support.design.widget.TextInputLayout>

@@ -52,8 +52,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:fontFamily="@font/fredoka_regular"
+                            android:fontFamily="@font/bungee"
                             android:text="Daftar Anak"
+                            android:gravity="center"
                             android:textColor="@color/common_google_signin_btn_text_dark"
                             android:textStyle="bold" />
 
@@ -101,7 +102,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:fontFamily="@font/fredoka_regular"
+                            android:fontFamily="@font/bungee"
+                            android:gravity="center"
                             android:text="@string/menu_1_head"
                             android:textColor="@color/common_google_signin_btn_text_dark"
                             android:textStyle="bold" />
@@ -158,7 +160,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:fontFamily="@font/fredoka_regular"
+                            android:fontFamily="@font/bungee"
+                            android:gravity="center"
                             android:text="Riwayat Pengukuran"
                             android:textColor="@color/common_google_signin_btn_text_dark"
                             android:textStyle="bold" />
@@ -207,7 +210,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:fontFamily="@font/fredoka_regular"
+                            android:fontFamily="@font/bungee"
+                            android:gravity="center"
                             android:text="Grafik Pertumbuhan"
                             android:textColor="@color/common_google_signin_btn_text_dark"
                             android:textStyle="bold" />
@@ -224,6 +228,41 @@
                             android:padding="5dp"
                             android:text="Grafik pertumbuhan berdasarkan Z-Score"
                             android:textColor="@color/common_google_signin_btn_text_dark"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/menu_6"
+                    android:layout_width="340dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    app:cardCornerRadius="@dimen/cardview_default_radiust"
+                    app:cardElevation="@dimen/cardview_default_elevations">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/bungee"
+                            android:text="Research"
+                            android:textColor="@color/common_google_signin_btn_text_light_pressed"
                             android:textStyle="bold" />
                     </LinearLayout>
                 </android.support.v7.widget.CardView>
@@ -264,7 +303,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
-                            android:fontFamily="@font/fredoka_regular"
+                            android:fontFamily="@font/bungee"
                             android:text="Detail Orang Tua"
                             android:textColor="@color/common_google_signin_btn_text_dark"
                             android:textStyle="bold" />
