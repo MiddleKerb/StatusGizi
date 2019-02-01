@@ -37,8 +37,6 @@ import com.squareup.picasso.Picasso;
 
 import java.util.Calendar;
 
-import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
-
 public class MenuActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
     private static final int TIME_INTERVAL = 2000;
     private long mBackPressed;
@@ -136,10 +134,7 @@ public class MenuActivity extends BaseActivity implements NavigationView.OnNavig
                 try {
                     if (task.getResult() != null) {
                         String download = task.getResult().toString();
-                        Picasso.get().load(download)
-                                .centerCrop().resize(250, 250)
-                                .transform(new RoundedCornersTransformation(250, 250))
-                                .into(imageView);
+                        Picasso.get().load(download).into(imageView);
                     }
                 } catch (Exception e) {
                     e.printStackTrace();
