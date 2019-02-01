@@ -1,5 +1,6 @@
 # :zap: Status Gizi :zap:
 Android application for checking toddler nutritional status
+![alt text](https://i.imgur.com/jnJRB5p.png)
 
 ## Function :fire:
 - Users can sign up using email/password.
