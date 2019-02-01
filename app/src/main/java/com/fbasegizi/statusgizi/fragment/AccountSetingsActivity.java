@@ -13,7 +13,6 @@ import com.fbasegizi.statusgizi.UbahPassword;
 import com.fbasegizi.statusgizi.UbahProfil;
 
 public class AccountSetingsActivity extends BaseActivity {
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

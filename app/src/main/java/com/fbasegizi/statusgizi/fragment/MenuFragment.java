@@ -16,6 +16,7 @@ import com.fbasegizi.statusgizi.count.AnakCount;
 import com.fbasegizi.statusgizi.graph.ChildGraph;
 import com.fbasegizi.statusgizi.history.HistoryAnak;
 import com.fbasegizi.statusgizi.parent.ParentList;
+import com.fbasegizi.statusgizi.research.MySqlMain;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MenuFragment extends Fragment implements View.OnClickListener {
@@ -32,12 +33,14 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
         CardView menu_3 = root.findViewById(R.id.menu_3);
         CardView menu_4 = root.findViewById(R.id.menu_4);
         CardView menu_5 = root.findViewById(R.id.menu_5);
+        CardView menu_6 = root.findViewById(R.id.menu_6);
 
         menu_1.setOnClickListener(this);
         menu_2.setOnClickListener(this);
         menu_3.setOnClickListener(this);
         menu_4.setOnClickListener(this);
         menu_5.setOnClickListener(this);
+        menu_6.setOnClickListener(this);
 
         if (getUid().equals("3Nxyv5oB5aVijKiO0bA0oZjEejg2")) {
             menu_5.setVisibility(View.VISIBLE);
@@ -74,6 +77,10 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.menu_5:
                 i = new Intent(getActivity(), ParentList.class);
+                startActivity(i);
+                break;
+            case R.id.menu_6:
+                i = new Intent(getActivity(), MySqlMain.class);
                 startActivity(i);
                 break;
         }

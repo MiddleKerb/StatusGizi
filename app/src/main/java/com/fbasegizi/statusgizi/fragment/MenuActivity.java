@@ -2,6 +2,7 @@ package com.fbasegizi.statusgizi.fragment;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.NavigationView;
@@ -15,20 +16,28 @@ import android.support.v7.app.AlertDialog;
 import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.fbasegizi.statusgizi.BaseActivity;
 import com.fbasegizi.statusgizi.R;
 import com.fbasegizi.statusgizi.SignIn;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.FirebaseStorage;
+import com.google.firebase.storage.StorageReference;
+import com.squareup.picasso.Picasso;
 
 import java.util.Calendar;
+
+import jp.wasabeef.picasso.transformations.RoundedCornersTransformation;
 
 public class MenuActivity extends BaseActivity implements NavigationView.OnNavigationItemSelectedListener {
     private static final int TIME_INTERVAL = 2000;
@@ -39,6 +48,9 @@ public class MenuActivity extends BaseActivity implements NavigationView.OnNavig
     private NavigationView navigationView;
     private ActionBarDrawerToggle toggle;
     private Toolbar toolbar;
+    private ImageView imageView;
+    private FirebaseStorage storage;
+    private StorageReference storageReference, path;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +67,9 @@ public class MenuActivity extends BaseActivity implements NavigationView.OnNavig
         toggle.syncState();
 
         databaseReference = FirebaseDatabase.getInstance().getReference();
+        storage = FirebaseStorage.getInstance();
+        storageReference = storage.getReference();
+        path = storageReference.child("profiles").child(getUid());
 
         navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
@@ -63,6 +78,7 @@ public class MenuActivity extends BaseActivity implements NavigationView.OnNavig
         textViewNama = ((View) headerView).findViewById(R.id.NamaHeader);
         textViewEmail = ((View) headerView).findViewById(R.id.EmailHeader);
         textViewGreetings = ((View) headerView).findViewById(R.id.GreetingsHeader);
+        imageView = ((View) headerView).findViewById(R.id.imageNav);
 
         greetings();
 
@@ -114,6 +130,22 @@ public class MenuActivity extends BaseActivity implements NavigationView.OnNavig
                                 Toast.LENGTH_SHORT).show();
                     }
                 });
+        path.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
+            @Override
+            public void onComplete(@NonNull Task<Uri> task) {
+                try {
+                    if (task.getResult() != null) {
+                        String download = task.getResult().toString();
+                        Picasso.get().load(download)
+                                .centerCrop().resize(250, 250)
+                                .transform(new RoundedCornersTransformation(250, 250))
+                                .into(imageView);
+                    }
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        });
     }
 
     @Override
