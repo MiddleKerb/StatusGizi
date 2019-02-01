@@ -2,7 +2,6 @@ package com.fbasegizi.statusgizi;
 
 import android.app.AlertDialog;
 import android.content.Intent;
-import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -65,7 +64,6 @@ public class SignUp extends BaseActivity implements View.OnClickListener {
         textInputLayoutPassword = findViewById(R.id.textLayoutPasswordUp);
         textInputLayoutName = findViewById(R.id.textLayoutNameUp);
 
-        mSignInLink.setPaintFlags(mSignInLink.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         // Click listeners
         mSignUpButton.setOnClickListener(this);
         mSignInLink.setOnClickListener(this);

@@ -9,22 +9,25 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:paddingLeft="24dp"
-        android:paddingTop="56dp"
-        android:paddingRight="24dp">
+        android:paddingLeft="@dimen/activity_vertical_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingRight="@dimen/activity_vertical_margin">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="200dp"
+            android:src="@drawable/splash_screen" />
 
         <android.support.design.widget.TextInputLayout
             android:id="@+id/textLayoutEmailIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_small_margin"
-            android:layout_marginBottom="@dimen/activity_small_margin">
+            android:layout_marginTop="@dimen/activity_small_margin">
 
             <EditText
                 android:id="@+id/field_email_signIn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/fredoka_regular"
                 android:hint="Email"
                 android:inputType="textEmailAddress" />
         </android.support.design.widget.TextInputLayout>
@@ -33,7 +36,6 @@
             android:id="@+id/textLayoutPasswordIn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="@dimen/activity_small_margin"
             app:passwordToggleEnabled="true"
             app:passwordToggleTint="@color/colorAccent">
 
@@ -41,7 +43,6 @@
                 android:id="@+id/field_password_signIn"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/fredoka_regular"
                 android:hint="Password"
                 android:inputType="textPassword" />
         </android.support.design.widget.TextInputLayout>
@@ -50,30 +51,23 @@
             android:id="@+id/button_sign_in"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:layout_marginBottom="24dp"
             android:backgroundTint="@color/colorPrimary"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
             android:padding="@dimen/fab_margin"
             android:text="Masuk"
-            android:textColor="@color/common_google_signin_btn_text_dark"
+            android:textColor="@android:color/white"
             android:textStyle="bold" />
-
-        <android.support.v7.widget.AppCompatButton
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/key_password" />
 
         <TextView
             android:id="@+id/link_signup"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="24dp"
+            android:layout_marginTop="@dimen/activity_small_margin"
             android:gravity="center"
-            android:text="Belum punya akun? Daftar disini"
-            android:textAllCaps="true"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
-            android:textColor="@color/merah"
+            android:text="Belum punya akun? Daftar disini."
+            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+            android:textColor="@color/primary_text"
             android:textStyle="bold" />
-
     </LinearLayout>
+
 </ScrollView>
