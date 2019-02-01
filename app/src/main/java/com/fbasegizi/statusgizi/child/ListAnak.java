@@ -1,6 +1,7 @@
 package com.fbasegizi.statusgizi.child;
 
 import android.content.Intent;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Parcelable;
 import android.support.annotation.NonNull;
@@ -76,6 +77,9 @@ public class ListAnak extends BaseActivity {
 
         floatAddAnak = findViewById(R.id.FloatAddChild);
         floatAddAnak.hide();
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+            floatAddAnak.setTooltipText("Daftar anak disini");
+        }
         floatAddAnak.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
