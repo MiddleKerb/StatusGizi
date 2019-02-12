@@ -12,11 +12,6 @@ import com.fbasegizi.statusgizi.BaseActivity;
 import com.fbasegizi.statusgizi.R;
 
 public class HistoryChoose extends BaseActivity implements View.OnClickListener {
-    public static final String ANAK_NAME = "com.fbasegizi.statusgizi.childname";
-    public static final String ANAK_ID = "com.fbasegizi.statusgizi.childid";
-    public static final String ANAK_DATE = "com.fbasegizi.statusgizi.childdate";
-    public static final String ANAK_GENDER = "com.fbasegizi.statusgizi.childgender";
-    public static final String HISTORY = "com.fbasegizi.statusgizi.history";
 
     private Button buttonToBBU;
     private Button buttonToTBU;
@@ -72,7 +67,7 @@ public class HistoryChoose extends BaseActivity implements View.OnClickListener 
     @Override
     public void onClick(View v) {
         int i = v.getId();
-        Intent intent = new Intent(getApplicationContext(), HistoryBulan.class);
+        Intent intent = new Intent(getApplicationContext(), HistoryDetail.class);
         switch (i) {
             case R.id.ButtonToBBU:
                 intent.putExtra("history", "BeratBadanUmur");

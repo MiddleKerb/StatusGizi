@@ -1,27 +1,26 @@
 package com.fbasegizi.statusgizi.history;
 
-import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
 import android.support.v7.app.ActionBar;
-import android.view.LayoutInflater;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.fbasegizi.statusgizi.BaseActivity;
 import com.fbasegizi.statusgizi.R;
-import com.fbasegizi.statusgizi.adapter.HistoryListBBTB;
-import com.fbasegizi.statusgizi.adapter.HistoryListBBU;
-import com.fbasegizi.statusgizi.adapter.HistoryListIMTU;
-import com.fbasegizi.statusgizi.adapter.HistoryListTBU;
+import com.fbasegizi.statusgizi.adapter.RecyclerViewHistoryBBTB;
+import com.fbasegizi.statusgizi.adapter.RecyclerViewHistoryBBU;
+import com.fbasegizi.statusgizi.adapter.RecyclerViewHistoryIMTU;
+import com.fbasegizi.statusgizi.adapter.RecyclerViewHistoryTBU;
+import com.fbasegizi.statusgizi.count.AnakCount;
 import com.fbasegizi.statusgizi.model.BeratBadanTinggiBadan;
 import com.fbasegizi.statusgizi.model.BeratBadanUmur;
 import com.fbasegizi.statusgizi.model.IndeksMassaTubuhUmur;
@@ -36,54 +35,60 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class HistoryDetail extends BaseActivity {
+
+    private DatabaseReference mDatabase;
+
     private TextView historyDetailName;
     private TextView historyDetailDOB;
     private TextView historyDetailGender;
     private TextView emptyText;
-
-    private String id, history;
-
-    private Integer BulanStart, BulanEnd;
-
-    private DatabaseReference mDatabase;
-
+    private Button button;
     private ProgressBar progressBar;
 
-    private ListView historyDetailList;
+    private String id, history;
+    private RecyclerView recyclerView;
+    private RecyclerViewHistoryBBU viewHistoryBBU;
+    private RecyclerViewHistoryBBTB viewHistoryBBTB;
+    private RecyclerViewHistoryTBU viewHistoryTBU;
+    private RecyclerViewHistoryIMTU viewHistoryIMTU;
 
-    private List<BeratBadanUmur> beratBadanUmurs;
-    private List<TinggiBadanUmur> tinggiBadanUmurs;
-    private List<BeratBadanTinggiBadan> beratBadanTinggiBadans;
-    private List<IndeksMassaTubuhUmur> indeksMassaTubuhUmurs;
+    private List<BeratBadanUmur> beratBadanUmurs = new ArrayList<>();
+    private List<BeratBadanTinggiBadan> beratBadanTinggiBadans = new ArrayList<>();
+    private List<TinggiBadanUmur> tinggiBadanUmurs = new ArrayList<>();
+    private List<IndeksMassaTubuhUmur> indeksMassaTubuhUmurs = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_history_detail);
-        Intent intent = getIntent();
 
         mDatabase = FirebaseDatabase.getInstance().getReference();
 
         progressBar = findViewById(R.id.ProgressHistoryDetail);
 
-        historyDetailList = findViewById(R.id.HistoryDetailList);
-        beratBadanUmurs = new ArrayList<>();
-        tinggiBadanUmurs = new ArrayList<>();
-        beratBadanTinggiBadans = new ArrayList<>();
-        indeksMassaTubuhUmurs = new ArrayList<>();
-
-        historyDetailList.setEmptyView(progressBar);
-
         historyDetailName = findViewById(R.id.HistoryDetailName);
         historyDetailDOB = findViewById(R.id.HistoryDetailDOB);
         historyDetailGender = findViewById(R.id.HistoryDetailGender);
+        button = findViewById(R.id.buttonHistoryDetail);
         emptyText = findViewById(R.id.empty_history_detail);
 
+        recyclerView = findViewById(R.id.RecycleListHistory);
+        recyclerView.setHasFixedSize(true);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(getApplicationContext());
+        recyclerView.setLayoutManager(layoutManager);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), AnakCount.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        Intent intent = getIntent();
         history = intent.getStringExtra("history");
         id = intent.getStringExtra("id");
-        BulanStart = Integer.parseInt(intent.getStringExtra("BulanStart"));
-        BulanEnd = Integer.parseInt(intent.getStringExtra("BulanEnd"));
-
         historyDetailName.setText(intent.getStringExtra("nama"));
         historyDetailGender.setText(intent.getStringExtra("gender"));
         historyDetailDOB.setText(intent.getStringExtra("tanggal"));
@@ -93,222 +98,181 @@ public class HistoryDetail extends BaseActivity {
             actionBar.setDisplayHomeAsUpEnabled(true);
             if ("BeratBadanUmur".equals(history)) {
                 actionBar.setTitle("Berat Badan Umur");
+                viewHistoryBBU = new RecyclerViewHistoryBBU(this, beratBadanUmurs);
+                loadBBU();
             } else if ("TinggiBadanUmur".equals(history)) {
                 actionBar.setTitle("Tinggi Badan Umur");
+                viewHistoryTBU = new RecyclerViewHistoryTBU(this, tinggiBadanUmurs);
+                loadTBU();
             } else if ("BeratBadanTinggiBadan".equals(history)) {
                 actionBar.setTitle("Berat Badan Tinggi Badan");
+                viewHistoryBBTB = new RecyclerViewHistoryBBTB(this, beratBadanTinggiBadans);
+                loadBBTB();
             } else if ("IndeksMassaTubuhUmur".equals(history)) {
                 actionBar.setTitle("Indeks Massa Tubuh");
+                viewHistoryIMTU = new RecyclerViewHistoryIMTU(this, indeksMassaTubuhUmurs);
+                loadIMTU();
             }
         }
 
-        historyDetailList.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                switch (history) {
-                    case "BeratBadanUmur":
-                        BeratBadanUmur beratBadanUmur = beratBadanUmurs.get(position);
-                        deleteDialog(beratBadanUmur.bbuId);
-                        break;
-                    case "TinggiBadanUmur":
-                        TinggiBadanUmur tinggiBadanUmur = tinggiBadanUmurs.get(position);
-                        deleteDialog(tinggiBadanUmur.tbuId);
-                        break;
-                    case "BeratBadanTinggiBadan":
-                        BeratBadanTinggiBadan beratBadanTinggiBadan = beratBadanTinggiBadans.get(position);
-                        deleteDialog(beratBadanTinggiBadan.bbtbId);
-                        break;
-                    case "IndeksMassaTubuhUmur":
-                        IndeksMassaTubuhUmur indeksMassaTubuhUmur = indeksMassaTubuhUmurs.get(position);
-                        deleteDialog(indeksMassaTubuhUmur.imtuId);
-                        break;
-                }
-            }
-        });
-    }
-
-    private void deleteDialog(final String detailId) {
-        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
-        LayoutInflater inflater = getLayoutInflater();
-        final View dialogView = inflater.inflate(R.layout.dialog_delete_detail, null);
-        dialogBuilder.setView(dialogView);
-
-        final Button buttonDelete = dialogView.findViewById(R.id.ButtonDeleteDetail);
-        final Button buttonCancel = dialogView.findViewById(R.id.buttonDeleteDetailCancel);
-
-        final AlertDialog b = dialogBuilder.create();
-        b.show();
-        b.setCanceledOnTouchOutside(false);
-
-        buttonDelete.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                if (isOnline()) {
-                    Snackbar mySnackbar = Snackbar.make(dialogView,
-                            "Koneksi internet tidak tersedia", Snackbar.LENGTH_SHORT)
-                            .setAction("COBA LAGI", new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    buttonDelete.performClick();
-                                }
-                            });
-                    mySnackbar.show();
-                    return;
-                }
-                deleteChild(detailId);
-                b.dismiss();
-            }
-        });
-
-        buttonCancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                b.dismiss();
-            }
-        });
-    }
-
-    private void deleteChild(String detailId) {
-        showProgressDialog();
-        mDatabase.child(history).child(getUid()).child(id).child(detailId).removeValue();
-        hideProgressDialog();
-        Snackbar.make(this.findViewById(android.R.id.content),
-                "Data berhasil di hapus", Snackbar.LENGTH_LONG).show();
-    }
-
-    @Override
-    protected void onStart() {
-        super.onStart();
-        switch (history) {
-            case "BeratBadanUmur":
-                mDatabase.child(history).child(getUid()).child(id)
-                        .orderByChild("bbuAge").startAt(BulanStart).endAt(BulanEnd)
-                        .addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                beratBadanUmurs.clear();
-                                if (dataSnapshot.exists()) {
-                                    for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                                        BeratBadanUmur beratBadanUmur = postSnapshot.getValue(BeratBadanUmur.class);
-                                        if (beratBadanUmur != null) {
-                                            beratBadanUmur.setBbuId(postSnapshot.getKey());
-                                        }
-                                        beratBadanUmurs.add(beratBadanUmur);
-                                        progressBar.setVisibility(View.GONE);
-                                    }
-                                } else {
-                                    progressBar.setVisibility(View.GONE);
-                                    historyDetailList.setEmptyView(emptyText);
-                                }
-                                HistoryListBBU listBBUAdapter = new HistoryListBBU(HistoryDetail.this,
-                                        beratBadanUmurs);
-                                listBBUAdapter.notifyDataSetChanged();
-                                historyDetailList.setAdapter(listBBUAdapter);
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                            }
-                        });
-                break;
-            case "TinggiBadanUmur":
-                mDatabase.child(history).child(getUid()).child(id)
-                        .orderByChild("tbuAge").startAt(BulanStart).endAt(BulanEnd)
-                        .addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                tinggiBadanUmurs.clear();
-                                if (dataSnapshot.exists()) {
-                                    for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                                        TinggiBadanUmur tinggiBadanUmur = postSnapshot.getValue(TinggiBadanUmur.class);
-                                        if (tinggiBadanUmur != null) {
-                                            tinggiBadanUmur.setTbuId(postSnapshot.getKey());
-                                        }
-                                        tinggiBadanUmurs.add(tinggiBadanUmur);
-                                        progressBar.setVisibility(View.GONE);
-                                    }
-                                } else {
-                                    progressBar.setVisibility(View.GONE);
-                                    historyDetailList.setEmptyView(emptyText);
-                                }
-                                HistoryListTBU listTBUAdapter = new HistoryListTBU(HistoryDetail.this,
-                                        tinggiBadanUmurs);
-                                listTBUAdapter.notifyDataSetChanged();
-                                historyDetailList.setAdapter(listTBUAdapter);
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                            }
-                        });
-                break;
-            case "BeratBadanTinggiBadan":
-                mDatabase.child(history).child(getUid()).child(id)
-                        .orderByChild("bbtbAge").startAt(BulanStart).endAt(BulanEnd)
-                        .addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                beratBadanTinggiBadans.clear();
-                                if (dataSnapshot.exists()) {
-                                    for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                                        BeratBadanTinggiBadan beratBadanTinggiBadan = postSnapshot.getValue(BeratBadanTinggiBadan.class);
-                                        if (beratBadanTinggiBadan != null) {
-                                            beratBadanTinggiBadan.setBbtbId(postSnapshot.getKey());
-                                        }
-                                        beratBadanTinggiBadans.add(beratBadanTinggiBadan);
-                                        progressBar.setVisibility(View.GONE);
-                                    }
-                                } else {
-                                    progressBar.setVisibility(View.GONE);
-                                    historyDetailList.setEmptyView(emptyText);
-                                }
-                                HistoryListBBTB listBBTBAdapter = new HistoryListBBTB(HistoryDetail.this,
-                                        beratBadanTinggiBadans);
-                                listBBTBAdapter.notifyDataSetChanged();
-                                historyDetailList.setAdapter(listBBTBAdapter);
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                            }
-                        });
-                break;
-            case "IndeksMassaTubuhUmur":
-                mDatabase.child(history).child(getUid()).child(id)
-                        .orderByChild("imtuAge").startAt(BulanStart).endAt(BulanEnd)
-                        .addValueEventListener(new ValueEventListener() {
-                            @Override
-                            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                                indeksMassaTubuhUmurs.clear();
-                                if (dataSnapshot.exists()) {
-                                    for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
-                                        IndeksMassaTubuhUmur indeksMassaTubuhUmur = postSnapshot.getValue(IndeksMassaTubuhUmur.class);
-                                        if (indeksMassaTubuhUmur != null) {
-                                            indeksMassaTubuhUmur.setImtuId(postSnapshot.getKey());
-                                        }
-                                        indeksMassaTubuhUmurs.add(indeksMassaTubuhUmur);
-                                        progressBar.setVisibility(View.GONE);
-                                    }
-                                } else {
-                                    progressBar.setVisibility(View.GONE);
-                                    historyDetailList.setEmptyView(emptyText);
-                                }
-                                HistoryListIMTU listIMTUAdapter = new HistoryListIMTU(HistoryDetail.this,
-                                        indeksMassaTubuhUmurs);
-                                listIMTUAdapter.notifyDataSetChanged();
-                                historyDetailList.setAdapter(listIMTUAdapter);
-                            }
-
-                            @Override
-                            public void onCancelled(@NonNull DatabaseError databaseError) {
-
-                            }
-                        });
-                break;
+        if (isOnline()) {
+            emptyText.setText("Koneksi internet tidak tersedia!");
+            emptyText.setVisibility(View.VISIBLE);
+            recyclerView.setVisibility(View.INVISIBLE);
+            progressBar.setVisibility(View.GONE);
+        } else {
+            emptyText.setVisibility(View.GONE);
+            recyclerView.setVisibility(View.VISIBLE);
+            progressBar.setVisibility(View.VISIBLE);
         }
+    }
+
+    private void loadBBU() {
+        mDatabase.child("BeratBadanUmur").child(getUid()).child(id)
+                .orderByChild("bbuAge").startAt(0).endAt(60)
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        beratBadanUmurs = new ArrayList<>();
+                        if (dataSnapshot.exists()) {
+                            for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                                BeratBadanUmur beratBadanUmur = postSnapshot.getValue(BeratBadanUmur.class);
+                                if (beratBadanUmur != null) {
+                                    beratBadanUmur.setBbuId(postSnapshot.getKey());
+                                }
+                                beratBadanUmurs.add(beratBadanUmur);
+                                progressBar.setVisibility(View.GONE);
+                                emptyText.setVisibility(View.GONE);
+                                button.setVisibility(View.GONE);
+                            }
+                        } else {
+                            progressBar.setVisibility(View.GONE);
+                            recyclerView.setVisibility(View.GONE);
+                            emptyText.setVisibility(View.VISIBLE);
+                            button.setVisibility(View.VISIBLE);
+                        }
+                        viewHistoryBBU = new RecyclerViewHistoryBBU(HistoryDetail.this, beratBadanUmurs);
+                        viewHistoryBBU.notifyDataSetChanged();
+                        recyclerView.setItemAnimator(new DefaultItemAnimator());
+                        recyclerView.setAdapter(viewHistoryBBU);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+    }
+
+    private void loadTBU() {
+        mDatabase.child("TinggiBadanUmur").child(getUid()).child(id)
+                .orderByChild("tbuAge").startAt(0).endAt(60)
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        tinggiBadanUmurs = new ArrayList<>();
+                        if (dataSnapshot.exists()) {
+                            for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                                TinggiBadanUmur tinggiBadanUmur = postSnapshot.getValue(TinggiBadanUmur.class);
+                                if (tinggiBadanUmur != null) {
+                                    tinggiBadanUmur.setTbuId(postSnapshot.getKey());
+                                }
+                                tinggiBadanUmurs.add(tinggiBadanUmur);
+                                progressBar.setVisibility(View.GONE);
+                                emptyText.setVisibility(View.GONE);
+                                button.setVisibility(View.GONE);
+                            }
+                        } else {
+                            progressBar.setVisibility(View.GONE);
+                            recyclerView.setVisibility(View.GONE);
+                            emptyText.setVisibility(View.VISIBLE);
+                            button.setVisibility(View.VISIBLE);
+                        }
+                        viewHistoryTBU = new RecyclerViewHistoryTBU(HistoryDetail.this, tinggiBadanUmurs);
+                        viewHistoryTBU.notifyDataSetChanged();
+                        recyclerView.setItemAnimator(new DefaultItemAnimator());
+                        recyclerView.setAdapter(viewHistoryTBU);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+    }
+
+    private void loadBBTB() {
+        mDatabase.child("BeratBadanTinggiBadan").child(getUid()).child(id)
+                .orderByChild("bbtbAge").startAt(0).endAt(60)
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        beratBadanTinggiBadans = new ArrayList<>();
+                        if (dataSnapshot.exists()) {
+                            for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                                BeratBadanTinggiBadan beratBadanTinggiBadan = postSnapshot.getValue(BeratBadanTinggiBadan.class);
+                                if (beratBadanTinggiBadan != null) {
+                                    beratBadanTinggiBadan.setBbtbId(postSnapshot.getKey());
+                                }
+                                beratBadanTinggiBadans.add(beratBadanTinggiBadan);
+                                progressBar.setVisibility(View.GONE);
+                                emptyText.setVisibility(View.GONE);
+                                button.setVisibility(View.GONE);
+                            }
+                        } else {
+                            progressBar.setVisibility(View.GONE);
+                            recyclerView.setVisibility(View.GONE);
+                            emptyText.setVisibility(View.VISIBLE);
+                            button.setVisibility(View.VISIBLE);
+                        }
+                        viewHistoryBBTB = new RecyclerViewHistoryBBTB(HistoryDetail.this, beratBadanTinggiBadans);
+                        viewHistoryBBTB.notifyDataSetChanged();
+                        recyclerView.setItemAnimator(new DefaultItemAnimator());
+                        recyclerView.setAdapter(viewHistoryBBTB);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
+    }
+
+    private void loadIMTU() {
+        mDatabase.child("IndeksMassaTubuhUmur").child(getUid()).child(id)
+                .orderByChild("imtuAge").startAt(0).endAt(60)
+                .addValueEventListener(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        indeksMassaTubuhUmurs = new ArrayList<>();
+                        if (dataSnapshot.exists()) {
+                            for (DataSnapshot postSnapshot : dataSnapshot.getChildren()) {
+                                IndeksMassaTubuhUmur indeksMassaTubuhUmur = postSnapshot.getValue(IndeksMassaTubuhUmur.class);
+                                if (indeksMassaTubuhUmur != null) {
+                                    indeksMassaTubuhUmur.setImtuId(postSnapshot.getKey());
+                                }
+                                indeksMassaTubuhUmurs.add(indeksMassaTubuhUmur);
+                                progressBar.setVisibility(View.GONE);
+                                emptyText.setVisibility(View.GONE);
+                                button.setVisibility(View.GONE);
+                            }
+                        } else {
+                            progressBar.setVisibility(View.GONE);
+                            recyclerView.setVisibility(View.GONE);
+                            emptyText.setVisibility(View.VISIBLE);
+                            button.setVisibility(View.VISIBLE);
+                        }
+                        viewHistoryIMTU = new RecyclerViewHistoryIMTU(HistoryDetail.this, indeksMassaTubuhUmurs);
+                        viewHistoryIMTU.notifyDataSetChanged();
+                        recyclerView.setItemAnimator(new DefaultItemAnimator());
+                        recyclerView.setAdapter(viewHistoryIMTU);
+                    }
+
+                    @Override
+                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                    }
+                });
     }
 
     @Override

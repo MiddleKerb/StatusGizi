@@ -14,8 +14,7 @@
         android:layout_marginTop="@dimen/fab_margin"
         android:layout_marginRight="@dimen/fab_margin"
         android:gravity="center"
-        android:textAllCaps="true"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
         android:textStyle="bold" />
 
     <LinearLayout
@@ -24,7 +23,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/HistoryDetailName"
         android:layout_marginLeft="@dimen/fab_margin"
-        android:layout_marginTop="@dimen/fab_margin"
+        android:layout_marginTop="@dimen/activity_small_margin"
         android:layout_marginRight="@dimen/fab_margin"
         android:orientation="horizontal">
 
@@ -32,17 +31,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="@font/fredoka_regular"
-            android:text="Tanggal Lahir"
+            android:text="Tanggal lahir"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-            android:textColor="@android:color/primary_text_light" />
+            android:textColor="@android:color/primary_text_light"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/HistoryDetailDOB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="@font/fredoka_regular"
             android:gravity="right"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/primary_text_light"
@@ -62,17 +60,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="@font/fredoka_regular"
-            android:text="Jenis Kelamin"
+            android:text="Jenis kelamin"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-            android:textColor="@android:color/primary_text_light" />
+            android:textColor="@android:color/primary_text_light"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/HistoryDetailGender"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="@font/fredoka_regular"
             android:gravity="right"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/primary_text_light"
@@ -93,23 +90,34 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true" />
 
-    <ListView
-        android:id="@+id/HistoryDetailList"
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/RecycleListHistory"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_below="@id/ViewHistoryDetail"
-        android:layout_gravity="center"
-        android:divider="#00000000" />
+        android:paddingTop="@dimen/activity_small_margin" />
 
     <TextView
         android:id="@+id/empty_history_detail"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="@dimen/activity_vertical_margin"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:gravity="center"
+        android:padding="@dimen/activity_vertical_margin"
         android:text="Data Kosong! Lakukan kalkulasi terlebih dahulu di menu Hitung Status Gizi!"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
         android:textColor="@color/primary_text"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/buttonHistoryDetail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/empty_history_detail"
+        android:layout_centerInParent="true"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Hitung Status Gizi"
+        android:textColor="@color/putih"
         android:textStyle="bold"
         android:visibility="gone" />
 
