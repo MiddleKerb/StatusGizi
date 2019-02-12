@@ -51,7 +51,6 @@ public class EditAnak extends BaseActivity implements View.OnClickListener {
     private Spinner dSpinnerGender;
     private Button buttonUpdate, buttonDelete;
     private String id, nama, tanggal, gender;
-    private int mYear, mMonth, mDay;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -380,29 +379,37 @@ public class EditAnak extends BaseActivity implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         int i = v.getId();
-        final String nama = dTextName.getText().toString();
-        final String gender = dSpinnerGender.getSelectedItem().toString();
-        final String tanggal = dTextDate.getText().toString();
-        final Calendar c = Calendar.getInstance();
-        mYear = c.get(Calendar.YEAR);
-        mMonth = c.get(Calendar.MONTH);
-        mDay = c.get(Calendar.DAY_OF_MONTH);
-
         switch (i) {
             case R.id.dialogChildDate:
+                String[] dateParts = tanggal.split("-");
+                Integer mDay = Integer.valueOf(dateParts[0]);
+                Integer mMonth = Integer.parseInt(dateParts[1]);
+                Integer mYear = Integer.parseInt(dateParts[2]);
+
                 DatePickerDialog datePickerDialog = new DatePickerDialog(EditAnak.this,
                         new DatePickerDialog.OnDateSetListener() {
                             @Override
                             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                                dTextDate.setText(new StringBuilder().append(dayOfMonth).append("-")
-                                        .append(month + 1).append("-").append(year));
+                                String monthString = String.valueOf(month + 1);
+                                String dayString = String.valueOf(dayOfMonth);
+                                if (monthString.length() == 1) {
+                                    monthString = "0" + monthString;
+                                }
+                                if (dayString.length() == 1) {
+                                    dayString = "0" + dayString;
+                                }
+                                dTextDate.setText(new StringBuilder().append(dayString).append("-")
+                                        .append(monthString).append("-").append(year));
                             }
                         }, mYear, mMonth, mDay);
                 datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
                 datePickerDialog.show();
                 break;
             case R.id.buttonUpdateAnak:
-                updateDialog(id, nama.replaceFirst("\\s++$", ""), gender, tanggal);
+                String nama = dTextName.getText().toString();
+                String gender = dSpinnerGender.getSelectedItem().toString();
+                String tanggal = dTextDate.getText().toString();
+                updateDialog(id, nama.trim().replaceAll(" +", " "), gender, tanggal);
                 break;
             case R.id.buttonDeleteAnak:
                 deleteDialog(id);

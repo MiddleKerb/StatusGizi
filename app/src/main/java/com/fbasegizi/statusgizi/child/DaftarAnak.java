@@ -222,7 +222,7 @@ public class DaftarAnak extends BaseActivity implements View.OnClickListener {
         final String id = mDatabase.child("child").push().getKey();
         final String userId = getUid();
 
-        final Anak anak = new Anak(id, nama.replaceFirst("\\s++$", ""), gender, tanggal);
+        final Anak anak = new Anak(id, nama.trim().replaceAll(" +", " "), gender, tanggal);
 
         showProgressDialog();
         mDatabase.child("child").child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
@@ -270,16 +270,23 @@ public class DaftarAnak extends BaseActivity implements View.OnClickListener {
         int i = v.getId();
         if (i == R.id.ChildDate) {
             final Calendar c = Calendar.getInstance();
-            mYear = c.get(Calendar.YEAR);
-            mMonth = c.get(Calendar.MONTH);
-            mDay = c.get(Calendar.DAY_OF_MONTH);
-
+            Integer mYear = c.get(Calendar.YEAR);
+            Integer mMonth = c.get(Calendar.MONTH);
+            Integer mDay = c.get(Calendar.DAY_OF_MONTH);
             DatePickerDialog datePickerDialog = new DatePickerDialog(this,
                     new DatePickerDialog.OnDateSetListener() {
                         @Override
                         public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                            mChildDate.setText(new StringBuilder().append(dayOfMonth).append("-")
-                                    .append(month + 1).append("-").append(year));
+                            String monthString = String.valueOf(month + 1);
+                            String dayString = String.valueOf(dayOfMonth);
+                            if (monthString.length() == 1) {
+                                monthString = "0" + monthString;
+                            }
+                            if (dayString.length() == 1) {
+                                dayString = "0" + dayString;
+                            }
+                            mChildDate.setText(new StringBuilder().append(dayString).append("-")
+                                    .append(monthString).append("-").append(year));
                         }
                     }, mYear, mMonth, mDay);
             datePickerDialog.getDatePicker().setMaxDate(System.currentTimeMillis());
