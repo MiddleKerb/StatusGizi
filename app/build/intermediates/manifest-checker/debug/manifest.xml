@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fbasegizi.statusgizi"
     android:versionCode="3"
-    android:versionName="3.3.5" >
+    android:versionName="3.4.3" >
 
     <uses-sdk
         android:minSdkVersion="23"
@@ -10,6 +10,9 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" /> <!-- Required by older versions of Google Play services to create IID tokens -->
     <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
@@ -25,6 +28,21 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.fbasegizi.statusgizi.makan.MenuHarianAnak" />
+        <activity android:name="com.fbasegizi.statusgizi.makan.HitungMenu" />
+        <activity android:name="com.fbasegizi.statusgizi.makan.MenuHarian" />
+        <activity android:name="com.fbasegizi.statusgizi.makan.TambahMenu" />
+        <activity android:name="com.fbasegizi.statusgizi.makan.RekomendasiAnak" />
+        <activity android:name="com.fbasegizi.statusgizi.makan.RekomendasiMakan" />
+        <activity android:name="com.fbasegizi.statusgizi.makan.TambahBahan" />
+        <activity android:name="com.fbasegizi.statusgizi.makan.DaftarBahan" />
+        <activity android:name="com.fbasegizi.statusgizi.makan.MakanMain" />
+        <activity android:name="com.fbasegizi.statusgizi.research.FirebaseView" />
+        <activity android:name="com.fbasegizi.statusgizi.research.MySqlViewMain" />
+        <activity android:name="com.fbasegizi.statusgizi.research.MySqlView" />
+        <activity android:name="com.fbasegizi.statusgizi.research.MySqlEdit" />
+        <activity android:name="com.fbasegizi.statusgizi.research.MySqlInsert" />
+        <activity android:name="com.fbasegizi.statusgizi.research.MySqlMain" />
         <activity android:name="com.fbasegizi.statusgizi.UbahProfil" />
         <activity android:name="com.fbasegizi.statusgizi.count.AnakCount" />
         <activity
@@ -37,7 +55,7 @@
         </activity>
         <activity
             android:name="com.fbasegizi.statusgizi.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/SplashScreenTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -152,6 +170,10 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.fbasegizi.statusgizi.com.squareup.picasso"
+            android:exported="false" />
         <provider
             android:name="com.android.tools.ir.server.InstantRunContentProvider"
             android:authorities="com.fbasegizi.statusgizi.com.android.tools.ir.server.InstantRunContentProvider"
