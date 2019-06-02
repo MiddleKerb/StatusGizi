@@ -32,8 +32,7 @@ public class RecyclerViewDaftarAnak extends RecyclerView.Adapter<RecyclerViewDaf
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.layout_child_list, viewGroup, false);
-        ViewHolder holder = new ViewHolder(v);
-        return holder;
+        return new ViewHolder(v);
     }
 
     class ViewHolder extends RecyclerView.ViewHolder {

@@ -36,8 +36,7 @@ public class RecyclerViewHistoryBBTB extends RecyclerView.Adapter<RecyclerViewHi
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.layout_bbtb_list, viewGroup, false);
-        ViewHolder holder = new ViewHolder(v);
-        return holder;
+        return new ViewHolder(v);
     }
 
     @Override

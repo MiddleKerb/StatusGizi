@@ -36,8 +36,7 @@ public class RecyclerViewHistoryTBU extends RecyclerView.Adapter<RecyclerViewHis
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.layout_tbu_list, viewGroup, false);
-        ViewHolder holder = new ViewHolder(v);
-        return holder;
+        return new ViewHolder(v);
     }
 
     @Override
