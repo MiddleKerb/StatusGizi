@@ -1,14 +1,16 @@
 package com.fbasegizi.statusgizi;
 
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TextInputLayout;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.ActionBar;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
@@ -67,6 +69,7 @@ public class SignUp extends BaseActivity implements View.OnClickListener {
         // Click listeners
         mSignUpButton.setOnClickListener(this);
         mSignInLink.setOnClickListener(this);
+        mSignInLink.setPaintFlags(mSignInLink.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -128,10 +131,10 @@ public class SignUp extends BaseActivity implements View.OnClickListener {
 
     private void onAuthSuccess(FirebaseUser user) {
         String username = usernameFromEmail(user.getEmail());
-        String name = mNameField.getText().toString();
+        String name = mNameField.getText().toString().trim().replaceAll(" +", " ");
 
         // Write new user
-        writeNewUser(user.getUid(), username, user.getEmail(), name.replaceFirst("\\s++$", ""));
+        writeNewUser(user.getUid(), name, username, user.getEmail());
 
         // Go to MenuActivity
         startActivity(new Intent(SignUp.this, MenuActivity.class));
@@ -139,8 +142,8 @@ public class SignUp extends BaseActivity implements View.OnClickListener {
     }
 
     // Simpen data Email dan Nama ke dalam DB
-    private void writeNewUser(String userId, String username, String email, String name) {
-        User user = new User(username, email, name);
+    private void writeNewUser(String userId, String name, String username, String email) {
+        User user = new User(name, username, email);
 
         mDatabase.child("users").child(userId).setValue(user);
     }
@@ -203,44 +206,41 @@ public class SignUp extends BaseActivity implements View.OnClickListener {
         if (!validateForm()) {
             return;
         }
-        AlertDialog.Builder dialogBuilder = new AlertDialog.Builder(this);
-        LayoutInflater inflater = getLayoutInflater();
-        final View dialogView = inflater.inflate(R.layout.dialog_update_detail, null);
-        dialogBuilder.setView(dialogView);
 
-        final Button buttonUpdateAgree = dialogView.findViewById(R.id.ButtonUpdateAgree);
-        final Button buttonUpdateCancel = dialogView.findViewById(R.id.ButtonUpdateCancel);
-
-        final AlertDialog b = dialogBuilder.create();
-        b.show();
-        b.setCanceledOnTouchOutside(false);
-
-        buttonUpdateAgree.setOnClickListener(new View.OnClickListener() {
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setTitle("Peringatan");
+        alertDialogBuilder
+                .setMessage("Apakah data yang diisi sudah benar?")
+                .setCancelable(false)
+                .setPositiveButton("Daftar", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        if (isOnline()) {
+                            dialog.cancel();
+                            Snackbar.make(SignUp.this.findViewById(android.R.id.content),
+                                    "Koneksi internet tidak tersedia",
+                                    Snackbar.LENGTH_SHORT).show();
+                            return;
+                        }
+                        signUp();
+                        dialog.cancel();
+                    }
+                })
+                .setNegativeButton("Batal", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.cancel();
+                    }
+                });
+        final AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.setOnShowListener(new DialogInterface.OnShowListener() {
             @Override
-            public void onClick(View view) {
-                if (isOnline()) {
-                    Snackbar mySnackbar = Snackbar.make(dialogView,
-                            "Koneksi internet tidak tersedia", Snackbar.LENGTH_SHORT)
-                            .setAction("COBA LAGI", new View.OnClickListener() {
-                                @Override
-                                public void onClick(View v) {
-                                    buttonUpdateAgree.performClick();
-                                }
-                            });
-                    mySnackbar.show();
-                    return;
-                }
-                signUp();
-                b.dismiss();
+            public void onShow(DialogInterface dialog) {
+                alertDialog.getButton(AlertDialog.BUTTON_NEGATIVE)
+                        .setTextColor(ContextCompat.getColor(getApplicationContext(), R.color.primary_text));
             }
         });
-
-        buttonUpdateCancel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                b.dismiss();
-            }
-        });
+        alertDialog.show();
     }
 
     @Override

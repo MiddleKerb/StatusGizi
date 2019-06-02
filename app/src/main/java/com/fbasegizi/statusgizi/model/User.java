@@ -5,21 +5,28 @@ import com.google.firebase.database.IgnoreExtraProperties;
 /**
  * Created by bonie on 29-Jun-18.
  */
-
 @IgnoreExtraProperties
 public class User {
 
-    public String Username;
-    public String email;
-    public String Nama;
+    private String Nama;
+    private String Username;
+    private String Email;
 
     public User() {
 
     }
 
-    public User(String username, String email, String nama) {
+    public User(String nama, String username, String email) {
+        this.Nama = nama;
         this.Username = username;
-        this.email = email;
+        this.Email = email;
+    }
+
+    public String getNama() {
+        return Nama;
+    }
+
+    public void setNama(String nama) {
         this.Nama = nama;
     }
 
@@ -32,18 +39,10 @@ public class User {
     }
 
     public String getEmail() {
-        return email;
+        return Email;
     }
 
     public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getNama() {
-        return Nama;
-    }
-
-    public void setNama(String nama) {
-        this.Nama = nama;
+        this.Email = email;
     }
 }
