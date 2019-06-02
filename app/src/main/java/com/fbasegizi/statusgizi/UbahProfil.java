@@ -6,10 +6,8 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
 import android.provider.MediaStore;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -29,10 +27,8 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.fbasegizi.statusgizi.fragment.AccountSetingsActivity;
-import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -45,18 +41,13 @@ import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
-import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 
 public class UbahProfil extends BaseActivity implements View.OnClickListener {
     private int STORAGE_PERMISSION_CODE = 1;
-    private int WRITE_PERMISSION_CODE = 2;
-    private int CAMERA_PERMISSION_CODE = 3;
-    private int GALLERY = 4, CAMERA = 5;
-    private String imageLocation = "";
+    private int CAMERA_PERMISSION_CODE = 2;
+    private int GALLERY = 3, CAMERA = 4;
 
     private Uri contentURI;
     private Bitmap bitmap;
@@ -103,19 +94,21 @@ public class UbahProfil extends BaseActivity implements View.OnClickListener {
     }
 
     private void loadImage() {
-        path.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
+        path.getDownloadUrl().addOnSuccessListener(new OnSuccessListener<Uri>() {
             @Override
-            public void onComplete(@NonNull Task<Uri> task) {
-                try {
-                    if (task.getResult() != null) {
-                        String download = task.getResult().toString();
-                        Picasso.get().load(download).fit().centerCrop().into(imageView);
-                    }
-                    imageView.setVisibility(View.VISIBLE);
-                    progressBar.setVisibility(View.GONE);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+            public void onSuccess(Uri uri) {
+                String download = uri.toString();
+                Picasso.get().load(download).fit().centerCrop().into(imageView);
+                imageView.setVisibility(View.VISIBLE);
+                progressBar.setVisibility(View.GONE);
+            }
+        }).addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception e) {
+                String download = "https://raw.githubusercontent.com/MiddleKerb/StatusGizi/master/app/src/main/res/drawable/splash_screen.png";
+                Picasso.get().load(String.valueOf(download)).fit().centerCrop().into(imageView);
+                imageView.setVisibility(View.VISIBLE);
+                progressBar.setVisibility(View.GONE);
             }
         });
     }
@@ -128,7 +121,7 @@ public class UbahProfil extends BaseActivity implements View.OnClickListener {
                     .addListenerForSingleValueEvent(new ValueEventListener() {
                         @Override
                         public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                            String nama = dataSnapshot.child("Nama").getValue(String.class);
+                            String nama = dataSnapshot.child("nama").getValue(String.class);
                             editText.setText(nama);
                         }
 
@@ -148,7 +141,7 @@ public class UbahProfil extends BaseActivity implements View.OnClickListener {
                 .addListenerForSingleValueEvent(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        dataSnapshot.getRef().child("Nama").setValue(nama.replaceFirst("\\s++$", ""));
+                        dataSnapshot.getRef().child("nama").setValue(nama.trim().replaceAll(" +", " "));
                         Intent intent = new Intent(getBaseContext(), AccountSetingsActivity.class);
                         intent.putExtra("profile_change", "update");
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
@@ -223,39 +216,6 @@ public class UbahProfil extends BaseActivity implements View.OnClickListener {
         alertDialog.show();
     }
 
-    private void uploadFile() {
-        if (contentURI != null) {
-            path.putFile(contentURI).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                @Override
-                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    hideProgressDialog();
-                }
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    hideProgressDialog();
-                }
-            });
-        } else if (bitmap != null) {
-            ByteArrayOutputStream stream = new ByteArrayOutputStream();
-
-            byte[] bytes = stream.toByteArray();
-            path.putBytes(bytes).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                @Override
-                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    hideProgressDialog();
-                }
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    hideProgressDialog();
-                }
-            });
-        } else {
-            Toast.makeText(UbahProfil.this, "Gambar tidak boleh kosong!", Toast.LENGTH_SHORT).show();
-        }
-    }
-
     private void showPictureDialog() {
         final AlertDialog.Builder pictureDialog = new AlertDialog.Builder(this);
         pictureDialog.setTitle("Pilih aksi");
@@ -287,9 +247,7 @@ public class UbahProfil extends BaseActivity implements View.OnClickListener {
 
     private void checkPermissionCamera() {
         if (ContextCompat.checkSelfPermission(UbahProfil.this,
-                Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED
-                && ContextCompat.checkSelfPermission(UbahProfil.this,
-                Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+                Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
             takePhotoFromCamera();
         } else {
             requestCameraPermission();
@@ -318,31 +276,6 @@ public class UbahProfil extends BaseActivity implements View.OnClickListener {
         } else {
             ActivityCompat.requestPermissions(this,
                     new String[]{Manifest.permission.CAMERA}, CAMERA_PERMISSION_CODE);
-        }
-    }
-
-    private void requestWritePermission() {
-        if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.WRITE_EXTERNAL_STORAGE)) {
-            new AlertDialog.Builder(this)
-                    .setTitle("Diperlukan izin")
-                    .setMessage("Izin ini diperlukan untuk menyimpan gambar pada perangkat Anda")
-                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            ActivityCompat.requestPermissions(UbahProfil.this,
-                                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, WRITE_PERMISSION_CODE);
-                        }
-                    })
-                    .setNegativeButton("Batal", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.cancel();
-                        }
-                    })
-                    .create().show();
-        } else {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.WRITE_EXTERNAL_STORAGE}, WRITE_PERMISSION_CODE);
         }
     }
 
@@ -381,12 +314,6 @@ public class UbahProfil extends BaseActivity implements View.OnClickListener {
             }
         } else if (requestCode == CAMERA_PERMISSION_CODE) {
             if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                requestWritePermission();
-            } else {
-                Toast.makeText(this, "Izin dibatalkan", Toast.LENGTH_SHORT).show();
-            }
-        } else if (requestCode == WRITE_PERMISSION_CODE) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
                 takePhotoFromCamera();
             } else {
                 Toast.makeText(this, "Izin dibatalkan", Toast.LENGTH_SHORT).show();
@@ -402,15 +329,42 @@ public class UbahProfil extends BaseActivity implements View.OnClickListener {
 
     private void takePhotoFromCamera() {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, contentURI);
-        File photofile = null;
-        try {
-            photofile = createImageFile();
-        } catch (IOException e) {
-            e.printStackTrace();
+        if (intent.resolveActivity(getPackageManager()) != null) {
+            startActivityForResult(intent, CAMERA);
         }
-        intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(photofile));
-        startActivityForResult(intent, CAMERA);
+    }
+
+    private void uploadFile() {
+        if (contentURI != null) {
+            path.putFile(contentURI).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                    hideProgressDialog();
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    hideProgressDialog();
+                }
+            });
+        } else if (bitmap != null) {
+            ByteArrayOutputStream stream = new ByteArrayOutputStream();
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+            byte[] bytes = stream.toByteArray();
+            path.putBytes(bytes).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+                @Override
+                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                    hideProgressDialog();
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    hideProgressDialog();
+                }
+            });
+        }/* else {
+            Toast.makeText(UbahProfil.this, "Gambar tidak boleh kosong!", Toast.LENGTH_SHORT).show();
+        }*/
     }
 
     @Override
@@ -433,38 +387,11 @@ public class UbahProfil extends BaseActivity implements View.OnClickListener {
                 }
             }
         } else if (requestCode == CAMERA && resultCode == RESULT_OK) {
-            /*Bundle extras = data.getExtras();
+            Bundle extras = data.getExtras();
             bitmap = (Bitmap) extras.get("data");
-            imageView.setImageBitmap(bitmap);*/
-            /*bitmap = BitmapFactory.decodeFile(imageLocation);
-            imageView.setImageBitmap(bitmap);*/
-            reducedSize();
+            imageView.setImageBitmap(bitmap);
+            imageView.setRotation(90);
         }
-    }
-
-    File createImageFile() throws IOException {
-        String timestamp = new SimpleDateFormat("DDMMyyyy_HHmmss").format(new Date());
-        String imageFileName = "GAMBAR_Gizi_" + timestamp + "_";
-        File storageDir = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
-        File image = File.createTempFile(imageFileName, ".jpg", storageDir);
-        imageLocation = image.getAbsolutePath();
-        return image;
-    }
-
-    void reducedSize() {
-        int ImgWidth = imageView.getWidth();
-        int ImgHeight = imageView.getHeight();
-
-        BitmapFactory.Options bmOptions = new BitmapFactory.Options();
-        bmOptions.inJustDecodeBounds = true;
-        BitmapFactory.decodeFile(imageLocation, bmOptions);
-        int CameraWidth = bmOptions.outWidth;
-        int CameraHeight = bmOptions.outHeight;
-
-        bmOptions.inSampleSize = Math.min(CameraWidth / ImgWidth, CameraHeight / ImgHeight);
-        bmOptions.inJustDecodeBounds = false;
-        bitmap = BitmapFactory.decodeFile(imageLocation, bmOptions);
-        imageView.setImageBitmap(bitmap);
     }
 
     @Override

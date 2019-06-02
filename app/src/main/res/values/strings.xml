@@ -31,6 +31,11 @@
     <string name="heading_my_top_posts">My Top Posts</string>
     <string name="menu_1_head">Hitung Gizi</string>
     <string name="menu_1_desc">Menghitung status gizi anak anda, sesuai standar KEMENKES</string>
+    <string-array name="waktu_menu">
+        <item>Pagi</item>
+        <item>Siang</item>
+        <item>Sore</item>
+    </string-array>
     <string-array name="child_genre">
         <item>Pilih</item>
         <item>Laki-laki</item>
@@ -73,8 +78,8 @@
         <attr name="android:minHeight" />
     </declare-styleable>
     <dimen name="cardview_compat_inset_shadows">1dp</dimen>
-    <dimen name="cardview_default_elevations">4dp</dimen>
-    <dimen name="cardview_default_radiust">4dp</dimen>
+    <dimen name="cardview_default_elevations">2dp</dimen>
+    <dimen name="cardview_default_radiust">2dp</dimen>
 
     <style name="Base.CardViews" parent="android:Widget">
         <item name="cardCornerRadius">@dimen/cardview_default_radiust</item>

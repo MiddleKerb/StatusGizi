@@ -17,7 +17,6 @@
             android:id="@+id/dialogChildName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:drawableEnd="@drawable/ic_person_black_24dp"
             android:hint="Nama Anak"
             android:inputType="textCapWords"
             android:maxLines="3" />
@@ -34,7 +33,6 @@
             android:layout_height="wrap_content"
             android:clickable="true"
             android:cursorVisible="false"
-            android:drawableEnd="@drawable/ic_date_range_black_24dp"
             android:focusable="false"
             android:hint="Tanggal lahir" />
     </android.support.design.widget.TextInputLayout>

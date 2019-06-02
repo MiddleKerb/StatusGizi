@@ -14,11 +14,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/fab_margin"
-        android:fontFamily="@font/fredoka_regular"
         android:gravity="center"
         android:text="Pilih kategori dan ambang batas status gizi anak berdasarkan indeks"
+        android:textAllCaps="true"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:textColor="@android:color/primary_text_light" />
+        android:textColor="@android:color/primary_text_light"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/GraphToBBU"

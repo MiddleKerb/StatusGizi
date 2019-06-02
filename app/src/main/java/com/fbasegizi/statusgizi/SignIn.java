@@ -1,6 +1,7 @@
 package com.fbasegizi.statusgizi;
 
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.design.widget.Snackbar;
@@ -10,7 +11,6 @@ import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
-import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -35,9 +35,9 @@ public class SignIn extends BaseActivity implements View.OnClickListener {
     private EditText mPasswordField;
     private Button mSignInButton;
     private TextView mSignUpLink;
+    private TextView textViewForgot;
     private TextInputLayout textInputLayoutEmail;
     private TextInputLayout textInputLayoutPassword;
-    private CheckBox checkBox;
     private static final int TIME_INTERVAL = 2000;
     private long mBackPressed;
 
@@ -55,10 +55,14 @@ public class SignIn extends BaseActivity implements View.OnClickListener {
         mSignUpLink = findViewById(R.id.link_signup);
         textInputLayoutEmail = findViewById(R.id.textLayoutEmailIn);
         textInputLayoutPassword = findViewById(R.id.textLayoutPasswordIn);
+        textViewForgot = findViewById(R.id.link_forgot);
 
         // Click listeners
         mSignInButton.setOnClickListener(this);
         mSignUpLink.setOnClickListener(this);
+        textViewForgot.setOnClickListener(this);
+        mSignUpLink.setPaintFlags(mSignUpLink.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        textViewForgot.setPaintFlags(textViewForgot.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
 
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
@@ -218,6 +222,12 @@ public class SignIn extends BaseActivity implements View.OnClickListener {
         } else if (i == R.id.link_signup) {
             startActivity(new Intent(SignIn.this, SignUp.class));
             finish();
+        } else if (i == R.id.link_forgot) {
+            String email = mEmailField.getText().toString();
+            Intent intent = new Intent(getBaseContext(), UbahPassword.class);
+            intent.putExtra(RESET, email);
+            intent.putExtra("reset_pass", "sign_out");
+            startActivity(intent);
         }
     }
 }

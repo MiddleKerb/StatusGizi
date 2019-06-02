@@ -16,7 +16,6 @@
         android:layout_marginRight="@dimen/activity_vertical_margin"
         android:text="DETAIL ORANGTUA"
         android:textAlignment="center"
-        android:fontFamily="@font/fredoka_regular"
         android:textAllCaps="true"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 

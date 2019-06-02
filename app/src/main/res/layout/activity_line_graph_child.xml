@@ -31,17 +31,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="@font/fredoka_regular"
             android:text="Tanggal Lahir"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-            android:textColor="@android:color/primary_text_light" />
+            android:textColor="@android:color/primary_text_light"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/GraphDOB"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="@font/fredoka_regular"
             android:gravity="right"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/primary_text_light"
@@ -63,17 +62,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="@font/fredoka_regular"
             android:text="Jenis Kelamin"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-            android:textColor="@android:color/primary_text_light" />
+            android:textColor="@android:color/primary_text_light"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/GraphSex"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:fontFamily="@font/fredoka_regular"
             android:gravity="right"
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
             android:textColor="@android:color/primary_text_light"
@@ -85,11 +83,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:fontFamily="@font/fredoka_regular"
         android:gravity="center"
         android:padding="@dimen/activity_vertical_margin"
         android:text="Data Kosong! Hitung status gizi terlebih dahulu pada menu Hitung Status Gizi"
-        android:textAllCaps="true"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
         android:textColor="@color/primary_text"
         android:visibility="gone" />

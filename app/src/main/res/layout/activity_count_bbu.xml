@@ -15,7 +15,6 @@
         android:id="@+id/textViewNameCountBBU"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:fontFamily="@font/fredoka_regular"
         android:gravity="center"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 

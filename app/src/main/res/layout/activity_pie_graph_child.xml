@@ -15,7 +15,6 @@
         android:layout_marginLeft="@dimen/fab_margin"
         android:layout_marginTop="@dimen/fab_margin"
         android:layout_marginRight="@dimen/fab_margin"
-        android:fontFamily="@font/fredoka_regular"
         android:gravity="center"
         android:textAllCaps="true"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"

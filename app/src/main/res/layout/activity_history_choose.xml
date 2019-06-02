@@ -14,11 +14,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/fab_margin"
-        android:fontFamily="@font/fredoka_regular"
         android:gravity="center"
         android:text="Pilih Kategori dan Ambang Batas Status Gizi Anak Berdasarkan Indeks"
+        android:textAllCaps="true"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:textColor="@android:color/primary_text_light" />
+        android:textColor="@android:color/primary_text_light"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/ButtonToBBU"
@@ -62,7 +63,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="@dimen/fab_margin"
         android:backgroundTint="@color/kuning"
-        android:text="Indeks Masa Tubuh Menurut Umur"
+        android:text="Indeks Masa Tubuh menurut Umur"
         android:textAllCaps="false"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
         android:textColor="@color/common_google_signin_btn_text_dark"

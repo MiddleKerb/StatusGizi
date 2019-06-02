@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#E0E0E0"
     android:orientation="vertical"
     tools:context=".child.ListAnak">
 
@@ -15,7 +14,8 @@
         <android.support.v7.widget.RecyclerView
             android:id="@+id/RecycleListAnak"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="match_parent"
+            android:paddingTop="@dimen/activity_vertical_margin" />
     </android.support.v4.widget.SwipeRefreshLayout>
 
     <ProgressBar
@@ -29,7 +29,6 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:fontFamily="@font/fredoka_regular"
         android:gravity="center"
         android:padding="@dimen/activity_vertical_margin"
         android:text="Data Kosong! Daftarkan anak anda terlebih dahulu"

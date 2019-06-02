@@ -72,16 +72,30 @@
             android:textColor="@android:color/white"
             android:textStyle="bold" />
 
-        <TextView
-            android:id="@+id/link_signin"
-            android:layout_width="fill_parent"
+        <LinearLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/activity_small_margin"
-            android:gravity="center"
-            android:text="Sudah punya akun? Masuk di sini"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
-            android:textColor="@color/primary_text"
-            android:textStyle="bold" />
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_small_margin"
+                android:text="Sudah punya akun? Masuk "
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/primary_text" />
+
+            <TextView
+                android:id="@+id/link_signin"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_small_margin"
+                android:text="disini."
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold" />
+        </LinearLayout>
 
     </LinearLayout>
 </ScrollView>

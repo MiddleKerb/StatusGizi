@@ -51,23 +51,77 @@
             android:id="@+id/button_sign_in"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:backgroundTint="@color/colorPrimary"
             android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:backgroundTint="@color/colorPrimary"
             android:padding="@dimen/fab_margin"
             android:text="Masuk"
             android:textColor="@android:color/white"
             android:textStyle="bold" />
 
         <TextView
-            android:id="@+id/link_signup"
+            android:id="@+id/link_forgot"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/activity_small_margin"
+            android:text="Lupa password ?"
             android:gravity="center"
-            android:text="Belum punya akun? Daftar disini."
             android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
             android:textColor="@color/primary_text"
             android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_small_margin"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:background="@android:color/black" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activity_small_margin"
+                android:layout_marginRight="@dimen/activity_small_margin"
+                android:text="Atau"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/primary_text" />
+
+            <View
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_gravity="center"
+                android:background="@android:color/black" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_small_margin"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Belum punya akun? Daftar "
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/primary_text" />
+
+            <TextView
+                android:id="@+id/link_signup"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="disini."
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:textColor="@color/primary_text"
+                android:textStyle="bold" />
+        </LinearLayout>
+
     </LinearLayout>
 
 </ScrollView>
