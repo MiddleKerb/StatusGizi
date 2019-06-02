@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".makan.RekomendasiAnak">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/RecycleRekomendasiAnak"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/activity_vertical_margin" />
+
+    <TextView
+        android:id="@+id/empty_rekomendasi_anak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:padding="@dimen/activity_vertical_margin"
+        android:text="Data Kosong! Daftarkan anak anda terlebih dahulu di menu daftar anak"
+        android:textAllCaps="true"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:textColor="@color/primary_text"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/buttonRekomendasiAnak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/empty_rekomendasi_anak"
+        android:layout_centerInParent="true"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Daftar anak"
+        android:textColor="@color/putih"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/ProgressRekomendasiAnak"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

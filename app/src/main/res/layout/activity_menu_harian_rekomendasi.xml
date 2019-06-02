@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".makan.RekomendasiHarian">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/RecycleRekomendasiHarian"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="@dimen/activity_vertical_margin" />
+
+    <TextView
+        android:id="@+id/empty_rekomendasi_harian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:padding="@dimen/activity_vertical_margin"
+        android:text="Data menu kosong untuk hari ini! Daftarkan menu untuk anak anda terlebih dahulu di menu harian!"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:textColor="@color/primary_text"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/buttonRekomendasiHarian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/empty_rekomendasi_harian"
+        android:layout_centerInParent="true"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Daftar menu"
+        android:textColor="@color/putih"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+    <ProgressBar
+        android:id="@+id/ProgressRekomendasiHarian"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+</RelativeLayout>

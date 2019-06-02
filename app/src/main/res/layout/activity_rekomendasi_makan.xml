@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".makan.RekomendasiMakan">
+
+    <Button
+        android:id="@+id/buttonRekomendasiMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_small_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginBottom="@dimen/activity_small_margin"
+        android:backgroundTint="@color/colorAccent"
+        android:text="Lihat semua menu"
+        android:textColor="@color/putih"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewRekomendasiMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/buttonRekomendasiMenu"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:gravity="center"
+        android:paddingBottom="@dimen/activity_small_margin"
+        android:text="Menu makanan sesuai data menu harian anak"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+        android:textColor="@color/primary_text" />
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/RecycleRekomendasiMenu"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/textViewRekomendasiMenu" />
+
+    <ProgressBar
+        android:id="@+id/ProgressRekomendasiMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
+    <TextView
+        android:id="@+id/empty_rekomendasi_menu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:padding="@dimen/activity_vertical_margin"
+        android:text="Data Kosong!"
+        android:textAllCaps="true"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Headline"
+        android:textColor="@color/primary_text"
+        android:visibility="gone" />
+
+</RelativeLayout>
