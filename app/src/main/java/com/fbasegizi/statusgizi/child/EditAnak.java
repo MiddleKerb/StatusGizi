@@ -81,7 +81,7 @@ public class EditAnak extends BaseActivity implements View.OnClickListener {
         final List<String> genderList =
                 new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.child_genre)));
         final ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(
-                this, R.layout.custom_spinner, genderList) {
+                this, android.R.layout.simple_spinner_dropdown_item, genderList) {
             @Override
             public boolean isEnabled(int position) {
                 return position != 0;
@@ -100,7 +100,7 @@ public class EditAnak extends BaseActivity implements View.OnClickListener {
                 return view;
             }
         };
-        spinnerArrayAdapter.setDropDownViewResource(R.layout.custom_spinner);
+        spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         dSpinnerGender.setAdapter(spinnerArrayAdapter);
 
         if (gender.equals("Laki-laki")) {
@@ -191,6 +191,12 @@ public class EditAnak extends BaseActivity implements View.OnClickListener {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 hideProgressDialog();
                 mDatabase.child("child").child(getUid()).child(userId).setValue(anak);
+                Intent intent = new Intent(getBaseContext(), ListAnak.class);
+                String update = "update";
+                intent.putExtra("user_update", update);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+                finish();
             }
 
             @Override
@@ -201,13 +207,6 @@ public class EditAnak extends BaseActivity implements View.OnClickListener {
                         Snackbar.LENGTH_LONG).show();
             }
         });
-        hideProgressDialog();
-        Intent intent = new Intent(getBaseContext(), ListAnak.class);
-        String update = "update";
-        intent.putExtra("user_update", update);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
-        finish();
     }
 
     private void deleteChild(final String id) {
@@ -226,6 +225,12 @@ public class EditAnak extends BaseActivity implements View.OnClickListener {
                             mDatabase.child("BeratBadanTinggiBadan").child(requiredId).child(id).removeValue();
                             mDatabase.child("IndeksMassaTubuhUmur").child(requiredId).child(id).removeValue();
                             mDatabase.child("ParentDetail").child(requiredId).child(id).removeValue();
+                            Intent intent = new Intent(getBaseContext(), ListAnak.class);
+                            String update = "update";
+                            intent.putExtra("user_delete", update);
+                            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                            startActivity(intent);
+                            finish();
                         }
                     }
                 }
@@ -249,6 +254,12 @@ public class EditAnak extends BaseActivity implements View.OnClickListener {
                     mDatabase.child("BeratBadanTinggiBadan").child(getUid()).child(id).removeValue();
                     mDatabase.child("IndeksMassaTubuhUmur").child(getUid()).child(id).removeValue();
                     mDatabase.child("ParentDetail").child(getUid()).child(id).removeValue();
+                    Intent intent = new Intent(getBaseContext(), ListAnak.class);
+                    String update = "update";
+                    intent.putExtra("user_delete", update);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(intent);
+                    finish();
                 }
 
                 @Override
@@ -260,12 +271,6 @@ public class EditAnak extends BaseActivity implements View.OnClickListener {
                 }
             });
         }
-        Intent intent = new Intent(getBaseContext(), ListAnak.class);
-        String update = "update";
-        intent.putExtra("user_delete", update);
-        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-        startActivity(intent);
-        finish();
     }
 
     private void deleteDialog(final String Id) {

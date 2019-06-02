@@ -53,8 +53,6 @@ public class DaftarAnak extends BaseActivity implements View.OnClickListener {
     private TextInputLayout tLayoutChildName;
     private TextInputLayout tLayoutChildDate;
 
-    private int mYear, mMonth, mDay;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,7 +78,7 @@ public class DaftarAnak extends BaseActivity implements View.OnClickListener {
         final List<String> genderList =
                 new ArrayList<>(Arrays.asList(getResources().getStringArray(R.array.child_genre)));
         final ArrayAdapter<String> spinnerArrayAdapter = new ArrayAdapter<String>(
-                this, R.layout.custom_spinner, genderList) {
+                this, android.R.layout.simple_spinner_item, genderList) {
             @Override
             public boolean isEnabled(int position) {
                 return position != 0;
@@ -99,7 +97,7 @@ public class DaftarAnak extends BaseActivity implements View.OnClickListener {
                 return view;
             }
         };
-        spinnerArrayAdapter.setDropDownViewResource(R.layout.custom_spinner);
+        spinnerArrayAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         mChildGender.setAdapter(spinnerArrayAdapter);
 
         ActionBar actionBar = getSupportActionBar();

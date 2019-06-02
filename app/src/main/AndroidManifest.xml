@@ -16,7 +16,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".makan.MenuHarianAnak"></activity>
+        <activity android:name=".makan.RekomendasiDetail"></activity>
+        <activity android:name=".makan.RekomendasiHarian" />
+        <activity android:name=".makan.MenuHarianAnak" />
         <activity android:name=".makan.HitungMenu" />
         <activity android:name=".makan.MenuHarian" />
         <activity android:name=".makan.TambahMenu" />

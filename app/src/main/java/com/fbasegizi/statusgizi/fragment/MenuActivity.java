@@ -44,6 +44,7 @@ public class MenuActivity extends BaseActivity implements NavigationView.OnNavig
     private TextView textViewNama, textViewEmail, textViewGreetings;
     private DrawerLayout drawerLayout;
     private NavigationView navigationView;
+    private View headerView;
     private ActionBarDrawerToggle toggle;
     private Toolbar toolbar;
     private ImageView imageView;
@@ -72,11 +73,11 @@ public class MenuActivity extends BaseActivity implements NavigationView.OnNavig
         navigationView = findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        View headerView = navigationView.getHeaderView(0);
-        textViewNama = ((View) headerView).findViewById(R.id.NamaHeader);
-        textViewEmail = ((View) headerView).findViewById(R.id.EmailHeader);
-        textViewGreetings = ((View) headerView).findViewById(R.id.GreetingsHeader);
-        imageView = ((View) headerView).findViewById(R.id.imageNav);
+        headerView = navigationView.getHeaderView(0);
+        textViewNama = headerView.findViewById(R.id.NamaHeader);
+        textViewEmail = headerView.findViewById(R.id.EmailHeader);
+        textViewGreetings = headerView.findViewById(R.id.GreetingsHeader);
+        imageView = headerView.findViewById(R.id.imageNav);
 
         greetings();
 
@@ -116,7 +117,7 @@ public class MenuActivity extends BaseActivity implements NavigationView.OnNavig
                 .addValueEventListener(new ValueEventListener() {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                        String nama = dataSnapshot.child("Nama").getValue(String.class);
+                        String nama = dataSnapshot.child("nama").getValue(String.class);
                         textViewNama.setText(nama);
                         String email = dataSnapshot.child("email").getValue(String.class);
                         textViewEmail.setText(email);
@@ -124,8 +125,7 @@ public class MenuActivity extends BaseActivity implements NavigationView.OnNavig
 
                     @Override
                     public void onCancelled(@NonNull DatabaseError databaseError) {
-                        Toast.makeText(getApplicationContext(), "Server error, coba ulangi beberapa saat lagi!",
-                                Toast.LENGTH_SHORT).show();
+
                     }
                 });
         path.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
