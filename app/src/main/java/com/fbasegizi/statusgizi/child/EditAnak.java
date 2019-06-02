@@ -225,6 +225,7 @@ public class EditAnak extends BaseActivity implements View.OnClickListener {
                             mDatabase.child("BeratBadanTinggiBadan").child(requiredId).child(id).removeValue();
                             mDatabase.child("IndeksMassaTubuhUmur").child(requiredId).child(id).removeValue();
                             mDatabase.child("ParentDetail").child(requiredId).child(id).removeValue();
+                            mDatabase.child("Rekomendasi").child(requiredId).child(id).removeValue();
                             Intent intent = new Intent(getBaseContext(), ListAnak.class);
                             String update = "update";
                             intent.putExtra("user_delete", update);
@@ -254,6 +255,7 @@ public class EditAnak extends BaseActivity implements View.OnClickListener {
                     mDatabase.child("BeratBadanTinggiBadan").child(getUid()).child(id).removeValue();
                     mDatabase.child("IndeksMassaTubuhUmur").child(getUid()).child(id).removeValue();
                     mDatabase.child("ParentDetail").child(getUid()).child(id).removeValue();
+                    mDatabase.child("Rekomendasi").child(getUid()).child(id).removeValue();
                     Intent intent = new Intent(getBaseContext(), ListAnak.class);
                     String update = "update";
                     intent.putExtra("user_delete", update);
