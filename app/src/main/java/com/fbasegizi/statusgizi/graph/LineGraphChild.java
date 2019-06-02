@@ -32,6 +32,9 @@ import com.github.mikephil.charting.components.YAxis;
 import com.github.mikephil.charting.data.Entry;
 import com.github.mikephil.charting.data.LineData;
 import com.github.mikephil.charting.data.LineDataSet;
+import com.github.mikephil.charting.formatter.IFillFormatter;
+import com.github.mikephil.charting.interfaces.dataprovider.LineDataProvider;
+import com.github.mikephil.charting.interfaces.datasets.ILineDataSet;
 import com.github.mikephil.charting.utils.Utils;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -164,6 +167,14 @@ public class LineGraphChild extends BaseActivity {
                     progressBar.setVisibility(View.GONE);
                     final LineDataSet dataSet = new LineDataSet(entries, "Z-Score");
                     LineData data = new LineData(dataSet);
+
+                    dataSet.setDrawFilled(true);
+                    dataSet.setFillFormatter(new IFillFormatter() {
+                        @Override
+                        public float getFillLinePosition(ILineDataSet dataSet, LineDataProvider dataProvider) {
+                            return 0f;
+                        }
+                    });
                     if (Utils.getSDKInt() >= 18) {
                         Drawable drawable = ContextCompat.
                                 getDrawable(LineGraphChild.this, R.drawable.fade_blue);
@@ -171,7 +182,6 @@ public class LineGraphChild extends BaseActivity {
                     } else {
                         dataSet.setFillColor(Color.BLUE);
                     }
-                    dataSet.setDrawFilled(true);
                     dataSet.setDrawCircles(true);
                     dataSet.setHighlightEnabled(true);
                     dataSet.setDrawHighlightIndicators(true);
@@ -197,6 +207,7 @@ public class LineGraphChild extends BaseActivity {
                     chart.setDragEnabled(true);
                     chart.setScaleEnabled(true);
                     chart.setPinchZoom(true);
+                    chart.setDoubleTapToZoomEnabled(true);
                     chart.animateY(2000);
 
                     IMarker marker = new MyMarkerView(LineGraphChild.this, R.layout.custom_marker_view);
