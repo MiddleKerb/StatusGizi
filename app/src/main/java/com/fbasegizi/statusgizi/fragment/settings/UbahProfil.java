@@ -1,34 +1,39 @@
-package com.fbasegizi.statusgizi;
+package com.fbasegizi.statusgizi.fragment.settings;
 
 import android.Manifest;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
+import android.media.ExifInterface;
 import android.net.Uri;
 import android.os.Bundle;
+import android.os.Environment;
 import android.provider.MediaStore;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
-import android.support.design.widget.TextInputLayout;
-import android.support.v4.app.ActivityCompat;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBar;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import com.fbasegizi.statusgizi.fragment.AccountSetingsActivity;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.ActionBar;
+import androidx.core.content.ContextCompat;
+import androidx.core.content.FileProvider;
+
+import com.fbasegizi.statusgizi.BaseActivity;
+import com.fbasegizi.statusgizi.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -41,16 +46,21 @@ import com.google.firebase.storage.UploadTask;
 import com.squareup.picasso.Picasso;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+import java.util.Locale;
 
-public class UbahProfil extends BaseActivity implements View.OnClickListener {
-    private int STORAGE_PERMISSION_CODE = 1;
-    private int CAMERA_PERMISSION_CODE = 2;
-    private int GALLERY = 3, CAMERA = 4;
+import pub.devrel.easypermissions.AfterPermissionGranted;
+import pub.devrel.easypermissions.AppSettingsDialog;
+import pub.devrel.easypermissions.EasyPermissions;
 
-    private Uri contentURI;
-    private Bitmap bitmap;
+public class UbahProfil extends BaseActivity implements View.OnClickListener, EasyPermissions.PermissionCallbacks {
+    private int GALLERY = 1, CAMERA = 2;
+    private String mImageFileLocation = "";
 
     private EditText editText;
     private TextInputLayout textInputLayout;
@@ -106,7 +116,7 @@ public class UbahProfil extends BaseActivity implements View.OnClickListener {
             @Override
             public void onFailure(@NonNull Exception e) {
                 String download = "https://raw.githubusercontent.com/MiddleKerb/StatusGizi/master/app/src/main/res/drawable/splash_screen.png";
-                Picasso.get().load(String.valueOf(download)).fit().centerCrop().into(imageView);
+                Picasso.get().load(download).fit().centerCrop().into(imageView);
                 imageView.setVisibility(View.VISIBLE);
                 progressBar.setVisibility(View.GONE);
             }
@@ -142,7 +152,7 @@ public class UbahProfil extends BaseActivity implements View.OnClickListener {
                     @Override
                     public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                         dataSnapshot.getRef().child("nama").setValue(nama.trim().replaceAll(" +", " "));
-                        Intent intent = new Intent(getBaseContext(), AccountSetingsActivity.class);
+                        Intent intent = new Intent(getBaseContext(), AccountSettings.class);
                         intent.putExtra("profile_change", "update");
                         intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(intent);
@@ -194,8 +204,6 @@ public class UbahProfil extends BaseActivity implements View.OnClickListener {
                         showProgressDialog();
                         uploadFile();
                         hideProgressDialog();
-                        loadImage();
-                        ResetProfile();
                         dialog.cancel();
                     }
                 })
@@ -227,98 +235,33 @@ public class UbahProfil extends BaseActivity implements View.OnClickListener {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         if (which == 0) {
-                            checkPermissionStorage();
+                            choosePhotoFromGallery();
                         } else if (which == 1) {
-                            checkPermissionCamera();
+                            takePhotoFromCamera();
                         }
                     }
                 });
         pictureDialog.show();
     }
 
-    private void checkPermissionStorage() {
-        if (ContextCompat.checkSelfPermission(UbahProfil.this,
-                Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-            choosePhotoFromGallery();
+    @AfterPermissionGranted(123)
+    private void openPicture() {
+        String[] perms = {Manifest.permission.CAMERA, Manifest.permission.WRITE_EXTERNAL_STORAGE};
+        if (EasyPermissions.hasPermissions(this, perms)) {
+            showPictureDialog();
         } else {
-            requestStoragePermission();
-        }
-    }
-
-    private void checkPermissionCamera() {
-        if (ContextCompat.checkSelfPermission(UbahProfil.this,
-                Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
-            takePhotoFromCamera();
-        } else {
-            requestCameraPermission();
-        }
-    }
-
-    private void requestCameraPermission() {
-        if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.CAMERA)) {
-            new AlertDialog.Builder(this)
-                    .setTitle("Diperlukan izin")
-                    .setMessage("Izin ini diperlukan untuk membuka kamera pada perangkat Anda")
-                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            ActivityCompat.requestPermissions(UbahProfil.this,
-                                    new String[]{Manifest.permission.CAMERA}, CAMERA_PERMISSION_CODE);
-                        }
-                    })
-                    .setNegativeButton("Batal", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.cancel();
-                        }
-                    })
-                    .create().show();
-        } else {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.CAMERA}, CAMERA_PERMISSION_CODE);
-        }
-    }
-
-    private void requestStoragePermission() {
-        if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
-            new AlertDialog.Builder(this)
-                    .setTitle("Diperlukan izin")
-                    .setMessage("Izin ini diperlukan untuk membaca file pada perangkat Anda")
-                    .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            ActivityCompat.requestPermissions(UbahProfil.this,
-                                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
-                        }
-                    })
-                    .setNegativeButton("Batal", new DialogInterface.OnClickListener() {
-                        @Override
-                        public void onClick(DialogInterface dialog, int which) {
-                            dialog.cancel();
-                        }
-                    })
-                    .create().show();
-        } else {
-            ActivityCompat.requestPermissions(this,
-                    new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, STORAGE_PERMISSION_CODE);
+            EasyPermissions.requestPermissions(this, "Aplikasi ini mungkin tidak " +
+                            "berfungsi dengan benar tanpa izin yang diminta. Buka layar " +
+                            "pengaturan aplikasi untuk memodifikasi izin aplikasi.",
+                    123, perms);
         }
     }
 
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
-        if (requestCode == STORAGE_PERMISSION_CODE) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                choosePhotoFromGallery();
-            } else {
-                Toast.makeText(this, "Izin dibatalkan", Toast.LENGTH_SHORT).show();
-            }
-        } else if (requestCode == CAMERA_PERMISSION_CODE) {
-            if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                takePhotoFromCamera();
-            } else {
-                Toast.makeText(this, "Izin dibatalkan", Toast.LENGTH_SHORT).show();
-            }
-        }
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+
+        EasyPermissions.onRequestPermissionsResult(requestCode, permissions, grantResults, this);
     }
 
     public void choosePhotoFromGallery() {
@@ -329,54 +272,40 @@ public class UbahProfil extends BaseActivity implements View.OnClickListener {
 
     private void takePhotoFromCamera() {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (intent.resolveActivity(getPackageManager()) != null) {
-            startActivityForResult(intent, CAMERA);
+        File photofile = null;
+        try {
+            photofile = createImageFile();
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-    }
+        String authorities = getApplicationContext().getPackageName() + ".fileprovider";
+        Uri imageUri = null;
+        if (photofile != null) {
+            imageUri = FileProvider.getUriForFile(this, authorities, photofile);
+        }
+        intent.putExtra(MediaStore.EXTRA_OUTPUT, imageUri);
 
-    private void uploadFile() {
-        if (contentURI != null) {
-            path.putFile(contentURI).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                @Override
-                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    hideProgressDialog();
-                }
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    hideProgressDialog();
-                }
-            });
-        } else if (bitmap != null) {
-            ByteArrayOutputStream stream = new ByteArrayOutputStream();
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream);
-            byte[] bytes = stream.toByteArray();
-            path.putBytes(bytes).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
-                @Override
-                public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
-                    hideProgressDialog();
-                }
-            }).addOnFailureListener(new OnFailureListener() {
-                @Override
-                public void onFailure(@NonNull Exception e) {
-                    hideProgressDialog();
-                }
-            });
-        }/* else {
-            Toast.makeText(UbahProfil.this, "Gambar tidak boleh kosong!", Toast.LENGTH_SHORT).show();
-        }*/
+        startActivityForResult(intent, CAMERA);
     }
 
     @Override
-    public void onActivityResult(int requestCode, int resultCode, Intent data) {
+    public void onPermissionsGranted(int requestCode, @NonNull List<String> perms) {
 
-        super.onActivityResult(requestCode, resultCode, data);
-        if (resultCode == RESULT_CANCELED) {
-            return;
+    }
+
+    @Override
+    public void onPermissionsDenied(int requestCode, @NonNull List<String> perms) {
+        if (EasyPermissions.somePermissionPermanentlyDenied(this, perms)) {
+            new AppSettingsDialog.Builder(this).build().show();
         }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == GALLERY && resultCode == RESULT_OK) {
             if (data != null) {
-                contentURI = data.getData();
+                Uri contentURI = data.getData();
                 try {
                     Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), contentURI);
                     imageView.setImageBitmap(bitmap);
@@ -386,12 +315,79 @@ public class UbahProfil extends BaseActivity implements View.OnClickListener {
                     e.printStackTrace();
                 }
             }
-        } else if (requestCode == CAMERA && resultCode == RESULT_OK) {
-            Bundle extras = data.getExtras();
-            bitmap = (Bitmap) extras.get("data");
-            imageView.setImageBitmap(bitmap);
-            imageView.setRotation(90);
         }
+        if (requestCode == CAMERA && resultCode == RESULT_OK) {
+            rotateImage(setReducedImageSize());
+        }
+    }
+
+    private File createImageFile() throws IOException {
+        String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.ENGLISH).format(new Date());
+        String imageFileName = "StatusGizi_" + timestamp + "_";
+        File storageDirectory = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
+
+        File image = File.createTempFile(imageFileName, ".jpg", storageDirectory);
+        mImageFileLocation = image.getAbsolutePath();
+
+        return image;
+    }
+
+    private void rotateImage(Bitmap bitmap) {
+        ExifInterface exifInterface = null;
+        try {
+            exifInterface = new ExifInterface(mImageFileLocation);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        int orientation = exifInterface.getAttributeInt(ExifInterface.TAG_ORIENTATION, ExifInterface.ORIENTATION_UNDEFINED);
+        Matrix matrix = new Matrix();
+        if (orientation == ExifInterface.ORIENTATION_ROTATE_90) {
+            matrix.setRotate(90);
+        } else if (orientation == ExifInterface.ORIENTATION_ROTATE_180) {
+            matrix.setRotate(180);
+        } else if (orientation == ExifInterface.ORIENTATION_ROTATE_270) {
+            matrix.setRotate(270);
+        }
+        Bitmap rotatedBitmap = Bitmap.createBitmap(bitmap, 0, 0, bitmap.getWidth(), bitmap.getHeight(), matrix, true);
+        imageView.setImageBitmap(rotatedBitmap);
+    }
+
+    private Bitmap setReducedImageSize() {
+        int targetImageViewWidth = imageView.getWidth();
+        int targetImageViewHeight = imageView.getHeight();
+
+        BitmapFactory.Options bmOptions = new BitmapFactory.Options();
+        bmOptions.inJustDecodeBounds = true;
+        BitmapFactory.decodeFile(mImageFileLocation, bmOptions);
+        int cameraImageWidth = bmOptions.outWidth;
+        int cameraImageHeight = bmOptions.outHeight;
+
+        bmOptions.inSampleSize = Math.min(cameraImageWidth / targetImageViewWidth, cameraImageHeight / targetImageViewHeight);
+        bmOptions.inJustDecodeBounds = false;
+
+        return BitmapFactory.decodeFile(mImageFileLocation, bmOptions);
+    }
+
+    private void uploadFile() {
+        imageView.setDrawingCacheEnabled(true);
+        imageView.buildDrawingCache();
+        Bitmap bitmap = imageView.getDrawingCache();
+        ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
+        bitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream);
+        byte[] data = byteArrayOutputStream.toByteArray();
+
+        UploadTask uploadTask = path.putBytes(data);
+        uploadTask.addOnFailureListener(new OnFailureListener() {
+            @Override
+            public void onFailure(@NonNull Exception exception) {
+                Toast.makeText(UbahProfil.this, "Gagal mengunggah gambar", Toast.LENGTH_LONG).show();
+            }
+        }).addOnSuccessListener(new OnSuccessListener<UploadTask.TaskSnapshot>() {
+            @Override
+            public void onSuccess(UploadTask.TaskSnapshot taskSnapshot) {
+                ResetProfile();
+            }
+        });
     }
 
     @Override
@@ -413,23 +409,11 @@ public class UbahProfil extends BaseActivity implements View.OnClickListener {
     public void onClick(View v) {
         int i = v.getId();
         if (i == R.id.btn_change_profil) {
-            try {
-                InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                if (imm != null) {
-                    imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-                }
-            } catch (Exception ignored) {
-            }
+            hideKeyboard(UbahProfil.this);
             ResetDialog();
         } else if (i == R.id.btn_choose) {
-            try {
-                InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-                if (imm != null) {
-                    imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-                }
-            } catch (Exception ignored) {
-            }
-            showPictureDialog();
+            hideKeyboard(UbahProfil.this);
+            openPicture();
         }
     }
 }
