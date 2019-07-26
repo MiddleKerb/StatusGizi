@@ -2,13 +2,14 @@ package com.fbasegizi.statusgizi.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
-import android.support.v7.widget.CardView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import androidx.cardview.widget.CardView;
+import androidx.fragment.app.Fragment;
 
 import com.fbasegizi.statusgizi.R;
 import com.fbasegizi.statusgizi.child.ListAnak;
@@ -16,7 +17,6 @@ import com.fbasegizi.statusgizi.count.AnakCount;
 import com.fbasegizi.statusgizi.graph.ChildGraph;
 import com.fbasegizi.statusgizi.history.HistoryAnak;
 import com.fbasegizi.statusgizi.makan.MakanMain;
-import com.fbasegizi.statusgizi.parent.ParentList;
 import com.fbasegizi.statusgizi.research.MySqlMain;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -33,7 +33,6 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
         CardView menu_2 = root.findViewById(R.id.menu_2);
         CardView menu_3 = root.findViewById(R.id.menu_3);
         CardView menu_4 = root.findViewById(R.id.menu_4);
-        CardView menu_5 = root.findViewById(R.id.menu_5);
         CardView menu_6 = root.findViewById(R.id.menu_6);
         CardView menu_research = root.findViewById(R.id.menu_research);
 
@@ -41,16 +40,10 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
         menu_2.setOnClickListener(this);
         menu_3.setOnClickListener(this);
         menu_4.setOnClickListener(this);
-        menu_5.setOnClickListener(this);
         menu_6.setOnClickListener(this);
         menu_research.setOnClickListener(this);
 
-        if (getUid().equals("3Nxyv5oB5aVijKiO0bA0oZjEejg2")) {
-            menu_5.setVisibility(View.VISIBLE);
-        } else if (getUid().equals("nVk4cDUYBMhO9yYAOyfhr1KTgEO2")) {
-            menu_research.setVisibility(View.VISIBLE);
-        } else {
-            menu_5.setVisibility(View.GONE);
+        if (!getUid().equals("3Nxyv5oB5aVijKiO0bA0oZjEejg2")) {
             menu_research.setVisibility(View.GONE);
         }
 
@@ -79,10 +72,6 @@ public class MenuFragment extends Fragment implements View.OnClickListener {
                 break;
             case R.id.menu_4:
                 i = new Intent(getActivity(), ChildGraph.class);
-                startActivity(i);
-                break;
-            case R.id.menu_5:
-                i = new Intent(getActivity(), ParentList.class);
                 startActivity(i);
                 break;
             case R.id.menu_6:

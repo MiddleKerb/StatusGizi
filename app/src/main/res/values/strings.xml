@@ -102,4 +102,6 @@
     <string name="title_activity_pengaturan">Pengaturan</string>
     <string name="key_profil">key_profil</string>
     <string name="key_password">key_password</string>
+    <string name="key_faq">key_faq</string>
+    <string name="key_ref">key_ref</string>
 </resources>
