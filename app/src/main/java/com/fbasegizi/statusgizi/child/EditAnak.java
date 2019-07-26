@@ -6,17 +6,11 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
-import android.support.design.widget.TextInputLayout;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBar;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.inputmethod.InputMethodManager;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -24,9 +18,15 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.core.content.ContextCompat;
+
 import com.fbasegizi.statusgizi.BaseActivity;
 import com.fbasegizi.statusgizi.R;
 import com.fbasegizi.statusgizi.model.Anak;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -276,13 +276,7 @@ public class EditAnak extends BaseActivity implements View.OnClickListener {
     }
 
     private void deleteDialog(final String Id) {
-        try {
-            InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-            if (imm != null) {
-                imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-            }
-        } catch (Exception ignored) {
-        }
+        hideKeyboard(EditAnak.this);
 
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setTitle("Peringatan");
@@ -321,13 +315,7 @@ public class EditAnak extends BaseActivity implements View.OnClickListener {
     }
 
     private void updateDialog(final String Id, final String nama, final String gender, final String tanggal) {
-        try {
-            InputMethodManager imm = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
-            if (imm != null) {
-                imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
-            }
-        } catch (Exception ignored) {
-        }
+        hideKeyboard(EditAnak.this);
         if (!validateForm()) {
             return;
         }
@@ -388,9 +376,9 @@ public class EditAnak extends BaseActivity implements View.OnClickListener {
         int i = v.getId();
         switch (i) {
             case R.id.dialogChildDate:
-                String[] dateParts = tanggal.split("-");
+                String[] dateParts = dTextDate.getText().toString().split("-");
                 Integer mDay = Integer.valueOf(dateParts[0]);
-                Integer mMonth = Integer.parseInt(dateParts[1]);
+                Integer mMonth = Integer.parseInt(dateParts[1]) - 1;
                 Integer mYear = Integer.parseInt(dateParts[2]);
 
                 DatePickerDialog datePickerDialog = new DatePickerDialog(EditAnak.this,

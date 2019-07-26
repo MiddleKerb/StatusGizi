@@ -5,11 +5,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
-import android.support.design.widget.TextInputLayout;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -18,9 +13,15 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.core.content.ContextCompat;
+
 import com.fbasegizi.statusgizi.BaseActivity;
 import com.fbasegizi.statusgizi.R;
 import com.fbasegizi.statusgizi.model.BeratBadanUmur;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -913,7 +914,13 @@ public class BBUCount extends BaseActivity implements View.OnClickListener {
                         if (!dataSnapshot.exists()) {
                             mDatabase.child(id).setValue(beratBadanUmur);
                             Snackbar.make(BBUCount.this.findViewById(android.R.id.content),
-                                    "Data Berhasil Disimpan", Snackbar.LENGTH_LONG).show();
+                                    "Data Berhasil Disimpan", Snackbar.LENGTH_LONG)
+                                    .setAction("BATAL", new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            mDatabase.child(id).removeValue();
+                                        }
+                                    }).show();
                         } else {
                             Snackbar.make(BBUCount.this.findViewById(android.R.id.content),
                                     "Data di bulan ke " + UmurString + " sudah tersimpan",
@@ -967,10 +974,9 @@ public class BBUCount extends BaseActivity implements View.OnClickListener {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()) {
-            case android.R.id.home:
-                onBackPressed();
-                return true;
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+            return true;
         }
         return super.onOptionsItemSelected(item);
     }
