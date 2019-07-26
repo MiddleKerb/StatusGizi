@@ -4,7 +4,6 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
 
@@ -16,35 +15,108 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".makan.RekomendasiDetail"></activity>
-        <activity android:name=".makan.RekomendasiHarian" />
-        <activity android:name=".makan.MenuHarianAnak" />
-        <activity android:name=".makan.HitungMenu" />
-        <activity android:name=".makan.MenuHarian" />
-        <activity android:name=".makan.TambahMenu" />
-        <activity android:name=".makan.RekomendasiAnak" />
-        <activity android:name=".makan.RekomendasiMakan" />
-        <activity android:name=".makan.TambahBahan" />
-        <activity android:name=".makan.DaftarBahan" />
-        <activity android:name=".makan.MakanMain" />
-        <activity android:name=".research.FirebaseView" />
-        <activity android:name=".research.MySqlViewMain" />
-        <activity android:name=".research.MySqlView" />
-        <activity android:name=".research.MySqlEdit" />
-        <activity android:name=".research.MySqlInsert" />
-        <activity android:name=".research.MySqlMain" />
-        <activity android:name=".UbahProfil" />
-        <activity android:name=".count.AnakCount" />
         <activity
-            android:name=".fragment.AccountSetingsActivity"
+            android:name=".fragment.Help.RefWebView"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragment.Help.Referensi"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragment.Help.Panduan"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragment.Help.HelpSettings"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".makan.RekomendasiDetail"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".makan.RekomendasiHarian"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".makan.MenuHarianAnak"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".makan.MenuHarian"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".makan.TambahMenu"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".makan.RekomendasiAnak"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".makan.RekomendasiMakan"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".makan.TambahBahan"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".makan.DaftarBahan"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".makan.MakanMain"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".research.FirebaseView"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".research.MySqlViewMain"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".research.MySqlView"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".research.MySqlEdit"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".research.MySqlInsert"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".research.MySqlMain"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragment.settings.UbahProfil"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".count.AnakCount"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".fragment.settings.AccountSettings"
+            android:configChanges="orientation"
             android:label="Settings"
-            android:parentActivityName=".fragment.MenuActivity">
+            android:parentActivityName=".fragment.MenuActivity"
+            android:screenOrientation="portrait">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".fragment.MenuActivity" />
         </activity>
         <activity
             android:name=".MainActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:theme="@style/SplashScreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -55,29 +127,95 @@
         </activity>
         <activity
             android:name=".fragment.MenuActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".SignIn" />
-        <activity android:name=".SignUp" />
-        <activity android:name=".count.GiziCount" />
-        <activity android:name=".child.DaftarAnak" />
-        <activity android:name=".BaseActivity" />
-        <activity android:name=".count.BBUCount" />
-        <activity android:name=".history.HistoryAnak" />
-        <activity android:name=".history.HistoryChoose" />
-        <activity android:name=".history.HistoryDetail" />
-        <activity android:name=".count.TBUCount" />
-        <activity android:name=".child.ListAnak" />
-        <activity android:name=".history.HistoryBulan" />
-        <activity android:name=".count.BBTBCount" />
-        <activity android:name=".count.IMTUCount" />
-        <activity android:name=".graph.LineGraphChild" />
-        <activity android:name=".graph.ChildGraph" />
-        <activity android:name=".graph.GraphChoose" />
-        <activity android:name=".graph.PieGraphChild" />
-        <activity android:name=".parent.ParentList" />
-        <activity android:name=".parent.ParentDetailAdd" />
-        <activity android:name=".child.EditAnak" />
-        <activity android:name=".UbahPassword" />
+        <activity
+            android:name=".SignIn"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SignUp"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".count.GiziCount"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".child.DaftarAnak"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BaseActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".count.BBUCount"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".history.HistoryAnak"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".history.HistoryChoose"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".history.HistoryDetail"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".count.TBUCount"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".child.ListAnak"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".count.BBTBCount"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".count.IMTUCount"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".graph.LineGraphChild"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".graph.ChildGraph"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".graph.GraphChoose"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".graph.PieGraphChild"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".child.EditAnak"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".UbahPassword"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
     </application>
 
 </manifest>
