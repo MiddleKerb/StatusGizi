@@ -6,11 +6,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.annotation.NonNull;
-import android.support.design.widget.Snackbar;
-import android.support.design.widget.TextInputLayout;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.ActionBar;
 import android.text.TextUtils;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -24,9 +19,15 @@ import android.widget.EditText;
 import android.widget.Spinner;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBar;
+import androidx.core.content.ContextCompat;
+
 import com.fbasegizi.statusgizi.BaseActivity;
 import com.fbasegizi.statusgizi.R;
 import com.fbasegizi.statusgizi.model.Anak;
+import com.google.android.material.snackbar.Snackbar;
+import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -268,9 +269,17 @@ public class DaftarAnak extends BaseActivity implements View.OnClickListener {
         int i = v.getId();
         if (i == R.id.ChildDate) {
             final Calendar c = Calendar.getInstance();
-            Integer mYear = c.get(Calendar.YEAR);
-            Integer mMonth = c.get(Calendar.MONTH);
-            Integer mDay = c.get(Calendar.DAY_OF_MONTH);
+            int mYear, mMonth, mDay;
+            if (mChildDate.getText().toString().isEmpty()) {
+                mYear = c.get(Calendar.YEAR);
+                mMonth = c.get(Calendar.MONTH);
+                mDay = c.get(Calendar.DAY_OF_MONTH);
+            } else {
+                String[] dateParts = mChildDate.getText().toString().split("-");
+                mDay = Integer.valueOf(dateParts[0]);
+                mMonth = Integer.parseInt(dateParts[1]) - 1;
+                mYear = Integer.parseInt(dateParts[2]);
+            }
             DatePickerDialog datePickerDialog = new DatePickerDialog(this,
                     new DatePickerDialog.OnDateSetListener() {
                         @Override
