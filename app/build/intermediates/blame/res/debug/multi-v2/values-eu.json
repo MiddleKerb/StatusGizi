@@ -4,58 +4,7 @@
             "outputFile": "D:\\StatusGizi\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-eu\\values-eu.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\0a5b767f211b1596bf023b49f18b3dc2\\res\\values-eu\\values.xml",
-                    "from": {
-                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
-                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
-                        "startOffsets": "245,347,555,679,786,992,1117,1266,1398,1641,1747,1945,2073,2300,2485,2577,2668",
-                        "endColumns": "101,207,123,106,205,124,148,131,242,105,197,127,226,184,91,90,113",
-                        "endOffsets": "346,554,678,785,991,1116,1265,1397,1640,1746,1944,2072,2299,2484,2576,2667,2781"
-                    },
-                    "to": {
-                        "startLines": "29,30,31,32,33,34,35,36,38,39,40,41,42,43,44,45,46",
-                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
-                        "startOffsets": "2856,2962,3170,3298,3409,3615,3744,3897,4234,4477,4587,4785,4917,5144,5333,5429,5524",
-                        "endColumns": "105,207,127,110,205,128,152,135,242,109,197,131,226,188,95,94,117",
-                        "endOffsets": "2957,3165,3293,3404,3610,3739,3892,4028,4472,4582,4780,4912,5139,5328,5424,5519,5637"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\3114b371ac7c6aaf39f7ffb172942e86\\res\\values-eu\\values-eu.xml",
-                    "from": {
-                        "startLines": "2,3,4,5",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "105,204,373,463",
-                        "endColumns": "98,168,89,83",
-                        "endOffsets": "199,368,458,542"
-                    },
-                    "to": {
-                        "startLines": "47,50,51,52",
-                        "startColumns": "4,4,4,4",
-                        "startOffsets": "5642,5924,6093,6183",
-                        "endColumns": "98,168,89,83",
-                        "endOffsets": "5736,6088,6178,6262"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\1aef97b8f077db9bf8403bcd2dd9797e\\res\\values-eu\\values-eu.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "100",
-                        "endOffsets": "151"
-                    },
-                    "to": {
-                        "startLines": "49",
-                        "startColumns": "4",
-                        "startOffsets": "5823",
-                        "endColumns": "100",
-                        "endOffsets": "5919"
-                    }
-                },
-                {
-                    "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\01fb5de4583795212248c763055b6a24\\res\\values-eu\\values.xml",
+                    "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\2366f4e90a7f4dbfe4e42bca7c3a1648\\res\\values-eu\\values.xml",
                     "from": {
                         "startLines": "4",
                         "startColumns": "0",
@@ -72,7 +21,58 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\2cbad82525fb86823be2dda0b02f8872\\res\\values-eu\\values-eu.xml",
+                    "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\e8893f5065d8e1133a9b8ae58cb49a35\\res\\values-eu\\values-eu.xml",
+                    "from": {
+                        "startLines": "2,3,4,5",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "105,204,373,463",
+                        "endColumns": "98,168,89,83",
+                        "endOffsets": "199,368,458,542"
+                    },
+                    "to": {
+                        "startLines": "47,50,51,52",
+                        "startColumns": "4,4,4,4",
+                        "startOffsets": "5642,5924,6093,6183",
+                        "endColumns": "98,168,89,83",
+                        "endOffsets": "5736,6088,6178,6262"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\f269e3486375d801b8a977dbfcafcf28\\res\\values-eu\\values.xml",
+                    "from": {
+                        "startLines": "4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20",
+                        "startColumns": "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0",
+                        "startOffsets": "245,347,555,679,786,992,1117,1266,1398,1641,1747,1945,2073,2300,2485,2577,2668",
+                        "endColumns": "101,207,123,106,205,124,148,131,242,105,197,127,226,184,91,90,113",
+                        "endOffsets": "346,554,678,785,991,1116,1265,1397,1640,1746,1944,2072,2299,2484,2576,2667,2781"
+                    },
+                    "to": {
+                        "startLines": "29,30,31,32,33,34,35,36,38,39,40,41,42,43,44,45,46",
+                        "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",
+                        "startOffsets": "2856,2962,3170,3298,3409,3615,3744,3897,4234,4477,4587,4785,4917,5144,5333,5429,5524",
+                        "endColumns": "105,207,127,110,205,128,152,135,242,109,197,131,226,188,95,94,117",
+                        "endOffsets": "2957,3165,3293,3404,3610,3739,3892,4028,4472,4582,4780,4912,5139,5328,5424,5519,5637"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\52bf207fff5c684817ca445ef262392f\\res\\values-eu\\values-eu.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "100",
+                        "endOffsets": "151"
+                    },
+                    "to": {
+                        "startLines": "49",
+                        "startColumns": "4",
+                        "startOffsets": "5823",
+                        "endColumns": "100",
+                        "endOffsets": "5919"
+                    }
+                },
+                {
+                    "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\688dff0caa67ce38a5b289bb0908f358\\res\\values-eu\\values-eu.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

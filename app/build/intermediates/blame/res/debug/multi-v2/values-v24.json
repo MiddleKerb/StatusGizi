@@ -4,7 +4,7 @@
             "outputFile": "D:\\StatusGizi\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-v24\\values-v24.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\b2bdfdd52d620e57214040860557af69\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\ab7acd2f985a7541780a0515442e03dc\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -21,7 +21,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\2cbad82525fb86823be2dda0b02f8872\\res\\values-v24\\values-v24.xml",
+                    "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\688dff0caa67ce38a5b289bb0908f358\\res\\values-v24\\values-v24.xml",
                     "from": {
                         "startLines": "2,3",
                         "startColumns": "4,4",

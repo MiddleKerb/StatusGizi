@@ -1194,9 +1194,6 @@ id AgeFieldBBTB
 id AgeFieldBBU
 id AgeFieldIMTU
 id AgeFieldTBU
-id AgeParentDetail
-id AgeParentField
-id AgeParentFragment
 id ButtonAddBahan
 id ButtonAddMenu
 id ButtonCountBBTB
@@ -1210,7 +1207,6 @@ id ButtonMenuSimpan
 id ButtonSaveBBTB
 id ButtonSaveBBU
 id ButtonSaveIMTU
-id ButtonSaveParent
 id ButtonSaveTBU
 id ButtonToBBTB
 id ButtonToBBU
@@ -1264,9 +1260,6 @@ id EmailHeader
 id ErorrListDaftarAnak
 id ErorrListEditAnak
 id FUNCTION
-id FamilyParentDetail
-id FamilyParentField
-id FamilyParentFragment
 id FieldKaloriBahan
 id FieldKarboBahan
 id FieldLemakBahan
@@ -1287,9 +1280,6 @@ id GreetingsHeader
 id HeightFieldBBTB
 id HeightFieldIMTU
 id HeightFieldTBU
-id HeightParentDetail
-id HeightParentField
-id HeightParentFragment
 id HistoryDetailDOB
 id HistoryDetailGender
 id HistoryDetailName
@@ -1310,8 +1300,6 @@ id ProgressLineGraph
 id ProgressListAnak
 id ProgressListDaftarBahan
 id ProgressMenuAnak
-id ProgressParentDetail
-id ProgressParentGraph
 id ProgressPieGraph
 id ProgressRekomendasiAnak
 id ProgressRekomendasiHarian
@@ -1341,7 +1329,6 @@ id TextMenuHarianSama
 id TextMenuHarianTanggal
 id TextMenuHarianTotal
 id TextMenuHarianWarn
-id TextParentChild
 id TextViewBahanKalori
 id TextViewBahanKarbo
 id TextViewBahanLemak
@@ -1373,9 +1360,6 @@ id ViewHistoryDetail
 id WeightFieldBBTB
 id WeightFieldBBU
 id WeightFieldIMTU
-id WeightParentDetail
-id WeightParentField
-id WeightParentFragment
 id action0
 id action_bar
 id action_bar_activity_content
@@ -1423,6 +1407,8 @@ id buttonLineGraph
 id buttonListAnak
 id buttonMenuAnak
 id buttonPanel
+id buttonRefHitung
+id buttonRefKalori
 id buttonRekomendasiAnak
 id buttonRekomendasiHarian
 id buttonRekomendasiMenu
@@ -1484,8 +1470,6 @@ id empty_line_graph
 id empty_list_anak
 id empty_list_bahan
 id empty_menu_anak
-id empty_parent_detail
-id empty_parent_graph
 id empty_rekomendasi_anak
 id empty_rekomendasi_harian
 id empty_rekomendasi_menu
@@ -1538,8 +1522,6 @@ id link_forgot
 id link_signin
 id link_signup
 id listMode
-id listViewParentChild
-id listViewParentDetail
 id list_item
 id ll
 id lookAllGraph
@@ -1556,7 +1538,6 @@ id menu_1_4
 id menu_2
 id menu_3
 id menu_4
-id menu_5
 id menu_6
 id menu_research
 id message
@@ -1679,7 +1660,6 @@ id textLayoutChildName
 id textLayoutEmailIn
 id textLayoutEmailUp
 id textLayoutNameUp
-id textLayoutParentDetail
 id textLayoutPasswordIn
 id textLayoutPasswordUp
 id textSpacerNoButtons
@@ -1694,7 +1674,6 @@ id textViewNameCountBBTB
 id textViewNameCountBBU
 id textViewNameCountIMTU
 id textViewNameCountTBU
-id textViewNameParentDetail
 id textViewRekomendasiMenu
 id textViewTanggal
 id textViewWaktu
@@ -1722,6 +1701,7 @@ id up
 id useLogo
 id view_offset_helper
 id visible
+id webviewRef
 id wide
 id withText
 id wrap
@@ -1802,10 +1782,10 @@ layout activity_my_sql_insert
 layout activity_my_sql_main
 layout activity_my_sql_view
 layout activity_my_sql_view_main
-layout activity_parent_detail
-layout activity_parent_detail_list
-layout activity_parent_graph
+layout activity_panduan
 layout activity_pie_graph_child
+layout activity_ref_web_view
+layout activity_referensi
 layout activity_rekomendasi_anak
 layout activity_rekomendasi_detail
 layout activity_rekomendasi_makan
@@ -1833,7 +1813,6 @@ layout design_text_input_password_icon
 layout dialog_delete_detail
 layout dialog_update_detail
 layout expand_button
-layout fragment_help
 layout fragment_menu
 layout layout_bahan_list
 layout layout_bbtb_list
@@ -1966,8 +1945,10 @@ string heading_recent
 string hide_bottom_view_on_scroll_behavior
 string hint_email
 string hint_password
+string key_faq
 string key_password
 string key_profil
+string key_ref
 string login_label
 string lorem
 string menu_1_desc
@@ -1984,6 +1965,8 @@ string path_password_eye_mask_strike_through
 string path_password_eye_mask_visible
 string path_password_strike_through
 string project_id
+string rationale_ask
+string rationale_ask_again
 string search_menu_title
 string send_text
 string sign_in
@@ -1991,6 +1974,7 @@ string sign_up
 string status_bar_notification_info_overflow
 string summary_collapsed_preference_list
 string title_activity_pengaturan
+string title_settings_dialog
 string title_sign_in
 string v7_preference_off
 string v7_preference_on
@@ -2199,6 +2183,8 @@ style CardView_Light
 style CardViews
 style CardViews_Dark
 style CardViews_Light
+style EasyPermissions
+style EasyPermissions_Transparent
 style Platform_AppCompat
 style Platform_AppCompat_Light
 style Platform_MaterialComponents
@@ -2627,4 +2613,6 @@ styleable Toolbar android_gravity android_minHeight buttonGravity collapseConten
 styleable View android_theme android_focusable paddingEnd paddingStart theme
 styleable ViewBackgroundHelper android_background backgroundTint backgroundTintMode
 styleable ViewStubCompat android_id android_layout android_inflatedId
+xml filepaths
 xml pref_account
+xml pref_help

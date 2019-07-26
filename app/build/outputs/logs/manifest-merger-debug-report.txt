@@ -1,532 +1,545 @@
 -- Merging decision tree log ---
+provider#androidx.core.content.FileProvider
+INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:83:9-91:20
+	android:grantUriPermissions
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:87:13-47
+	android:authorities
+		INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:85:13-64
+	android:exported
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:86:13-37
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:84:13-62
 manifest
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-83:12
-INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-83:12
-INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-83:12
-INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-83:12
-MERGED from [com.android.support:design:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3275fa4027f0836e8b84350cd11a16cb\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:preference-v7:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3114b371ac7c6aaf39f7ffb172942e86\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2cbad82525fb86823be2dda0b02f8872\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\92f0d618cdd7e19d440e7a06e2fcc119\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\c7fcd26792a1993e74b7c5fc030e7018\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\22b490a094556dca1aa7c10d8b65ac21\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f1e9fb6210363dd7e22db4aa097f281a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.firebase:firebase-auth:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f42b744ae9c2650ed5dec725196fa88e\AndroidManifest.xml:17:1-42:12
-MERGED from [com.google.firebase:firebase-database:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4aa601ce932b40b652c564d7c2cc48fa\AndroidManifest.xml:15:1-36:12
-MERGED from [com.google.firebase:firebase-storage:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4440e15e85b84a1c970e28ad423308b5\AndroidManifest.xml:15:1-37:12
-MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e12a50ed1bf102cd9c512cc0754ccaf6\AndroidManifest.xml:17:1-22:12
-MERGED from [com.google.firebase:firebase-auth-interop:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e7502d5db151e6e5765498bfb28d24d7\AndroidManifest.xml:2:1-10:12
-MERGED from [com.google.firebase:firebase-core:16.0.9] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\29121b1441a6f566d06243eac7fd6aee\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-analytics:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2938c4e0f679ae4c8ba8ae98b3ff4d48\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\04434c729b10adcd4d9d6269ff406ab7\AndroidManifest.xml:17:1-36:12
-MERGED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:17:1-59:12
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\76b45d0fcb3e37e60be89ee9449ce2e4\AndroidManifest.xml:2:1-10:12
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\0a5b767f211b1596bf023b49f18b3dc2\AndroidManifest.xml:17:1-29:12
-MERGED from [com.google.firebase:firebase-common:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\67f924f80a69a3c7dc45cf21100fe5c0\AndroidManifest.xml:2:1-19:12
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bc02051a40cf5fd64d694add24ed1549\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:17:1-55:12
-MERGED from [com.google.android.gms:play-services-measurement-sdk:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\02bff3b0704f0e5eed0f56c278871fe0\AndroidManifest.xml:17:1-25:12
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bb07c22991be23eb493e220eb5eac890\AndroidManifest.xml:17:1-40:12
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e7d1ada84fb333d9054fed811421f1f5\AndroidManifest.xml:17:1-40:12
-MERGED from [com.google.android.gms:play-services-measurement-base:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\7508acbff2ea080bdfb4ef110a149031\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\b5ac67e64243d4571681943e72f58653\AndroidManifest.xml:2:1-9:12
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\48868b070ec5c414fc0d5932da00a2cf\AndroidManifest.xml:17:1-25:12
-MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\112c685aa3acdf3631282e0dfb5bad2d\AndroidManifest.xml:17:1-24:12
-MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\01fb5de4583795212248c763055b6a24\AndroidManifest.xml:17:1-28:12
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a81d24cd830c6a28a15ebc8040ae5790\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\b2bdfdd52d620e57214040860557af69\AndroidManifest.xml:17:1-22:12
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6fc7be7c54af479ff84cb199ced9457a\AndroidManifest.xml:2:1-14:12
-MERGED from [com.android.support:exifinterface:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6380c723bd97e287eda78960f1ed3db6\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f4e549400135d2c547089fae197f4a71\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\cb3143144d442ecdda7d905ca9d9cdce\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6c55c77e64803c59a0e5aac9d9d638fd\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:transition:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\69f5a786b1a95fb458b60a9a90b36c86\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:loader:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\83de04a1ebfaab9d622ae4a5431f993a\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2e9ed09e5b0c36e27537bac6dd07bdd6\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\8e76e8f566a1d3adcb9a3c7f20957f11\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\167e78090e4ed93eacd2cc11e1b2b761\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4e8db4a374fe70888639ab5671bfdde3\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:customview:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\cdedb4838d536337fc3550046c17a10b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\44c9dee0e131f166d1eed180d773ce31\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3b3b6afe90424c78789d767ddc32551b\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\1aef97b8f077db9bf8403bcd2dd9797e\AndroidManifest.xml:17:1-24:12
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\eafebbeeee5b2e04471d5aa0e8fdc710\AndroidManifest.xml:17:1-25:12
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\622963c71ef05ac68272169df8b42582\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\290277a756c08a7c12d7f03dc499d4f4\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f9de603dd8f1322e5c9191c5a998ed51\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\68470aec4626c0a15b90b324f3f2b4f5\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:print:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4c3e1f9230e0ff338678c87ef6d8c850\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\cc1c7bfaf9d98011a125c943e5d5a194\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\14bdd17e23a45daf27fbe043a336440b\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\abb5a83ce0523c8c06d441175ef1ae4c\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\23d3b116f6fd7d8ec74a06582c57a8cf\AndroidManifest.xml:17:1-22:12
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2e81fe7cf6d8cf8d9867e92c05e00c63\AndroidManifest.xml:17:1-22:12
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a82513f31c5ef1d07de20f5ac43285bf\AndroidManifest.xml:2:1-11:12
-MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4448f640b6d8889fef2048361e7f0672\AndroidManifest.xml:2:1-20:12
-MERGED from [com.google.firebase:firebase-database-collection:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\535b8fa731ff425b498688c34df778f1\AndroidManifest.xml:2:1-7:12
-INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-83:12
-INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-83:12
-INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-83:12
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-94:12
+INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-94:12
+INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-94:12
+INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-94:12
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\9cc464dde20df84f824815cf8240dfbe\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.preference:preference:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e8893f5065d8e1133a9b8ae58cb49a35\AndroidManifest.xml:17:1-22:12
+MERGED from [pub.devrel:easypermissions:3.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a79fd8a78f59701ba00b946b353398af\AndroidManifest.xml:2:1-19:12
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\688dff0caa67ce38a5b289bb0908f358\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\b5ebaea47f8aaef7e644e730a37972d4\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6b8a770607e4fb8384b93c9b9fc7227a\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\92bf9a3f3051d81619aaa0a1d38bfed1\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3b609899e7938c37bf596a6665539821\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\616f3d47cd6d04b6ce577b1addaa7405\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.media:media:1.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\ab7acd2f985a7541780a0515442e03dc\AndroidManifest.xml:17:1-22:12
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\783738ce53e8d6566976a33aa8a87677\AndroidManifest.xml:2:1-14:12
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\ec498f6dca2c45861be2e01e4eedf086\AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-database:18.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\991b920a7ba7dd5f2c01da233b7ac19b\AndroidManifest.xml:15:1-38:12
+MERGED from [com.google.firebase:firebase-storage:18.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\12fcf71c2596d226b14b00936f60adde\AndroidManifest.xml:15:1-39:12
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\9928389b9ace50e87f1eb9d0424e4fb1\AndroidManifest.xml:2:1-20:12
+MERGED from [com.google.firebase:firebase-auth:18.1.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f017b150f2e1e090bde399fcd073178c\AndroidManifest.xml:17:1-42:12
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\ce456507b5378a48fd264c295a3e0e79\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-core:17.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\7f88a6743e13d7411d5e3cdd5dcb054c\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-analytics:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2cc6da2f2cccce767943ffb91eed1d27\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f5f263c4c5fc4a2e5c73b9d0f2980ae9\AndroidManifest.xml:17:1-36:12
+MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:17:1-47:12
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\fa653a8836b00891f96a164b0cf9f497\AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f269e3486375d801b8a977dbfcafcf28\AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.firebase:firebase-common:18.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3c68391230ac598040065cf90c872558\AndroidManifest.xml:2:1-19:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\ea8bb2eac52efaae8394c11e0563c46e\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:17:1-55:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\db565dc4c568e99e738ce43c3136f1e1\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2e300cefe6d5dc511926d0bd65f52c21\AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2403bc235350d533e9840c53dc6c98fa\AndroidManifest.xml:17:1-40:12
+MERGED from [com.google.android.gms:play-services-measurement-base:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a454e54cc6aa7431d583ed7138ce890e\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\fd4b3c1d60842518361c4de2d92122f8\AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\42eef2f7af0dde0a2a78ee5ad77f5dcb\AndroidManifest.xml:17:1-25:12
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\1a3d74ce8a2cc8c3c6ed59235f7722ba\AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2366f4e90a7f4dbfe4e42bca7c3a1648\AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\749c3e0e9f37deeb534515d7332af52f\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2f4883a79a2e21377382fdb4e9d442c0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\1f6f9e4b275da2fe7aa202ae28fe4ac7\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\953e042bfb2e942f26837937ed21f48b\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a556f52195a05bc42b4ce85b726431e9\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\1d66963d0f72c485f353b6d621796e5b\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a018cea7271c1981863df7c5e0081cc0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\9bc51da57c52a01a297a1759c8357a61\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\d2a07f20cc34007264768102fb1582d8\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\c3caad268c37f8f92998e774e203844b\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\b2182e28af4d73dbe6ca627b9c0fc0e0\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3167597eba8c8e671db1091197a31c28\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\52bf207fff5c684817ca445ef262392f\AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4eca24b03b44410a6285a2065a61c780\AndroidManifest.xml:17:1-25:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\0a7181858e1ccd1fd9ccca0c64cf7879\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\b0a76bbf5288896387979df89fdfd945\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\7c47801188ffa2ad6a67a521a545d425\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\c3a023dd6f931d195b237d58bf17d855\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\1c2df3a0f010c88518d4e001e681e67d\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e88f3b13373266a9c7f3ac3a63ccdf64\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\ff26734dc7271b1579e4504325b1fb24\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\80bd939a9aea8ca34d6b12d0904a9a27\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\b83f5e7cfbc4dc71e6ea715d55d3be30\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\d4e265cd28c2a747f49be54a3b7e135f\AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\7ffcaa73d3852e2fb92607a4974ff110\AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.firebase:firebase-database-collection:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\018aebd6fa00d7ccd38d96c6fb88b50e\AndroidManifest.xml:2:1-7:12
+INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-94:12
+INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-94:12
+INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-94:12
 	package
 		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:3:5-39
 		INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml
 		INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-83:12
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-94:12
 		INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-83:12
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-94:12
 		INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:11-69
 uses-permission#android.permission.INTERNET
 ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:5:5-67
-MERGED from [com.google.firebase:firebase-database:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4aa601ce932b40b652c564d7c2cc48fa\AndroidManifest.xml:26:5-67
-MERGED from [com.google.firebase:firebase-database:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4aa601ce932b40b652c564d7c2cc48fa\AndroidManifest.xml:26:5-67
-MERGED from [com.google.firebase:firebase-storage:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4440e15e85b84a1c970e28ad423308b5\AndroidManifest.xml:27:5-67
-MERGED from [com.google.firebase:firebase-storage:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4440e15e85b84a1c970e28ad423308b5\AndroidManifest.xml:27:5-67
-MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\04434c729b10adcd4d9d6269ff406ab7\AndroidManifest.xml:22:5-67
-MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\04434c729b10adcd4d9d6269ff406ab7\AndroidManifest.xml:22:5-67
-MERGED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:23:5-67
-MERGED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bb07c22991be23eb493e220eb5eac890\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bb07c22991be23eb493e220eb5eac890\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e7d1ada84fb333d9054fed811421f1f5\AndroidManifest.xml:23:5-67
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e7d1ada84fb333d9054fed811421f1f5\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-database:18.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\991b920a7ba7dd5f2c01da233b7ac19b\AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-database:18.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\991b920a7ba7dd5f2c01da233b7ac19b\AndroidManifest.xml:26:5-67
+MERGED from [com.google.firebase:firebase-storage:18.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\12fcf71c2596d226b14b00936f60adde\AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-storage:18.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\12fcf71c2596d226b14b00936f60adde\AndroidManifest.xml:27:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f5f263c4c5fc4a2e5c73b9d0f2980ae9\AndroidManifest.xml:22:5-67
+MERGED from [com.google.android.gms:play-services-measurement-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f5f263c4c5fc4a2e5c73b9d0f2980ae9\AndroidManifest.xml:22:5-67
+MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2e300cefe6d5dc511926d0bd65f52c21\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2e300cefe6d5dc511926d0bd65f52c21\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2403bc235350d533e9840c53dc6c98fa\AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2403bc235350d533e9840c53dc6c98fa\AndroidManifest.xml:23:5-67
 	android:name
 		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:5:22-64
 uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:6:5-79
-MERGED from [com.google.firebase:firebase-database:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4aa601ce932b40b652c564d7c2cc48fa\AndroidManifest.xml:25:5-79
-MERGED from [com.google.firebase:firebase-database:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4aa601ce932b40b652c564d7c2cc48fa\AndroidManifest.xml:25:5-79
-MERGED from [com.google.firebase:firebase-storage:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4440e15e85b84a1c970e28ad423308b5\AndroidManifest.xml:26:5-79
-MERGED from [com.google.firebase:firebase-storage:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4440e15e85b84a1c970e28ad423308b5\AndroidManifest.xml:26:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\04434c729b10adcd4d9d6269ff406ab7\AndroidManifest.xml:23:5-79
-MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\04434c729b10adcd4d9d6269ff406ab7\AndroidManifest.xml:23:5-79
-MERGED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:22:5-79
-MERGED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:22:5-79
-MERGED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bb07c22991be23eb493e220eb5eac890\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bb07c22991be23eb493e220eb5eac890\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e7d1ada84fb333d9054fed811421f1f5\AndroidManifest.xml:24:5-79
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e7d1ada84fb333d9054fed811421f1f5\AndroidManifest.xml:24:5-79
+MERGED from [com.google.firebase:firebase-database:18.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\991b920a7ba7dd5f2c01da233b7ac19b\AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-database:18.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\991b920a7ba7dd5f2c01da233b7ac19b\AndroidManifest.xml:25:5-79
+MERGED from [com.google.firebase:firebase-storage:18.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\12fcf71c2596d226b14b00936f60adde\AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-storage:18.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\12fcf71c2596d226b14b00936f60adde\AndroidManifest.xml:26:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f5f263c4c5fc4a2e5c73b9d0f2980ae9\AndroidManifest.xml:23:5-79
+MERGED from [com.google.android.gms:play-services-measurement-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f5f263c4c5fc4a2e5c73b9d0f2980ae9\AndroidManifest.xml:23:5-79
+MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2e300cefe6d5dc511926d0bd65f52c21\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2e300cefe6d5dc511926d0bd65f52c21\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2403bc235350d533e9840c53dc6c98fa\AndroidManifest.xml:24:5-79
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2403bc235350d533e9840c53dc6c98fa\AndroidManifest.xml:24:5-79
 	android:name
 		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:6:22-76
-uses-permission#android.permission.READ_EXTERNAL_STORAGE
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:7:5-80
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:7:22-77
 uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:8:5-81
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:7:5-81
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:8:22-78
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:7:22-78
 uses-permission#android.permission.CAMERA
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:9:5-65
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:8:5-65
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:9:22-62
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:8:22-62
 application
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:11:5-81:19
-MERGED from [com.android.support:design:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3275fa4027f0836e8b84350cd11a16cb\AndroidManifest.xml:22:5-20
-MERGED from [com.android.support:design:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3275fa4027f0836e8b84350cd11a16cb\AndroidManifest.xml:22:5-20
-MERGED from [com.google.firebase:firebase-auth:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f42b744ae9c2650ed5dec725196fa88e\AndroidManifest.xml:23:5-40:19
-MERGED from [com.google.firebase:firebase-auth:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f42b744ae9c2650ed5dec725196fa88e\AndroidManifest.xml:23:5-40:19
-MERGED from [com.google.firebase:firebase-database:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4aa601ce932b40b652c564d7c2cc48fa\AndroidManifest.xml:28:5-34:19
-MERGED from [com.google.firebase:firebase-database:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4aa601ce932b40b652c564d7c2cc48fa\AndroidManifest.xml:28:5-34:19
-MERGED from [com.google.firebase:firebase-storage:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4440e15e85b84a1c970e28ad423308b5\AndroidManifest.xml:29:5-35:19
-MERGED from [com.google.firebase:firebase-storage:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4440e15e85b84a1c970e28ad423308b5\AndroidManifest.xml:29:5-35:19
-MERGED from [com.google.firebase:firebase-auth-interop:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e7502d5db151e6e5765498bfb28d24d7\AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-auth-interop:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e7502d5db151e6e5765498bfb28d24d7\AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-core:16.0.9] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\29121b1441a6f566d06243eac7fd6aee\AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-core:16.0.9] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\29121b1441a6f566d06243eac7fd6aee\AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-analytics:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2938c4e0f679ae4c8ba8ae98b3ff4d48\AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-analytics:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2938c4e0f679ae4c8ba8ae98b3ff4d48\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\04434c729b10adcd4d9d6269ff406ab7\AndroidManifest.xml:26:5-34:19
-MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\04434c729b10adcd4d9d6269ff406ab7\AndroidManifest.xml:26:5-34:19
-MERGED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:28:5-57:19
-MERGED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:28:5-57:19
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\76b45d0fcb3e37e60be89ee9449ce2e4\AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\76b45d0fcb3e37e60be89ee9449ce2e4\AndroidManifest.xml:7:5-8:19
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\0a5b767f211b1596bf023b49f18b3dc2\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\0a5b767f211b1596bf023b49f18b3dc2\AndroidManifest.xml:22:5-27:19
-MERGED from [com.google.firebase:firebase-common:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\67f924f80a69a3c7dc45cf21100fe5c0\AndroidManifest.xml:11:5-17:19
-MERGED from [com.google.firebase:firebase-common:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\67f924f80a69a3c7dc45cf21100fe5c0\AndroidManifest.xml:11:5-17:19
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bc02051a40cf5fd64d694add24ed1549\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bc02051a40cf5fd64d694add24ed1549\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:28:5-53:19
-MERGED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:28:5-53:19
-MERGED from [com.google.android.gms:play-services-measurement-sdk:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\02bff3b0704f0e5eed0f56c278871fe0\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-measurement-sdk:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\02bff3b0704f0e5eed0f56c278871fe0\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bb07c22991be23eb493e220eb5eac890\AndroidManifest.xml:28:5-38:19
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bb07c22991be23eb493e220eb5eac890\AndroidManifest.xml:28:5-38:19
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e7d1ada84fb333d9054fed811421f1f5\AndroidManifest.xml:28:5-38:19
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e7d1ada84fb333d9054fed811421f1f5\AndroidManifest.xml:28:5-38:19
-MERGED from [com.google.android.gms:play-services-measurement-base:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\7508acbff2ea080bdfb4ef110a149031\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-measurement-base:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\7508acbff2ea080bdfb4ef110a149031\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\b5ac67e64243d4571681943e72f58653\AndroidManifest.xml:7:5-20
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\b5ac67e64243d4571681943e72f58653\AndroidManifest.xml:7:5-20
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\48868b070ec5c414fc0d5932da00a2cf\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\48868b070ec5c414fc0d5932da00a2cf\AndroidManifest.xml:22:5-23:19
-MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\112c685aa3acdf3631282e0dfb5bad2d\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\112c685aa3acdf3631282e0dfb5bad2d\AndroidManifest.xml:22:5-20
-MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\01fb5de4583795212248c763055b6a24\AndroidManifest.xml:22:5-26:19
-MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\01fb5de4583795212248c763055b6a24\AndroidManifest.xml:22:5-26:19
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6fc7be7c54af479ff84cb199ced9457a\AndroidManifest.xml:7:5-12:19
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6fc7be7c54af479ff84cb199ced9457a\AndroidManifest.xml:7:5-12:19
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\1aef97b8f077db9bf8403bcd2dd9797e\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\1aef97b8f077db9bf8403bcd2dd9797e\AndroidManifest.xml:22:5-94
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\eafebbeeee5b2e04471d5aa0e8fdc710\AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\eafebbeeee5b2e04471d5aa0e8fdc710\AndroidManifest.xml:22:5-23:19
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a82513f31c5ef1d07de20f5ac43285bf\AndroidManifest.xml:9:5-20
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a82513f31c5ef1d07de20f5ac43285bf\AndroidManifest.xml:9:5-20
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:10:5-92:19
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\9cc464dde20df84f824815cf8240dfbe\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\9cc464dde20df84f824815cf8240dfbe\AndroidManifest.xml:22:5-20
+MERGED from [pub.devrel:easypermissions:3.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a79fd8a78f59701ba00b946b353398af\AndroidManifest.xml:11:5-17:19
+MERGED from [pub.devrel:easypermissions:3.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a79fd8a78f59701ba00b946b353398af\AndroidManifest.xml:11:5-17:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\783738ce53e8d6566976a33aa8a87677\AndroidManifest.xml:7:5-12:19
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\783738ce53e8d6566976a33aa8a87677\AndroidManifest.xml:7:5-12:19
+MERGED from [com.google.firebase:firebase-database:18.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\991b920a7ba7dd5f2c01da233b7ac19b\AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-database:18.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\991b920a7ba7dd5f2c01da233b7ac19b\AndroidManifest.xml:28:5-36:19
+MERGED from [com.google.firebase:firebase-storage:18.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\12fcf71c2596d226b14b00936f60adde\AndroidManifest.xml:29:5-37:19
+MERGED from [com.google.firebase:firebase-storage:18.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\12fcf71c2596d226b14b00936f60adde\AndroidManifest.xml:29:5-37:19
+MERGED from [com.google.firebase:firebase-auth:18.1.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f017b150f2e1e090bde399fcd073178c\AndroidManifest.xml:23:5-40:19
+MERGED from [com.google.firebase:firebase-auth:18.1.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f017b150f2e1e090bde399fcd073178c\AndroidManifest.xml:23:5-40:19
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\ce456507b5378a48fd264c295a3e0e79\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\ce456507b5378a48fd264c295a3e0e79\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-core:17.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\7f88a6743e13d7411d5e3cdd5dcb054c\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-core:17.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\7f88a6743e13d7411d5e3cdd5dcb054c\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2cc6da2f2cccce767943ffb91eed1d27\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-analytics:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2cc6da2f2cccce767943ffb91eed1d27\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f5f263c4c5fc4a2e5c73b9d0f2980ae9\AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.android.gms:play-services-measurement-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f5f263c4c5fc4a2e5c73b9d0f2980ae9\AndroidManifest.xml:26:5-34:19
+MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:28:5-45:19
+MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:28:5-45:19
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\fa653a8836b00891f96a164b0cf9f497\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\fa653a8836b00891f96a164b0cf9f497\AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f269e3486375d801b8a977dbfcafcf28\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f269e3486375d801b8a977dbfcafcf28\AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.firebase:firebase-common:18.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3c68391230ac598040065cf90c872558\AndroidManifest.xml:11:5-17:19
+MERGED from [com.google.firebase:firebase-common:18.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3c68391230ac598040065cf90c872558\AndroidManifest.xml:11:5-17:19
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\ea8bb2eac52efaae8394c11e0563c46e\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\ea8bb2eac52efaae8394c11e0563c46e\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:28:5-53:19
+MERGED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:28:5-53:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\db565dc4c568e99e738ce43c3136f1e1\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\db565dc4c568e99e738ce43c3136f1e1\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2e300cefe6d5dc511926d0bd65f52c21\AndroidManifest.xml:28:5-38:19
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2e300cefe6d5dc511926d0bd65f52c21\AndroidManifest.xml:28:5-38:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2403bc235350d533e9840c53dc6c98fa\AndroidManifest.xml:28:5-38:19
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2403bc235350d533e9840c53dc6c98fa\AndroidManifest.xml:28:5-38:19
+MERGED from [com.google.android.gms:play-services-measurement-base:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a454e54cc6aa7431d583ed7138ce890e\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-measurement-base:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a454e54cc6aa7431d583ed7138ce890e\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\fd4b3c1d60842518361c4de2d92122f8\AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\fd4b3c1d60842518361c4de2d92122f8\AndroidManifest.xml:7:5-20
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\42eef2f7af0dde0a2a78ee5ad77f5dcb\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\42eef2f7af0dde0a2a78ee5ad77f5dcb\AndroidManifest.xml:22:5-23:19
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\1a3d74ce8a2cc8c3c6ed59235f7722ba\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\1a3d74ce8a2cc8c3c6ed59235f7722ba\AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2366f4e90a7f4dbfe4e42bca7c3a1648\AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2366f4e90a7f4dbfe4e42bca7c3a1648\AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\52bf207fff5c684817ca445ef262392f\AndroidManifest.xml:22:5-89
+MERGED from [androidx.core:core:1.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\52bf207fff5c684817ca445ef262392f\AndroidManifest.xml:22:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4eca24b03b44410a6285a2065a61c780\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4eca24b03b44410a6285a2065a61c780\AndroidManifest.xml:22:5-23:19
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\7ffcaa73d3852e2fb92607a4974ff110\AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\7ffcaa73d3852e2fb92607a4974ff110\AndroidManifest.xml:9:5-20
 	android:appComponentFactory
-		ADDED from [com.android.support:support-compat:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\1aef97b8f077db9bf8403bcd2dd9797e\AndroidManifest.xml:22:18-91
+		ADDED from [androidx.core:core:1.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\52bf207fff5c684817ca445ef262392f\AndroidManifest.xml:22:18-86
 	android:supportsRtl
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:17:9-35
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:16:9-35
 	android:label
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:15:9-41
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:14:9-41
 	android:fullBackupContent
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:13:9-41
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:12:9-41
 	android:roundIcon
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:16:9-54
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:15:9-54
 	android:icon
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:14:9-43
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:13:9-43
 	android:allowBackup
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:12:9-35
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:11:9-35
 	android:theme
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:18:9-40
-activity#com.fbasegizi.statusgizi.makan.RekomendasiDetail
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:19:9-70
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:17:9-40
+activity#com.fbasegizi.statusgizi.fragment.Help.RefWebView
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:18:9-62
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:18:19-59
+activity#com.fbasegizi.statusgizi.fragment.Help.Referensi
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:19:9-61
 	android:name
 		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:19:19-58
+activity#com.fbasegizi.statusgizi.fragment.Help.Panduan
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:20:9-59
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:20:19-56
+activity#com.fbasegizi.statusgizi.fragment.Help.HelpSettings
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:21:9-64
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:21:19-61
+activity#com.fbasegizi.statusgizi.makan.RekomendasiDetail
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:22:9-61
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:22:19-58
 activity#com.fbasegizi.statusgizi.makan.RekomendasiHarian
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:20:9-61
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:23:9-61
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:20:19-58
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:23:19-58
 activity#com.fbasegizi.statusgizi.makan.MenuHarianAnak
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:21:9-58
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:24:9-58
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:21:19-55
-activity#com.fbasegizi.statusgizi.makan.HitungMenu
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:22:9-54
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:22:19-51
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:24:19-55
 activity#com.fbasegizi.statusgizi.makan.MenuHarian
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:23:9-54
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:25:9-54
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:23:19-51
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:25:19-51
 activity#com.fbasegizi.statusgizi.makan.TambahMenu
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:24:9-54
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:26:9-54
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:24:19-51
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:26:19-51
 activity#com.fbasegizi.statusgizi.makan.RekomendasiAnak
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:25:9-59
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:27:9-59
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:25:19-56
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:27:19-56
 activity#com.fbasegizi.statusgizi.makan.RekomendasiMakan
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:26:9-60
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:28:9-60
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:26:19-57
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:28:19-57
 activity#com.fbasegizi.statusgizi.makan.TambahBahan
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:27:9-55
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:29:9-55
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:27:19-52
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:29:19-52
 activity#com.fbasegizi.statusgizi.makan.DaftarBahan
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:28:9-55
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:30:9-55
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:28:19-52
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:30:19-52
 activity#com.fbasegizi.statusgizi.makan.MakanMain
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:29:9-53
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:31:9-53
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:29:19-50
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:31:19-50
 activity#com.fbasegizi.statusgizi.research.FirebaseView
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:30:9-59
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:32:9-59
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:30:19-56
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:32:19-56
 activity#com.fbasegizi.statusgizi.research.MySqlViewMain
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:31:9-60
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:33:9-60
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:31:19-57
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:33:19-57
 activity#com.fbasegizi.statusgizi.research.MySqlView
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:32:9-56
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:34:9-56
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:32:19-53
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:34:19-53
 activity#com.fbasegizi.statusgizi.research.MySqlEdit
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:33:9-56
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:33:19-53
-activity#com.fbasegizi.statusgizi.research.MySqlInsert
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:34:9-58
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:34:19-55
-activity#com.fbasegizi.statusgizi.research.MySqlMain
 ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:35:9-56
 	android:name
 		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:35:19-53
-activity#com.fbasegizi.statusgizi.UbahProfil
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:36:9-48
+activity#com.fbasegizi.statusgizi.research.MySqlInsert
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:36:9-58
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:36:19-45
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:36:19-55
+activity#com.fbasegizi.statusgizi.research.MySqlMain
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:37:9-56
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:37:19-53
+activity#com.fbasegizi.statusgizi.fragment.settings.UbahProfil
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:38:9-66
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:38:19-63
 activity#com.fbasegizi.statusgizi.count.AnakCount
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:37:9-53
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:39:9-53
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:37:19-50
-activity#com.fbasegizi.statusgizi.fragment.AccountSetingsActivity
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:38:9-45:20
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:39:19-50
+activity#com.fbasegizi.statusgizi.fragment.settings.AccountSettings
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:40:9-47:20
 	android:parentActivityName
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:41:13-64
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:43:13-64
 	android:label
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:40:13-37
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:42:13-37
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:39:13-60
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:41:13-62
 meta-data#android.support.PARENT_ACTIVITY
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:42:13-44:58
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:44:13-46:58
 	android:value
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:44:17-55
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:46:17-55
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:43:17-63
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:45:17-63
 activity#com.fbasegizi.statusgizi.MainActivity
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:46:9-55:20
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:48:9-57:20
 	android:theme
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:48:13-53
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:50:13-53
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:47:13-41
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:49:13-41
 intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.LAUNCHER
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:49:13-54:29
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:51:13-56:29
 action#android.intent.action.MAIN
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:50:17-69
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:52:17-69
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:50:25-66
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:52:25-66
 action#android.intent.action.VIEW
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:51:17-69
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:53:17-69
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:51:25-66
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:53:25-66
 category#android.intent.category.LAUNCHER
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:53:17-77
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:55:17-77
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:53:27-74
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:55:27-74
 activity#com.fbasegizi.statusgizi.fragment.MenuActivity
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:56:9-58:59
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:58:9-62:59
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:61:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:60:13-48
 	android:theme
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:58:13-56
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:62:13-56
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:57:13-50
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:59:13-50
 activity#com.fbasegizi.statusgizi.SignIn
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:59:9-44
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:63:9-44
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:59:19-41
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:63:19-41
 activity#com.fbasegizi.statusgizi.SignUp
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:60:9-44
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:64:9-44
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:60:19-41
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:64:19-41
 activity#com.fbasegizi.statusgizi.count.GiziCount
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:61:9-53
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:65:9-53
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:61:19-50
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:65:19-50
 activity#com.fbasegizi.statusgizi.child.DaftarAnak
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:62:9-54
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:66:9-54
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:62:19-51
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:66:19-51
 activity#com.fbasegizi.statusgizi.BaseActivity
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:63:9-50
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:67:9-50
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:63:19-47
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:67:19-47
 activity#com.fbasegizi.statusgizi.count.BBUCount
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:64:9-52
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:64:19-49
-activity#com.fbasegizi.statusgizi.history.HistoryAnak
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:65:9-57
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:65:19-54
-activity#com.fbasegizi.statusgizi.history.HistoryChoose
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:66:9-59
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:66:19-56
-activity#com.fbasegizi.statusgizi.history.HistoryDetail
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:67:9-59
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:67:19-56
-activity#com.fbasegizi.statusgizi.count.TBUCount
 ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:68:9-52
 	android:name
 		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:68:19-49
+activity#com.fbasegizi.statusgizi.history.HistoryAnak
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:69:9-57
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:69:19-54
+activity#com.fbasegizi.statusgizi.history.HistoryChoose
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:70:9-59
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:70:19-56
+activity#com.fbasegizi.statusgizi.history.HistoryDetail
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:71:9-59
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:71:19-56
+activity#com.fbasegizi.statusgizi.count.TBUCount
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:72:9-52
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:72:19-49
 activity#com.fbasegizi.statusgizi.child.ListAnak
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:69:9-52
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:73:9-52
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:69:19-49
-activity#com.fbasegizi.statusgizi.history.HistoryBulan
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:70:9-58
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:70:19-55
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:73:19-49
 activity#com.fbasegizi.statusgizi.count.BBTBCount
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:71:9-53
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:74:9-53
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:71:19-50
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:74:19-50
 activity#com.fbasegizi.statusgizi.count.IMTUCount
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:72:9-53
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:75:9-53
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:72:19-50
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:75:19-50
 activity#com.fbasegizi.statusgizi.graph.LineGraphChild
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:73:9-58
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:76:9-58
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:73:19-55
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:76:19-55
 activity#com.fbasegizi.statusgizi.graph.ChildGraph
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:74:9-54
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:77:9-54
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:74:19-51
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:77:19-51
 activity#com.fbasegizi.statusgizi.graph.GraphChoose
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:75:9-55
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:78:9-55
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:75:19-52
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:78:19-52
 activity#com.fbasegizi.statusgizi.graph.PieGraphChild
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:76:9-57
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:79:9-57
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:76:19-54
-activity#com.fbasegizi.statusgizi.parent.ParentList
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:77:9-55
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:77:19-52
-activity#com.fbasegizi.statusgizi.parent.ParentDetailAdd
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:78:9-60
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:78:19-57
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:79:19-54
 activity#com.fbasegizi.statusgizi.child.EditAnak
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:79:9-52
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:80:9-52
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:79:19-49
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:80:19-49
 activity#com.fbasegizi.statusgizi.UbahPassword
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:80:9-50
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:81:9-50
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:80:19-47
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:81:19-47
 uses-sdk
 INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml
 INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml
-MERGED from [com.android.support:design:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3275fa4027f0836e8b84350cd11a16cb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:design:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3275fa4027f0836e8b84350cd11a16cb\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:preference-v7:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3114b371ac7c6aaf39f7ffb172942e86\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:preference-v7:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3114b371ac7c6aaf39f7ffb172942e86\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2cbad82525fb86823be2dda0b02f8872\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:appcompat-v7:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2cbad82525fb86823be2dda0b02f8872\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\92f0d618cdd7e19d440e7a06e2fcc119\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:recyclerview-v7:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\92f0d618cdd7e19d440e7a06e2fcc119\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\c7fcd26792a1993e74b7c5fc030e7018\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cardview-v7:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\c7fcd26792a1993e74b7c5fc030e7018\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\22b490a094556dca1aa7c10d8b65ac21\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:animated-vector-drawable:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\22b490a094556dca1aa7c10d8b65ac21\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f1e9fb6210363dd7e22db4aa097f281a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-vector-drawable:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f1e9fb6210363dd7e22db4aa097f281a\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-auth:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f42b744ae9c2650ed5dec725196fa88e\AndroidManifest.xml:21:5-44
-MERGED from [com.google.firebase:firebase-auth:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f42b744ae9c2650ed5dec725196fa88e\AndroidManifest.xml:21:5-44
-MERGED from [com.google.firebase:firebase-database:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4aa601ce932b40b652c564d7c2cc48fa\AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.firebase:firebase-database:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4aa601ce932b40b652c564d7c2cc48fa\AndroidManifest.xml:19:5-21:41
-MERGED from [com.google.firebase:firebase-storage:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4440e15e85b84a1c970e28ad423308b5\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.firebase:firebase-storage:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4440e15e85b84a1c970e28ad423308b5\AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e12a50ed1bf102cd9c512cc0754ccaf6\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-flags:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e12a50ed1bf102cd9c512cc0754ccaf6\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-auth-interop:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e7502d5db151e6e5765498bfb28d24d7\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-auth-interop:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e7502d5db151e6e5765498bfb28d24d7\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-core:16.0.9] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\29121b1441a6f566d06243eac7fd6aee\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-core:16.0.9] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\29121b1441a6f566d06243eac7fd6aee\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-analytics:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2938c4e0f679ae4c8ba8ae98b3ff4d48\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-analytics:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2938c4e0f679ae4c8ba8ae98b3ff4d48\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\04434c729b10adcd4d9d6269ff406ab7\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\04434c729b10adcd4d9d6269ff406ab7\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\76b45d0fcb3e37e60be89ee9449ce2e4\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-iid-interop:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\76b45d0fcb3e37e60be89ee9449ce2e4\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\0a5b767f211b1596bf023b49f18b3dc2\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\0a5b767f211b1596bf023b49f18b3dc2\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-common:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\67f924f80a69a3c7dc45cf21100fe5c0\AndroidManifest.xml:6:5-8:41
-MERGED from [com.google.firebase:firebase-common:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\67f924f80a69a3c7dc45cf21100fe5c0\AndroidManifest.xml:6:5-8:41
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bc02051a40cf5fd64d694add24ed1549\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-tasks:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bc02051a40cf5fd64d694add24ed1549\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\02bff3b0704f0e5eed0f56c278871fe0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\02bff3b0704f0e5eed0f56c278871fe0\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bb07c22991be23eb493e220eb5eac890\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bb07c22991be23eb493e220eb5eac890\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e7d1ada84fb333d9054fed811421f1f5\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e7d1ada84fb333d9054fed811421f1f5\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\7508acbff2ea080bdfb4ef110a149031\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-measurement-base:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\7508acbff2ea080bdfb4ef110a149031\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\b5ac67e64243d4571681943e72f58653\AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-stats:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\b5ac67e64243d4571681943e72f58653\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\48868b070ec5c414fc0d5932da00a2cf\AndroidManifest.xml:20:5-44
-MERGED from [com.google.firebase:firebase-measurement-connector:17.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\48868b070ec5c414fc0d5932da00a2cf\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\112c685aa3acdf3631282e0dfb5bad2d\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-ads-identifier:16.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\112c685aa3acdf3631282e0dfb5bad2d\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\01fb5de4583795212248c763055b6a24\AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\01fb5de4583795212248c763055b6a24\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a81d24cd830c6a28a15ebc8040ae5790\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-v4:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a81d24cd830c6a28a15ebc8040ae5790\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\b2bdfdd52d620e57214040860557af69\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-media-compat:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\b2bdfdd52d620e57214040860557af69\AndroidManifest.xml:20:5-44
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6fc7be7c54af479ff84cb199ced9457a\AndroidManifest.xml:5:5-44
-MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6fc7be7c54af479ff84cb199ced9457a\AndroidManifest.xml:5:5-44
-MERGED from [com.android.support:exifinterface:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6380c723bd97e287eda78960f1ed3db6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:exifinterface:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6380c723bd97e287eda78960f1ed3db6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f4e549400135d2c547089fae197f4a71\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-fragment:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f4e549400135d2c547089fae197f4a71\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\cb3143144d442ecdda7d905ca9d9cdce\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-ui:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\cb3143144d442ecdda7d905ca9d9cdce\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6c55c77e64803c59a0e5aac9d9d638fd\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-core-utils:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6c55c77e64803c59a0e5aac9d9d638fd\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\69f5a786b1a95fb458b60a9a90b36c86\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:transition:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\69f5a786b1a95fb458b60a9a90b36c86\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\83de04a1ebfaab9d622ae4a5431f993a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:loader:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\83de04a1ebfaab9d622ae4a5431f993a\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2e9ed09e5b0c36e27537bac6dd07bdd6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:viewpager:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2e9ed09e5b0c36e27537bac6dd07bdd6\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\8e76e8f566a1d3adcb9a3c7f20957f11\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:coordinatorlayout:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\8e76e8f566a1d3adcb9a3c7f20957f11\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\167e78090e4ed93eacd2cc11e1b2b761\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:drawerlayout:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\167e78090e4ed93eacd2cc11e1b2b761\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4e8db4a374fe70888639ab5671bfdde3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:slidingpanelayout:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4e8db4a374fe70888639ab5671bfdde3\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\cdedb4838d536337fc3550046c17a10b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:customview:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\cdedb4838d536337fc3550046c17a10b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\44c9dee0e131f166d1eed180d773ce31\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:swiperefreshlayout:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\44c9dee0e131f166d1eed180d773ce31\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3b3b6afe90424c78789d767ddc32551b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:asynclayoutinflater:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3b3b6afe90424c78789d767ddc32551b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\1aef97b8f077db9bf8403bcd2dd9797e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:support-compat:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\1aef97b8f077db9bf8403bcd2dd9797e\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\eafebbeeee5b2e04471d5aa0e8fdc710\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:versionedparcelable:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\eafebbeeee5b2e04471d5aa0e8fdc710\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\622963c71ef05ac68272169df8b42582\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:cursoradapter:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\622963c71ef05ac68272169df8b42582\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\290277a756c08a7c12d7f03dc499d4f4\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:runtime:1.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\290277a756c08a7c12d7f03dc499d4f4\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f9de603dd8f1322e5c9191c5a998ed51\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:documentfile:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f9de603dd8f1322e5c9191c5a998ed51\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\68470aec4626c0a15b90b324f3f2b4f5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:localbroadcastmanager:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\68470aec4626c0a15b90b324f3f2b4f5\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4c3e1f9230e0ff338678c87ef6d8c850\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:print:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4c3e1f9230e0ff338678c87ef6d8c850\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\cc1c7bfaf9d98011a125c943e5d5a194\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:viewmodel:1.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\cc1c7bfaf9d98011a125c943e5d5a194\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\14bdd17e23a45daf27fbe043a336440b\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support:interpolator:28.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\14bdd17e23a45daf27fbe043a336440b\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\abb5a83ce0523c8c06d441175ef1ae4c\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata:1.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\abb5a83ce0523c8c06d441175ef1ae4c\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\23d3b116f6fd7d8ec74a06582c57a8cf\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.lifecycle:livedata-core:1.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\23d3b116f6fd7d8ec74a06582c57a8cf\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2e81fe7cf6d8cf8d9867e92c05e00c63\AndroidManifest.xml:20:5-44
-MERGED from [android.arch.core:runtime:1.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2e81fe7cf6d8cf8d9867e92c05e00c63\AndroidManifest.xml:20:5-44
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a82513f31c5ef1d07de20f5ac43285bf\AndroidManifest.xml:5:5-7:41
-MERGED from [com.android.support.constraint:constraint-layout:1.1.3] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a82513f31c5ef1d07de20f5ac43285bf\AndroidManifest.xml:5:5-7:41
-MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4448f640b6d8889fef2048361e7f0672\AndroidManifest.xml:16:5-18:41
-MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4448f640b6d8889fef2048361e7f0672\AndroidManifest.xml:16:5-18:41
-MERGED from [com.google.firebase:firebase-database-collection:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\535b8fa731ff425b498688c34df778f1\AndroidManifest.xml:5:5-44
-MERGED from [com.google.firebase:firebase-database-collection:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\535b8fa731ff425b498688c34df778f1\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\9cc464dde20df84f824815cf8240dfbe\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\9cc464dde20df84f824815cf8240dfbe\AndroidManifest.xml:20:5-44
+MERGED from [androidx.preference:preference:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e8893f5065d8e1133a9b8ae58cb49a35\AndroidManifest.xml:20:5-44
+MERGED from [androidx.preference:preference:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e8893f5065d8e1133a9b8ae58cb49a35\AndroidManifest.xml:20:5-44
+MERGED from [pub.devrel:easypermissions:3.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a79fd8a78f59701ba00b946b353398af\AndroidManifest.xml:7:5-9:41
+MERGED from [pub.devrel:easypermissions:3.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a79fd8a78f59701ba00b946b353398af\AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\688dff0caa67ce38a5b289bb0908f358\AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.0.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\688dff0caa67ce38a5b289bb0908f358\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\b5ebaea47f8aaef7e644e730a37972d4\AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\b5ebaea47f8aaef7e644e730a37972d4\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6b8a770607e4fb8384b93c9b9fc7227a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6b8a770607e4fb8384b93c9b9fc7227a\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\92bf9a3f3051d81619aaa0a1d38bfed1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\92bf9a3f3051d81619aaa0a1d38bfed1\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3b609899e7938c37bf596a6665539821\AndroidManifest.xml:20:5-44
+MERGED from [androidx.vectordrawable:vectordrawable:1.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3b609899e7938c37bf596a6665539821\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\616f3d47cd6d04b6ce577b1addaa7405\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-v4:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\616f3d47cd6d04b6ce577b1addaa7405\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\ab7acd2f985a7541780a0515442e03dc\AndroidManifest.xml:20:5-44
+MERGED from [androidx.media:media:1.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\ab7acd2f985a7541780a0515442e03dc\AndroidManifest.xml:20:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\783738ce53e8d6566976a33aa8a87677\AndroidManifest.xml:5:5-44
+MERGED from [com.squareup.picasso:picasso:2.71828] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\783738ce53e8d6566976a33aa8a87677\AndroidManifest.xml:5:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\ec498f6dca2c45861be2e01e4eedf086\AndroidManifest.xml:20:5-44
+MERGED from [androidx.exifinterface:exifinterface:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\ec498f6dca2c45861be2e01e4eedf086\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-database:18.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\991b920a7ba7dd5f2c01da233b7ac19b\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-database:18.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\991b920a7ba7dd5f2c01da233b7ac19b\AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-storage:18.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\12fcf71c2596d226b14b00936f60adde\AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-storage:18.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\12fcf71c2596d226b14b00936f60adde\AndroidManifest.xml:20:5-22:41
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\9928389b9ace50e87f1eb9d0424e4fb1\AndroidManifest.xml:16:5-18:41
+MERGED from [com.github.PhilJay:MPAndroidChart:v3.1.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\9928389b9ace50e87f1eb9d0424e4fb1\AndroidManifest.xml:16:5-18:41
+MERGED from [com.google.firebase:firebase-auth:18.1.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f017b150f2e1e090bde399fcd073178c\AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-auth:18.1.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f017b150f2e1e090bde399fcd073178c\AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\ce456507b5378a48fd264c295a3e0e79\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:18.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\ce456507b5378a48fd264c295a3e0e79\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-core:17.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\7f88a6743e13d7411d5e3cdd5dcb054c\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-core:17.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\7f88a6743e13d7411d5e3cdd5dcb054c\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2cc6da2f2cccce767943ffb91eed1d27\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-analytics:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2cc6da2f2cccce767943ffb91eed1d27\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f5f263c4c5fc4a2e5c73b9d0f2980ae9\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f5f263c4c5fc4a2e5c73b9d0f2980ae9\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\fa653a8836b00891f96a164b0cf9f497\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-iid-interop:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\fa653a8836b00891f96a164b0cf9f497\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f269e3486375d801b8a977dbfcafcf28\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f269e3486375d801b8a977dbfcafcf28\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-common:18.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3c68391230ac598040065cf90c872558\AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.firebase:firebase-common:18.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3c68391230ac598040065cf90c872558\AndroidManifest.xml:6:5-8:41
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\ea8bb2eac52efaae8394c11e0563c46e\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\ea8bb2eac52efaae8394c11e0563c46e\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\db565dc4c568e99e738ce43c3136f1e1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\db565dc4c568e99e738ce43c3136f1e1\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2e300cefe6d5dc511926d0bd65f52c21\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2e300cefe6d5dc511926d0bd65f52c21\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2403bc235350d533e9840c53dc6c98fa\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2403bc235350d533e9840c53dc6c98fa\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a454e54cc6aa7431d583ed7138ce890e\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-measurement-base:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a454e54cc6aa7431d583ed7138ce890e\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\fd4b3c1d60842518361c4de2d92122f8\AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-stats:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\fd4b3c1d60842518361c4de2d92122f8\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\42eef2f7af0dde0a2a78ee5ad77f5dcb\AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-measurement-connector:18.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\42eef2f7af0dde0a2a78ee5ad77f5dcb\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\1a3d74ce8a2cc8c3c6ed59235f7722ba\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-ads-identifier:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\1a3d74ce8a2cc8c3c6ed59235f7722ba\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2366f4e90a7f4dbfe4e42bca7c3a1648\AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2366f4e90a7f4dbfe4e42bca7c3a1648\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\749c3e0e9f37deeb534515d7332af52f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\749c3e0e9f37deeb534515d7332af52f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2f4883a79a2e21377382fdb4e9d442c0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2f4883a79a2e21377382fdb4e9d442c0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\1f6f9e4b275da2fe7aa202ae28fe4ac7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\1f6f9e4b275da2fe7aa202ae28fe4ac7\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\953e042bfb2e942f26837937ed21f48b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\953e042bfb2e942f26837937ed21f48b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a556f52195a05bc42b4ce85b726431e9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a556f52195a05bc42b4ce85b726431e9\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\1d66963d0f72c485f353b6d621796e5b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\1d66963d0f72c485f353b6d621796e5b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a018cea7271c1981863df7c5e0081cc0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a018cea7271c1981863df7c5e0081cc0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\9bc51da57c52a01a297a1759c8357a61\AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\9bc51da57c52a01a297a1759c8357a61\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\d2a07f20cc34007264768102fb1582d8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\d2a07f20cc34007264768102fb1582d8\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\c3caad268c37f8f92998e774e203844b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\c3caad268c37f8f92998e774e203844b\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\b2182e28af4d73dbe6ca627b9c0fc0e0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.swiperefreshlayout:swiperefreshlayout:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\b2182e28af4d73dbe6ca627b9c0fc0e0\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3167597eba8c8e671db1091197a31c28\AndroidManifest.xml:20:5-44
+MERGED from [androidx.asynclayoutinflater:asynclayoutinflater:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3167597eba8c8e671db1091197a31c28\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\52bf207fff5c684817ca445ef262392f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\52bf207fff5c684817ca445ef262392f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4eca24b03b44410a6285a2065a61c780\AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4eca24b03b44410a6285a2065a61c780\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\0a7181858e1ccd1fd9ccca0c64cf7879\AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\0a7181858e1ccd1fd9ccca0c64cf7879\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\b0a76bbf5288896387979df89fdfd945\AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\b0a76bbf5288896387979df89fdfd945\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\7c47801188ffa2ad6a67a521a545d425\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\7c47801188ffa2ad6a67a521a545d425\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\c3a023dd6f931d195b237d58bf17d855\AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\c3a023dd6f931d195b237d58bf17d855\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\1c2df3a0f010c88518d4e001e681e67d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\1c2df3a0f010c88518d4e001e681e67d\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e88f3b13373266a9c7f3ac3a63ccdf64\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e88f3b13373266a9c7f3ac3a63ccdf64\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\ff26734dc7271b1579e4504325b1fb24\AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\ff26734dc7271b1579e4504325b1fb24\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\80bd939a9aea8ca34d6b12d0904a9a27\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\80bd939a9aea8ca34d6b12d0904a9a27\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\b83f5e7cfbc4dc71e6ea715d55d3be30\AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\b83f5e7cfbc4dc71e6ea715d55d3be30\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\d4e265cd28c2a747f49be54a3b7e135f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\d4e265cd28c2a747f49be54a3b7e135f\AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\7ffcaa73d3852e2fb92607a4974ff110\AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\7ffcaa73d3852e2fb92607a4974ff110\AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\018aebd6fa00d7ccd38d96c6fb88b50e\AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-database-collection:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\018aebd6fa00d7ccd38d96c6fb88b50e\AndroidManifest.xml:5:5-44
 INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml
 INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml
 	android:targetSdkVersion
@@ -537,193 +550,195 @@ INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml
 		INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml
 		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml
 		INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml
-activity#com.google.firebase.auth.internal.FederatedSignInActivity
-ADDED from [com.google.firebase:firebase-auth:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f42b744ae9c2650ed5dec725196fa88e\AndroidManifest.xml:24:9-31:50
-	android:excludeFromRecents
-		ADDED from [com.google.firebase:firebase-auth:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f42b744ae9c2650ed5dec725196fa88e\AndroidManifest.xml:26:13-46
-	android:launchMode
-		ADDED from [com.google.firebase:firebase-auth:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f42b744ae9c2650ed5dec725196fa88e\AndroidManifest.xml:28:13-44
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:88:13-90:53
+	android:resource
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:90:17-50
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:89:17-67
+activity#pub.devrel.easypermissions.AppSettingsDialogHolderActivity
+ADDED from [pub.devrel:easypermissions:3.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a79fd8a78f59701ba00b946b353398af\AndroidManifest.xml:12:9-16:66
+	android:label
+		ADDED from [pub.devrel:easypermissions:3.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a79fd8a78f59701ba00b946b353398af\AndroidManifest.xml:15:13-29
 	android:exported
-		ADDED from [com.google.firebase:firebase-auth:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f42b744ae9c2650ed5dec725196fa88e\AndroidManifest.xml:27:13-36
-	android:permission
-		ADDED from [com.google.firebase:firebase-auth:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f42b744ae9c2650ed5dec725196fa88e\AndroidManifest.xml:29:13-102
+		ADDED from [pub.devrel:easypermissions:3.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a79fd8a78f59701ba00b946b353398af\AndroidManifest.xml:14:13-37
 	android:theme
-		ADDED from [com.google.firebase:firebase-auth:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f42b744ae9c2650ed5dec725196fa88e\AndroidManifest.xml:30:13-72
-	tools:replace
-		ADDED from [com.google.firebase:firebase-auth:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f42b744ae9c2650ed5dec725196fa88e\AndroidManifest.xml:31:13-47
+		ADDED from [pub.devrel:easypermissions:3.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a79fd8a78f59701ba00b946b353398af\AndroidManifest.xml:16:13-63
 	android:name
-		ADDED from [com.google.firebase:firebase-auth:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f42b744ae9c2650ed5dec725196fa88e\AndroidManifest.xml:25:13-85
-service#com.google.firebase.components.ComponentDiscoveryService
-ADDED from [com.google.firebase:firebase-auth:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f42b744ae9c2650ed5dec725196fa88e\AndroidManifest.xml:33:9-39:19
-MERGED from [com.google.firebase:firebase-database:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4aa601ce932b40b652c564d7c2cc48fa\AndroidManifest.xml:29:9-33:19
-MERGED from [com.google.firebase:firebase-database:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4aa601ce932b40b652c564d7c2cc48fa\AndroidManifest.xml:29:9-33:19
-MERGED from [com.google.firebase:firebase-storage:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4440e15e85b84a1c970e28ad423308b5\AndroidManifest.xml:30:9-34:19
-MERGED from [com.google.firebase:firebase-storage:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4440e15e85b84a1c970e28ad423308b5\AndroidManifest.xml:30:9-34:19
-MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\04434c729b10adcd4d9d6269ff406ab7\AndroidManifest.xml:27:9-33:19
-MERGED from [com.google.android.gms:play-services-measurement-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\04434c729b10adcd4d9d6269ff406ab7\AndroidManifest.xml:27:9-33:19
-MERGED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:29:9-35:19
-MERGED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:29:9-35:19
-	android:exported
-		ADDED from [com.google.firebase:firebase-auth:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f42b744ae9c2650ed5dec725196fa88e\AndroidManifest.xml:35:13-37
-	android:name
-		ADDED from [com.google.firebase:firebase-auth:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f42b744ae9c2650ed5dec725196fa88e\AndroidManifest.xml:34:13-84
-meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
-ADDED from [com.google.firebase:firebase-auth:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f42b744ae9c2650ed5dec725196fa88e\AndroidManifest.xml:36:13-38:85
-	android:value
-		ADDED from [com.google.firebase:firebase-auth:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f42b744ae9c2650ed5dec725196fa88e\AndroidManifest.xml:38:17-82
-	android:name
-		ADDED from [com.google.firebase:firebase-auth:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f42b744ae9c2650ed5dec725196fa88e\AndroidManifest.xml:37:17-109
-meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
-ADDED from [com.google.firebase:firebase-database:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4aa601ce932b40b652c564d7c2cc48fa\AndroidManifest.xml:30:13-32:85
-	android:value
-		ADDED from [com.google.firebase:firebase-database:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4aa601ce932b40b652c564d7c2cc48fa\AndroidManifest.xml:32:17-82
-	android:name
-		ADDED from [com.google.firebase:firebase-database:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4aa601ce932b40b652c564d7c2cc48fa\AndroidManifest.xml:31:17-109
-meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
-ADDED from [com.google.firebase:firebase-storage:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4440e15e85b84a1c970e28ad423308b5\AndroidManifest.xml:31:13-33:85
-	android:value
-		ADDED from [com.google.firebase:firebase-storage:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4440e15e85b84a1c970e28ad423308b5\AndroidManifest.xml:33:17-82
-	android:name
-		ADDED from [com.google.firebase:firebase-storage:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\4440e15e85b84a1c970e28ad423308b5\AndroidManifest.xml:32:17-107
-uses-permission#android.permission.WAKE_LOCK
-ADDED from [com.google.android.gms:play-services-measurement-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\04434c729b10adcd4d9d6269ff406ab7\AndroidManifest.xml:24:5-68
-MERGED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:24:5-68
-MERGED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:24:5-68
-MERGED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bb07c22991be23eb493e220eb5eac890\AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bb07c22991be23eb493e220eb5eac890\AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e7d1ada84fb333d9054fed811421f1f5\AndroidManifest.xml:25:5-68
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e7d1ada84fb333d9054fed811421f1f5\AndroidManifest.xml:25:5-68
-	android:name
-		ADDED from [com.google.android.gms:play-services-measurement-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\04434c729b10adcd4d9d6269ff406ab7\AndroidManifest.xml:24:22-65
-meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
-ADDED from [com.google.android.gms:play-services-measurement-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\04434c729b10adcd4d9d6269ff406ab7\AndroidManifest.xml:30:13-32:85
-	android:value
-		ADDED from [com.google.android.gms:play-services-measurement-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\04434c729b10adcd4d9d6269ff406ab7\AndroidManifest.xml:32:17-82
-	android:name
-		ADDED from [com.google.android.gms:play-services-measurement-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\04434c729b10adcd4d9d6269ff406ab7\AndroidManifest.xml:31:17-139
-uses-permission#com.google.android.c2dm.permission.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:26:5-82
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:26:22-79
-meta-data#com.google.firebase.components:com.google.firebase.iid.Registrar
-ADDED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:32:13-34:85
-	android:value
-		ADDED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:34:17-82
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:33:17-96
-receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
-ADDED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:37:9-44:20
-	android:exported
-		ADDED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:39:13-36
-	android:permission
-		ADDED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:40:13-73
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:38:13-78
-intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:41:13-43:29
-action#com.google.android.c2dm.intent.RECEIVE
-ADDED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:42:17-81
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:42:25-78
-service#com.google.firebase.iid.FirebaseInstanceIdService
-ADDED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:50:9-56:19
-	android:exported
-		ADDED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:52:13-36
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:51:13-77
-intent-filter#action:name:com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:53:13-55:29
-	android:priority
-		ADDED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:53:28-51
-action#com.google.firebase.INSTANCE_ID_EVENT
-ADDED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:54:17-80
-	android:name
-		ADDED from [com.google.firebase:firebase-iid:17.1.2] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2aaedad17b2248fa9fccd9917c0a1f0d\AndroidManifest.xml:54:25-77
-activity#com.google.android.gms.common.api.GoogleApiActivity
-ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\0a5b767f211b1596bf023b49f18b3dc2\AndroidManifest.xml:23:9-26:75
-	android:exported
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\0a5b767f211b1596bf023b49f18b3dc2\AndroidManifest.xml:25:13-37
-	android:theme
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\0a5b767f211b1596bf023b49f18b3dc2\AndroidManifest.xml:26:13-72
-	android:name
-		ADDED from [com.google.android.gms:play-services-base:16.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\0a5b767f211b1596bf023b49f18b3dc2\AndroidManifest.xml:24:13-79
-provider#com.google.firebase.provider.FirebaseInitProvider
-ADDED from [com.google.firebase:firebase-common:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\67f924f80a69a3c7dc45cf21100fe5c0\AndroidManifest.xml:12:9-16:39
-	android:authorities
-		ADDED from [com.google.firebase:firebase-common:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\67f924f80a69a3c7dc45cf21100fe5c0\AndroidManifest.xml:14:13-72
-	android:exported
-		ADDED from [com.google.firebase:firebase-common:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\67f924f80a69a3c7dc45cf21100fe5c0\AndroidManifest.xml:15:13-37
-	android:initOrder
-		ADDED from [com.google.firebase:firebase-common:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\67f924f80a69a3c7dc45cf21100fe5c0\AndroidManifest.xml:16:13-36
-	android:name
-		ADDED from [com.google.firebase:firebase-common:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\67f924f80a69a3c7dc45cf21100fe5c0\AndroidManifest.xml:13:13-77
-uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
-ADDED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:26:5-110
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bb07c22991be23eb493e220eb5eac890\AndroidManifest.xml:26:5-110
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bb07c22991be23eb493e220eb5eac890\AndroidManifest.xml:26:5-110
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e7d1ada84fb333d9054fed811421f1f5\AndroidManifest.xml:26:5-110
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e7d1ada84fb333d9054fed811421f1f5\AndroidManifest.xml:26:5-110
-	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:26:22-107
-receiver#com.google.android.gms.measurement.AppMeasurementReceiver
-ADDED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:29:9-33:20
-	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:31:13-35
-	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:32:13-37
-	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:30:13-85
-receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
-ADDED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:34:9-42:20
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bb07c22991be23eb493e220eb5eac890\AndroidManifest.xml:29:9-37:20
-MERGED from [com.google.android.gms:play-services-measurement-impl:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bb07c22991be23eb493e220eb5eac890\AndroidManifest.xml:29:9-37:20
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e7d1ada84fb333d9054fed811421f1f5\AndroidManifest.xml:29:9-37:20
-MERGED from [com.google.android.gms:play-services-measurement-sdk-api:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e7d1ada84fb333d9054fed811421f1f5\AndroidManifest.xml:29:9-37:20
-	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:36:13-35
-	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:37:13-36
-	android:permission
-		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:38:13-69
-	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:35:13-100
-intent-filter#action:name:com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:39:13-41:29
-action#com.android.vending.INSTALL_REFERRER
-ADDED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:40:17-79
-	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:40:25-76
-service#com.google.android.gms.measurement.AppMeasurementService
-ADDED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:44:9-47:40
-	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:46:13-35
-	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:47:13-37
-	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:45:13-84
-service#com.google.android.gms.measurement.AppMeasurementJobService
-ADDED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:48:9-52:72
-	android:enabled
-		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:50:13-35
-	android:exported
-		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:51:13-37
-	android:permission
-		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:52:13-69
-	android:name
-		ADDED from [com.google.android.gms:play-services-measurement:16.5.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6f6008d62a47836f97e0e62a877b3585\AndroidManifest.xml:49:13-87
-meta-data#com.google.android.gms.version
-ADDED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\01fb5de4583795212248c763055b6a24\AndroidManifest.xml:23:9-25:69
-	android:value
-		ADDED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\01fb5de4583795212248c763055b6a24\AndroidManifest.xml:25:13-66
-	android:name
-		ADDED from [com.google.android.gms:play-services-basement:16.2.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\01fb5de4583795212248c763055b6a24\AndroidManifest.xml:24:13-58
+		ADDED from [pub.devrel:easypermissions:3.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a79fd8a78f59701ba00b946b353398af\AndroidManifest.xml:13:13-86
 provider#com.squareup.picasso.PicassoProvider
-ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6fc7be7c54af479ff84cb199ced9457a\AndroidManifest.xml:8:9-11:40
+ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\783738ce53e8d6566976a33aa8a87677\AndroidManifest.xml:8:9-11:40
 	android:authorities
-		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6fc7be7c54af479ff84cb199ced9457a\AndroidManifest.xml:10:13-72
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\783738ce53e8d6566976a33aa8a87677\AndroidManifest.xml:10:13-72
 	android:exported
-		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6fc7be7c54af479ff84cb199ced9457a\AndroidManifest.xml:11:13-37
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\783738ce53e8d6566976a33aa8a87677\AndroidManifest.xml:11:13-37
 	android:name
-		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\6fc7be7c54af479ff84cb199ced9457a\AndroidManifest.xml:9:13-64
+		ADDED from [com.squareup.picasso:picasso:2.71828] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\783738ce53e8d6566976a33aa8a87677\AndroidManifest.xml:9:13-64
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-database:18.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\991b920a7ba7dd5f2c01da233b7ac19b\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-storage:18.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\12fcf71c2596d226b14b00936f60adde\AndroidManifest.xml:30:9-36:19
+MERGED from [com.google.firebase:firebase-storage:18.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\12fcf71c2596d226b14b00936f60adde\AndroidManifest.xml:30:9-36:19
+MERGED from [com.google.firebase:firebase-auth:18.1.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f017b150f2e1e090bde399fcd073178c\AndroidManifest.xml:33:9-39:19
+MERGED from [com.google.firebase:firebase-auth:18.1.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f017b150f2e1e090bde399fcd073178c\AndroidManifest.xml:33:9-39:19
+MERGED from [com.google.android.gms:play-services-measurement-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f5f263c4c5fc4a2e5c73b9d0f2980ae9\AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.android.gms:play-services-measurement-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f5f263c4c5fc4a2e5c73b9d0f2980ae9\AndroidManifest.xml:27:9-33:19
+MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:29:9-35:19
+MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:29:9-35:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-database:18.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\991b920a7ba7dd5f2c01da233b7ac19b\AndroidManifest.xml:31:13-37
+	android:name
+		ADDED from [com.google.firebase:firebase-database:18.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\991b920a7ba7dd5f2c01da233b7ac19b\AndroidManifest.xml:30:13-84
+meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
+ADDED from [com.google.firebase:firebase-database:18.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\991b920a7ba7dd5f2c01da233b7ac19b\AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-database:18.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\991b920a7ba7dd5f2c01da233b7ac19b\AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-database:18.0.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\991b920a7ba7dd5f2c01da233b7ac19b\AndroidManifest.xml:33:17-109
+meta-data#com.google.firebase.components:com.google.firebase.storage.StorageRegistrar
+ADDED from [com.google.firebase:firebase-storage:18.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\12fcf71c2596d226b14b00936f60adde\AndroidManifest.xml:33:13-35:85
+	android:value
+		ADDED from [com.google.firebase:firebase-storage:18.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\12fcf71c2596d226b14b00936f60adde\AndroidManifest.xml:35:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-storage:18.1.1] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\12fcf71c2596d226b14b00936f60adde\AndroidManifest.xml:34:17-107
+activity#com.google.firebase.auth.internal.FederatedSignInActivity
+ADDED from [com.google.firebase:firebase-auth:18.1.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f017b150f2e1e090bde399fcd073178c\AndroidManifest.xml:24:9-31:50
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:18.1.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f017b150f2e1e090bde399fcd073178c\AndroidManifest.xml:26:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:18.1.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f017b150f2e1e090bde399fcd073178c\AndroidManifest.xml:28:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:18.1.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f017b150f2e1e090bde399fcd073178c\AndroidManifest.xml:27:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-auth:18.1.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f017b150f2e1e090bde399fcd073178c\AndroidManifest.xml:29:13-102
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:18.1.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f017b150f2e1e090bde399fcd073178c\AndroidManifest.xml:30:13-72
+	tools:replace
+		ADDED from [com.google.firebase:firebase-auth:18.1.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f017b150f2e1e090bde399fcd073178c\AndroidManifest.xml:31:13-47
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:18.1.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f017b150f2e1e090bde399fcd073178c\AndroidManifest.xml:25:13-85
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:18.1.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f017b150f2e1e090bde399fcd073178c\AndroidManifest.xml:36:13-38:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:18.1.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f017b150f2e1e090bde399fcd073178c\AndroidManifest.xml:38:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:18.1.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f017b150f2e1e090bde399fcd073178c\AndroidManifest.xml:37:17-109
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [com.google.android.gms:play-services-measurement-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f5f263c4c5fc4a2e5c73b9d0f2980ae9\AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:24:5-68
+MERGED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:24:5-68
+MERGED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2e300cefe6d5dc511926d0bd65f52c21\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2e300cefe6d5dc511926d0bd65f52c21\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2403bc235350d533e9840c53dc6c98fa\AndroidManifest.xml:25:5-68
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2403bc235350d533e9840c53dc6c98fa\AndroidManifest.xml:25:5-68
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f5f263c4c5fc4a2e5c73b9d0f2980ae9\AndroidManifest.xml:24:22-65
+meta-data#com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar
+ADDED from [com.google.android.gms:play-services-measurement-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f5f263c4c5fc4a2e5c73b9d0f2980ae9\AndroidManifest.xml:30:13-32:85
+	android:value
+		ADDED from [com.google.android.gms:play-services-measurement-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f5f263c4c5fc4a2e5c73b9d0f2980ae9\AndroidManifest.xml:32:17-82
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f5f263c4c5fc4a2e5c73b9d0f2980ae9\AndroidManifest.xml:31:17-139
+uses-permission#com.google.android.c2dm.permission.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:26:5-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:26:22-79
+meta-data#com.google.firebase.components:com.google.firebase.iid.Registrar
+ADDED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:33:17-96
+receiver#com.google.firebase.iid.FirebaseInstanceIdReceiver
+ADDED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:37:9-44:20
+	android:exported
+		ADDED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:39:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:40:13-73
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:38:13-78
+intent-filter#action:name:com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:41:13-43:29
+action#com.google.android.c2dm.intent.RECEIVE
+ADDED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:42:17-81
+	android:name
+		ADDED from [com.google.firebase:firebase-iid:19.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\55e0b6dbf2ab4236580b0a85c46e29ec\AndroidManifest.xml:42:25-78
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f269e3486375d801b8a977dbfcafcf28\AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f269e3486375d801b8a977dbfcafcf28\AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f269e3486375d801b8a977dbfcafcf28\AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\f269e3486375d801b8a977dbfcafcf28\AndroidManifest.xml:24:13-79
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:18.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3c68391230ac598040065cf90c872558\AndroidManifest.xml:12:9-16:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:18.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3c68391230ac598040065cf90c872558\AndroidManifest.xml:14:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:18.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3c68391230ac598040065cf90c872558\AndroidManifest.xml:15:13-37
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:18.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3c68391230ac598040065cf90c872558\AndroidManifest.xml:16:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:18.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\3c68391230ac598040065cf90c872558\AndroidManifest.xml:13:13-77
+uses-permission#com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE
+ADDED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2e300cefe6d5dc511926d0bd65f52c21\AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2e300cefe6d5dc511926d0bd65f52c21\AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2403bc235350d533e9840c53dc6c98fa\AndroidManifest.xml:26:5-110
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2403bc235350d533e9840c53dc6c98fa\AndroidManifest.xml:26:5-110
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:26:22-107
+receiver#com.google.android.gms.measurement.AppMeasurementReceiver
+ADDED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:29:9-33:20
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:31:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:32:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:30:13-85
+receiver#com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver
+ADDED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:34:9-42:20
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2e300cefe6d5dc511926d0bd65f52c21\AndroidManifest.xml:29:9-37:20
+MERGED from [com.google.android.gms:play-services-measurement-impl:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2e300cefe6d5dc511926d0bd65f52c21\AndroidManifest.xml:29:9-37:20
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2403bc235350d533e9840c53dc6c98fa\AndroidManifest.xml:29:9-37:20
+MERGED from [com.google.android.gms:play-services-measurement-sdk-api:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2403bc235350d533e9840c53dc6c98fa\AndroidManifest.xml:29:9-37:20
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:36:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:37:13-36
+	android:permission
+		ADDED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:38:13-69
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:35:13-100
+intent-filter#action:name:com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:39:13-41:29
+action#com.android.vending.INSTALL_REFERRER
+ADDED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:40:17-79
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:40:25-76
+service#com.google.android.gms.measurement.AppMeasurementService
+ADDED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:44:9-47:40
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:46:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:47:13-37
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:45:13-84
+service#com.google.android.gms.measurement.AppMeasurementJobService
+ADDED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:48:9-52:72
+	android:enabled
+		ADDED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:50:13-35
+	android:exported
+		ADDED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:51:13-37
+	android:permission
+		ADDED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:52:13-69
+	android:name
+		ADDED from [com.google.android.gms:play-services-measurement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\bfa5c817aee3ec2f9f3cf440f8d46cba\AndroidManifest.xml:49:13-87
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2366f4e90a7f4dbfe4e42bca7c3a1648\AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2366f4e90a7f4dbfe4e42bca7c3a1648\AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\2366f4e90a7f4dbfe4e42bca7c3a1648\AndroidManifest.xml:24:13-58

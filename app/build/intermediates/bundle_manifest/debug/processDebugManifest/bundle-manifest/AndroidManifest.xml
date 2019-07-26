@@ -1,16 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fbasegizi.statusgizi"
-    android:versionCode="3"
-    android:versionName="3.5" >
+    android:versionCode="7"
+    android:versionName="1.7.3" >
 
     <uses-sdk
-        android:minSdkVersion="23"
+        android:minSdkVersion="22"
         android:targetSdkVersion="28" />
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WAKE_LOCK" /> <!-- Required by older versions of Google Play services to create IID tokens -->
@@ -19,18 +18,22 @@
 
     <application
         android:allowBackup="true"
-        android:appComponentFactory="android.support.v4.app.CoreComponentFactory"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
         android:fullBackupContent="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:testOnly="true"
         android:theme="@style/AppTheme" >
+        <activity android:name="com.fbasegizi.statusgizi.fragment.Help.RefWebView" />
+        <activity android:name="com.fbasegizi.statusgizi.fragment.Help.Referensi" />
+        <activity android:name="com.fbasegizi.statusgizi.fragment.Help.Panduan" />
+        <activity android:name="com.fbasegizi.statusgizi.fragment.Help.HelpSettings" />
         <activity android:name="com.fbasegizi.statusgizi.makan.RekomendasiDetail" />
         <activity android:name="com.fbasegizi.statusgizi.makan.RekomendasiHarian" />
         <activity android:name="com.fbasegizi.statusgizi.makan.MenuHarianAnak" />
-        <activity android:name="com.fbasegizi.statusgizi.makan.HitungMenu" />
         <activity android:name="com.fbasegizi.statusgizi.makan.MenuHarian" />
         <activity android:name="com.fbasegizi.statusgizi.makan.TambahMenu" />
         <activity android:name="com.fbasegizi.statusgizi.makan.RekomendasiAnak" />
@@ -44,10 +47,10 @@
         <activity android:name="com.fbasegizi.statusgizi.research.MySqlEdit" />
         <activity android:name="com.fbasegizi.statusgizi.research.MySqlInsert" />
         <activity android:name="com.fbasegizi.statusgizi.research.MySqlMain" />
-        <activity android:name="com.fbasegizi.statusgizi.UbahProfil" />
+        <activity android:name="com.fbasegizi.statusgizi.fragment.settings.UbahProfil" />
         <activity android:name="com.fbasegizi.statusgizi.count.AnakCount" />
         <activity
-            android:name="com.fbasegizi.statusgizi.fragment.AccountSetingsActivity"
+            android:name="com.fbasegizi.statusgizi.fragment.settings.AccountSettings"
             android:label="Settings"
             android:parentActivityName="com.fbasegizi.statusgizi.fragment.MenuActivity" >
             <meta-data
@@ -66,6 +69,8 @@
         </activity>
         <activity
             android:name="com.fbasegizi.statusgizi.fragment.MenuActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name="com.fbasegizi.statusgizi.SignIn" />
         <activity android:name="com.fbasegizi.statusgizi.SignUp" />
@@ -78,36 +83,47 @@
         <activity android:name="com.fbasegizi.statusgizi.history.HistoryDetail" />
         <activity android:name="com.fbasegizi.statusgizi.count.TBUCount" />
         <activity android:name="com.fbasegizi.statusgizi.child.ListAnak" />
-        <activity android:name="com.fbasegizi.statusgizi.history.HistoryBulan" />
         <activity android:name="com.fbasegizi.statusgizi.count.BBTBCount" />
         <activity android:name="com.fbasegizi.statusgizi.count.IMTUCount" />
         <activity android:name="com.fbasegizi.statusgizi.graph.LineGraphChild" />
         <activity android:name="com.fbasegizi.statusgizi.graph.ChildGraph" />
         <activity android:name="com.fbasegizi.statusgizi.graph.GraphChoose" />
         <activity android:name="com.fbasegizi.statusgizi.graph.PieGraphChild" />
-        <activity android:name="com.fbasegizi.statusgizi.parent.ParentList" />
-        <activity android:name="com.fbasegizi.statusgizi.parent.ParentDetailAdd" />
         <activity android:name="com.fbasegizi.statusgizi.child.EditAnak" />
         <activity android:name="com.fbasegizi.statusgizi.UbahPassword" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.fbasegizi.statusgizi.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true" >
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+
         <activity
-            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
-            android:excludeFromRecents="true"
-            android:exported="true"
-            android:launchMode="singleTask"
-            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
-            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+            android:name="pub.devrel.easypermissions.AppSettingsDialogHolderActivity"
+            android:exported="false"
+            android:label=""
+            android:theme="@style/EasyPermissions.Transparent" />
+
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.fbasegizi.statusgizi.com.squareup.picasso"
+            android:exported="false" />
 
         <service
             android:name="com.google.firebase.components.ComponentDiscoveryService"
             android:exported="false" >
             <meta-data
-                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-                android:value="com.google.firebase.components.ComponentRegistrar" />
-            <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
             <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
                 android:value="com.google.firebase.components.ComponentRegistrar" />
             <meta-data
                 android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
@@ -117,6 +133,14 @@
                 android:value="com.google.firebase.components.ComponentRegistrar" />
         </service>
 
+        <activity
+            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+            android:excludeFromRecents="true"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+
         <receiver
             android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
             android:exported="true"
@@ -125,17 +149,6 @@
                 <action android:name="com.google.android.c2dm.intent.RECEIVE" />
             </intent-filter>
         </receiver>
-        <!--
-             FirebaseInstanceIdService performs security checks at runtime,
-             no need for explicit permissions despite exported="true"
-        -->
-        <service
-            android:name="com.google.firebase.iid.FirebaseInstanceIdService"
-            android:exported="true" >
-            <intent-filter android:priority="-500" >
-                <action android:name="com.google.firebase.INSTANCE_ID_EVENT" />
-            </intent-filter>
-        </service>
 
         <activity
             android:name="com.google.android.gms.common.api.GoogleApiActivity"
@@ -176,11 +189,6 @@
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
-
-        <provider
-            android:name="com.squareup.picasso.PicassoProvider"
-            android:authorities="com.fbasegizi.statusgizi.com.squareup.picasso"
-            android:exported="false" />
     </application>
 
 </manifest>

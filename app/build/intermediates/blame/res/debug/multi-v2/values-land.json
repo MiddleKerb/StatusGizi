@@ -4,7 +4,7 @@
             "outputFile": "D:\\StatusGizi\\app\\build\\intermediates\\incremental\\mergeDebugResources\\merged.dir\\values-land\\values-land.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\2cbad82525fb86823be2dda0b02f8872\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\688dff0caa67ce38a5b289bb0908f358\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2,3,4",
                         "startColumns": "4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\3275fa4027f0836e8b84350cd11a16cb\\res\\values-land\\values-land.xml",
+                    "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\9cc464dde20df84f824815cf8240dfbe\\res\\values-land\\values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
