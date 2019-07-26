@@ -33,7 +33,7 @@
 
         <TableRow>
 
-            <android.support.design.widget.TextInputLayout
+            <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1">
@@ -46,11 +46,11 @@
                     android:drawableEnd="@drawable/ic_search_black_24dp"
                     android:hint="Nama bahan"
                     android:inputType="textCapWords" />
-            </android.support.design.widget.TextInputLayout>
+            </com.google.android.material.textfield.TextInputLayout>
         </TableRow>
     </TableLayout>
 
-    <android.support.v7.widget.RecyclerView
+    <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/RecycleListDaftarBahan"
         android:layout_width="match_parent"
         android:layout_height="match_parent"

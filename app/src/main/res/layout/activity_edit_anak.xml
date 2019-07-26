@@ -8,7 +8,7 @@
     android:padding="@dimen/activity_vertical_margin"
     tools:context=".child.EditAnak">
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/dialogLayoutChildName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -20,9 +20,9 @@
             android:hint="Nama Anak"
             android:inputType="textCapWords"
             android:maxLines="3" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/dialogLayoutChildDate"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -35,7 +35,7 @@
             android:cursorVisible="false"
             android:focusable="false"
             android:hint="Tanggal lahir" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <TableLayout
         android:layout_width="match_parent"

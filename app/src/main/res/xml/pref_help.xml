@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+    <Preference
+        android:key="@string/key_faq"
+        android:summary="Panduan dan petunjuk pemakaian aplikasi Status Gizi"
+        android:title="Panduan" />
+    <Preference
+        android:key="@string/key_ref"
+        android:summary="Referensi perhitungan status gizi dan makanan"
+        android:title="Referensi" />
+</PreferenceScreen>

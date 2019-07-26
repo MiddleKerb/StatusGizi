@@ -18,7 +18,7 @@
         android:gravity="center"
         android:textAppearance="@style/Base.TextAppearance.AppCompat.Large" />
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
@@ -33,9 +33,9 @@
             android:focusableInTouchMode="false"
             android:hint="Jenis kelamin"
             android:inputType="none" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/activity_small_margin">
@@ -52,9 +52,9 @@
             android:hint="Tanggal Lahir"
             android:inputType="none"
             tools:ignore="TextFields" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/AgeFieldTBU"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -70,9 +70,9 @@
             android:focusable="false"
             android:hint="Umur (Bulan)"
             android:inputType="none" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/HeightFieldTBU"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -84,7 +84,7 @@
             android:drawableEnd="@drawable/ic_ruler_vertical_solid_black"
             android:hint="Tinggi (Cm)"
             android:inputType="numberDecimal" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/ButtonCountTBU"

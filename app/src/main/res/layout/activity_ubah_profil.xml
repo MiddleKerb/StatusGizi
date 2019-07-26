@@ -5,14 +5,14 @@
     android:id="@+id/layoutChangeProfile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".UbahProfil">
+    tools:context=".fragment.settings.UbahProfil">
 
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <android.support.v7.widget.CardView
+        <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/activity_vertical_margin"
@@ -50,9 +50,9 @@
                     android:textColor="@android:color/white"
                     android:textStyle="bold" />
             </LinearLayout>
-        </android.support.v7.widget.CardView>
+        </androidx.cardview.widget.CardView>
 
-        <android.support.design.widget.TextInputLayout
+        <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textLayoutChangeName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -65,7 +65,7 @@
                 android:layout_height="wrap_content"
                 android:hint="Nama"
                 android:inputType="textCapWords" />
-        </android.support.design.widget.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/btn_change_profil"

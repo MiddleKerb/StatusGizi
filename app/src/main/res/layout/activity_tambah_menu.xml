@@ -7,7 +7,7 @@
     android:padding="@dimen/activity_vertical_margin"
     tools:context=".makan.TambahMenu">
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/FieldNamaMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -18,9 +18,9 @@
             android:layout_height="wrap_content"
             android:hint="Nama Menu"
             android:inputType="textCapWords|textMultiLine" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/FieldMenuBahan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -31,9 +31,9 @@
             android:layout_height="wrap_content"
             android:hint="Bahan Menu"
             android:inputType="textMultiLine" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/FieldMenuBuat"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -44,7 +44,7 @@
             android:layout_height="wrap_content"
             android:hint="Cara Pembuatan"
             android:inputType="textMultiLine" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/ButtonAddMenu"

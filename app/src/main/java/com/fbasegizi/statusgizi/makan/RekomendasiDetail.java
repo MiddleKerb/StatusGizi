@@ -2,13 +2,14 @@ package com.fbasegizi.statusgizi.makan;
 
 import android.graphics.Color;
 import android.os.Bundle;
-import android.support.v7.app.ActionBar;
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TableLayout;
 import android.widget.TableRow;
 import android.widget.TextView;
+
+import androidx.appcompat.app.ActionBar;
 
 import com.fbasegizi.statusgizi.BaseActivity;
 import com.fbasegizi.statusgizi.R;

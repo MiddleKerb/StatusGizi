@@ -7,7 +7,7 @@
     android:padding="@dimen/activity_vertical_margin"
     tools:context=".makan.TambahBahan">
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/FieldNamaBahan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -18,9 +18,9 @@
             android:layout_height="wrap_content"
             android:hint="Nama Bahan"
             android:inputType="textCapWords" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/FieldKaloriBahan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -31,9 +31,9 @@
             android:layout_height="wrap_content"
             android:hint="Kalori"
             android:inputType="numberDecimal" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/FieldKarboBahan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -44,9 +44,9 @@
             android:layout_height="wrap_content"
             android:hint="Karbohidrat"
             android:inputType="numberDecimal" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/FieldLemakBahan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -57,9 +57,9 @@
             android:layout_height="wrap_content"
             android:hint="Lemak"
             android:inputType="numberDecimal" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
-    <android.support.design.widget.TextInputLayout
+    <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/FieldProteinBahan"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
@@ -70,7 +70,7 @@
             android:layout_height="wrap_content"
             android:hint="Protein"
             android:inputType="numberDecimal" />
-    </android.support.design.widget.TextInputLayout>
+    </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/ButtonAddBahan"
