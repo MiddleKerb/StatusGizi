@@ -27,38 +27,108 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/AppTheme" >
-        <activity android:name="com.fbasegizi.statusgizi.fragment.Help.RefWebView" />
-        <activity android:name="com.fbasegizi.statusgizi.fragment.Help.Referensi" />
-        <activity android:name="com.fbasegizi.statusgizi.fragment.Help.Panduan" />
-        <activity android:name="com.fbasegizi.statusgizi.fragment.Help.HelpSettings" />
-        <activity android:name="com.fbasegizi.statusgizi.makan.RekomendasiDetail" />
-        <activity android:name="com.fbasegizi.statusgizi.makan.RekomendasiHarian" />
-        <activity android:name="com.fbasegizi.statusgizi.makan.MenuHarianAnak" />
-        <activity android:name="com.fbasegizi.statusgizi.makan.MenuHarian" />
-        <activity android:name="com.fbasegizi.statusgizi.makan.TambahMenu" />
-        <activity android:name="com.fbasegizi.statusgizi.makan.RekomendasiAnak" />
-        <activity android:name="com.fbasegizi.statusgizi.makan.RekomendasiMakan" />
-        <activity android:name="com.fbasegizi.statusgizi.makan.TambahBahan" />
-        <activity android:name="com.fbasegizi.statusgizi.makan.DaftarBahan" />
-        <activity android:name="com.fbasegizi.statusgizi.makan.MakanMain" />
-        <activity android:name="com.fbasegizi.statusgizi.research.FirebaseView" />
-        <activity android:name="com.fbasegizi.statusgizi.research.MySqlViewMain" />
-        <activity android:name="com.fbasegizi.statusgizi.research.MySqlView" />
-        <activity android:name="com.fbasegizi.statusgizi.research.MySqlEdit" />
-        <activity android:name="com.fbasegizi.statusgizi.research.MySqlInsert" />
-        <activity android:name="com.fbasegizi.statusgizi.research.MySqlMain" />
-        <activity android:name="com.fbasegizi.statusgizi.fragment.settings.UbahProfil" />
-        <activity android:name="com.fbasegizi.statusgizi.count.AnakCount" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.fragment.Help.RefWebView"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.fragment.Help.Referensi"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.fragment.Help.Panduan"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.fragment.Help.HelpSettings"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.makan.RekomendasiDetail"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.makan.RekomendasiHarian"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.makan.MenuHarianAnak"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.makan.MenuHarian"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.makan.TambahMenu"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.makan.RekomendasiAnak"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.makan.RekomendasiMakan"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.makan.TambahBahan"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.makan.DaftarBahan"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.makan.MakanMain"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.research.FirebaseView"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.research.MySqlViewMain"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.research.MySqlView"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.research.MySqlEdit"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.research.MySqlInsert"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.research.MySqlMain"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.fragment.settings.UbahProfil"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.count.AnakCount"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
         <activity
             android:name="com.fbasegizi.statusgizi.fragment.settings.AccountSettings"
+            android:configChanges="orientation"
             android:label="Settings"
-            android:parentActivityName="com.fbasegizi.statusgizi.fragment.MenuActivity" >
+            android:parentActivityName="com.fbasegizi.statusgizi.fragment.MenuActivity"
+            android:screenOrientation="portrait" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".fragment.MenuActivity" />
         </activity>
         <activity
             android:name="com.fbasegizi.statusgizi.MainActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait"
             android:theme="@style/SplashScreenTheme" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -72,25 +142,82 @@
             android:configChanges="orientation"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name="com.fbasegizi.statusgizi.SignIn" />
-        <activity android:name="com.fbasegizi.statusgizi.SignUp" />
-        <activity android:name="com.fbasegizi.statusgizi.count.GiziCount" />
-        <activity android:name="com.fbasegizi.statusgizi.child.DaftarAnak" />
-        <activity android:name="com.fbasegizi.statusgizi.BaseActivity" />
-        <activity android:name="com.fbasegizi.statusgizi.count.BBUCount" />
-        <activity android:name="com.fbasegizi.statusgizi.history.HistoryAnak" />
-        <activity android:name="com.fbasegizi.statusgizi.history.HistoryChoose" />
-        <activity android:name="com.fbasegizi.statusgizi.history.HistoryDetail" />
-        <activity android:name="com.fbasegizi.statusgizi.count.TBUCount" />
-        <activity android:name="com.fbasegizi.statusgizi.child.ListAnak" />
-        <activity android:name="com.fbasegizi.statusgizi.count.BBTBCount" />
-        <activity android:name="com.fbasegizi.statusgizi.count.IMTUCount" />
-        <activity android:name="com.fbasegizi.statusgizi.graph.LineGraphChild" />
-        <activity android:name="com.fbasegizi.statusgizi.graph.ChildGraph" />
-        <activity android:name="com.fbasegizi.statusgizi.graph.GraphChoose" />
-        <activity android:name="com.fbasegizi.statusgizi.graph.PieGraphChild" />
-        <activity android:name="com.fbasegizi.statusgizi.child.EditAnak" />
-        <activity android:name="com.fbasegizi.statusgizi.UbahPassword" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.SignIn"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.SignUp"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.count.GiziCount"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.child.DaftarAnak"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.BaseActivity"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.count.BBUCount"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.history.HistoryAnak"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.history.HistoryChoose"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.history.HistoryDetail"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.count.TBUCount"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.child.ListAnak"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.count.BBTBCount"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.count.IMTUCount"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.graph.LineGraphChild"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.graph.ChildGraph"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.graph.GraphChoose"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.graph.PieGraphChild"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.child.EditAnak"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.fbasegizi.statusgizi.UbahPassword"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait" />
 
         <provider
             android:name="androidx.core.content.FileProvider"

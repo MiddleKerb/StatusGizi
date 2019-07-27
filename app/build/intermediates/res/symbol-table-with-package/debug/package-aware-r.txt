@@ -1253,6 +1253,7 @@ id EditKarboBahan
 id EditLemakBahan
 id EditMenuBahan
 id EditMenuBuat
+id EditMenuUmur
 id EditNamaBahan
 id EditNamaMenu
 id EditProteinBahan
@@ -1265,6 +1266,7 @@ id FieldKarboBahan
 id FieldLemakBahan
 id FieldMenuBahan
 id FieldMenuBuat
+id FieldMenuUmur
 id FieldNamaBahan
 id FieldNamaMenu
 id FieldProteinBahan

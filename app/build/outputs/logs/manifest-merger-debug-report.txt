@@ -1,20 +1,20 @@
 -- Merging decision tree log ---
 provider#androidx.core.content.FileProvider
-INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:83:9-91:20
+INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:210:9-218:20
 	android:grantUriPermissions
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:87:13-47
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:214:13-47
 	android:authorities
 		INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:85:13-64
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:212:13-64
 	android:exported
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:86:13-37
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:213:13-37
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:84:13-62
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:211:13-62
 manifest
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-94:12
-INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-94:12
-INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-94:12
-INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-94:12
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-221:12
+INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-221:12
+INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-221:12
+INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-221:12
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\9cc464dde20df84f824815cf8240dfbe\AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.preference:preference:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\e8893f5065d8e1133a9b8ae58cb49a35\AndroidManifest.xml:17:1-22:12
 MERGED from [pub.devrel:easypermissions:3.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a79fd8a78f59701ba00b946b353398af\AndroidManifest.xml:2:1-19:12
@@ -75,20 +75,20 @@ MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] C:\Users\bonie\.g
 MERGED from [androidx.arch.core:core-runtime:2.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\d4e265cd28c2a747f49be54a3b7e135f\AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\7ffcaa73d3852e2fb92607a4974ff110\AndroidManifest.xml:2:1-11:12
 MERGED from [com.google.firebase:firebase-database-collection:17.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\018aebd6fa00d7ccd38d96c6fb88b50e\AndroidManifest.xml:2:1-7:12
-INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-94:12
-INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-94:12
-INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-94:12
+INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-221:12
+INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-221:12
+INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-221:12
 	package
 		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:3:5-39
 		INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml
 		INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml
 	android:versionName
 		INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-94:12
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-221:12
 		INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml
 	android:versionCode
 		INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-94:12
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:1-221:12
 		INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml
 	xmlns:android
 		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:2:11-69
@@ -137,7 +137,7 @@ ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:8:5-65
 	android:name
 		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:8:22-62
 application
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:10:5-92:19
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:10:5-219:19
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\9cc464dde20df84f824815cf8240dfbe\AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\9cc464dde20df84f824815cf8240dfbe\AndroidManifest.xml:22:5-20
 MERGED from [pub.devrel:easypermissions:3.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a79fd8a78f59701ba00b946b353398af\AndroidManifest.xml:11:5-17:19
@@ -209,213 +209,385 @@ MERGED from [androidx.constraintlayout:constraintlayout:1.1.3] C:\Users\bonie\.g
 	android:theme
 		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:17:9-40
 activity#com.fbasegizi.statusgizi.fragment.Help.RefWebView
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:18:9-62
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:18:9-21:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:21:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:20:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:18:19-59
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:19:13-53
 activity#com.fbasegizi.statusgizi.fragment.Help.Referensi
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:19:9-61
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:22:9-25:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:25:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:24:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:19:19-58
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:23:13-52
 activity#com.fbasegizi.statusgizi.fragment.Help.Panduan
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:20:9-59
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:26:9-29:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:29:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:28:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:20:19-56
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:27:13-50
 activity#com.fbasegizi.statusgizi.fragment.Help.HelpSettings
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:21:9-64
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:30:9-33:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:33:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:32:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:21:19-61
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:31:13-55
 activity#com.fbasegizi.statusgizi.makan.RekomendasiDetail
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:22:9-61
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:34:9-37:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:37:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:36:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:22:19-58
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:35:13-52
 activity#com.fbasegizi.statusgizi.makan.RekomendasiHarian
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:23:9-61
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:38:9-41:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:41:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:40:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:23:19-58
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:39:13-52
 activity#com.fbasegizi.statusgizi.makan.MenuHarianAnak
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:24:9-58
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:42:9-45:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:45:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:44:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:24:19-55
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:43:13-49
 activity#com.fbasegizi.statusgizi.makan.MenuHarian
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:25:9-54
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:46:9-49:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:49:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:48:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:25:19-51
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:47:13-45
 activity#com.fbasegizi.statusgizi.makan.TambahMenu
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:26:9-54
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:50:9-53:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:53:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:52:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:26:19-51
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:51:13-45
 activity#com.fbasegizi.statusgizi.makan.RekomendasiAnak
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:27:9-59
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:54:9-57:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:57:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:56:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:27:19-56
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:55:13-50
 activity#com.fbasegizi.statusgizi.makan.RekomendasiMakan
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:28:9-60
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:28:19-57
-activity#com.fbasegizi.statusgizi.makan.TambahBahan
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:29:9-55
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:29:19-52
-activity#com.fbasegizi.statusgizi.makan.DaftarBahan
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:30:9-55
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:30:19-52
-activity#com.fbasegizi.statusgizi.makan.MakanMain
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:31:9-53
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:31:19-50
-activity#com.fbasegizi.statusgizi.research.FirebaseView
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:32:9-59
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:32:19-56
-activity#com.fbasegizi.statusgizi.research.MySqlViewMain
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:33:9-60
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:33:19-57
-activity#com.fbasegizi.statusgizi.research.MySqlView
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:34:9-56
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:34:19-53
-activity#com.fbasegizi.statusgizi.research.MySqlEdit
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:35:9-56
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:35:19-53
-activity#com.fbasegizi.statusgizi.research.MySqlInsert
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:36:9-58
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:36:19-55
-activity#com.fbasegizi.statusgizi.research.MySqlMain
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:37:9-56
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:37:19-53
-activity#com.fbasegizi.statusgizi.fragment.settings.UbahProfil
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:38:9-66
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:38:19-63
-activity#com.fbasegizi.statusgizi.count.AnakCount
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:39:9-53
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:39:19-50
-activity#com.fbasegizi.statusgizi.fragment.settings.AccountSettings
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:40:9-47:20
-	android:parentActivityName
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:43:13-64
-	android:label
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:42:13-37
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:41:13-62
-meta-data#android.support.PARENT_ACTIVITY
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:44:13-46:58
-	android:value
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:46:17-55
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:45:17-63
-activity#com.fbasegizi.statusgizi.MainActivity
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:48:9-57:20
-	android:theme
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:50:13-53
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:49:13-41
-intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.LAUNCHER
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:51:13-56:29
-action#android.intent.action.MAIN
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:52:17-69
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:52:25-66
-action#android.intent.action.VIEW
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:53:17-69
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:53:25-66
-category#android.intent.category.LAUNCHER
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:55:17-77
-	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:55:27-74
-activity#com.fbasegizi.statusgizi.fragment.MenuActivity
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:58:9-62:59
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:58:9-61:52
 	android:screenOrientation
 		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:61:13-49
 	android:configChanges
 		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:60:13-48
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:59:13-51
+activity#com.fbasegizi.statusgizi.makan.TambahBahan
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:62:9-65:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:65:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:64:13-48
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:63:13-46
+activity#com.fbasegizi.statusgizi.makan.DaftarBahan
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:66:9-69:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:69:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:68:13-48
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:67:13-46
+activity#com.fbasegizi.statusgizi.makan.MakanMain
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:70:9-73:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:73:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:72:13-48
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:71:13-44
+activity#com.fbasegizi.statusgizi.research.FirebaseView
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:74:9-77:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:77:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:76:13-48
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:75:13-50
+activity#com.fbasegizi.statusgizi.research.MySqlViewMain
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:78:9-81:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:81:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:80:13-48
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:79:13-51
+activity#com.fbasegizi.statusgizi.research.MySqlView
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:82:9-85:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:85:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:84:13-48
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:83:13-47
+activity#com.fbasegizi.statusgizi.research.MySqlEdit
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:86:9-89:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:89:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:88:13-48
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:87:13-47
+activity#com.fbasegizi.statusgizi.research.MySqlInsert
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:90:9-93:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:93:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:92:13-48
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:91:13-49
+activity#com.fbasegizi.statusgizi.research.MySqlMain
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:94:9-97:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:97:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:96:13-48
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:95:13-47
+activity#com.fbasegizi.statusgizi.fragment.settings.UbahProfil
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:98:9-101:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:101:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:100:13-48
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:99:13-57
+activity#com.fbasegizi.statusgizi.count.AnakCount
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:102:9-105:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:105:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:104:13-48
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:103:13-44
+activity#com.fbasegizi.statusgizi.fragment.settings.AccountSettings
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:106:9-115:20
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:111:13-49
+	android:parentActivityName
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:110:13-64
+	android:label
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:109:13-37
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:108:13-48
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:107:13-62
+meta-data#android.support.PARENT_ACTIVITY
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:112:13-114:58
+	android:value
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:114:17-55
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:113:17-63
+activity#com.fbasegizi.statusgizi.MainActivity
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:116:9-127:20
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:119:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:118:13-48
 	android:theme
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:62:13-56
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:120:13-53
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:59:13-50
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:117:13-41
+intent-filter#action:name:android.intent.action.MAIN+action:name:android.intent.action.VIEW+category:name:android.intent.category.LAUNCHER
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:121:13-126:29
+action#android.intent.action.MAIN
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:122:17-69
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:122:25-66
+action#android.intent.action.VIEW
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:123:17-69
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:123:25-66
+category#android.intent.category.LAUNCHER
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:125:17-77
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:125:27-74
+activity#com.fbasegizi.statusgizi.fragment.MenuActivity
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:128:9-132:59
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:131:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:130:13-48
+	android:theme
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:132:13-56
+	android:name
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:129:13-50
 activity#com.fbasegizi.statusgizi.SignIn
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:63:9-44
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:133:9-136:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:136:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:135:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:63:19-41
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:134:13-35
 activity#com.fbasegizi.statusgizi.SignUp
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:64:9-44
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:137:9-140:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:140:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:139:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:64:19-41
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:138:13-35
 activity#com.fbasegizi.statusgizi.count.GiziCount
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:65:9-53
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:141:9-144:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:144:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:143:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:65:19-50
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:142:13-44
 activity#com.fbasegizi.statusgizi.child.DaftarAnak
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:66:9-54
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:145:9-148:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:148:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:147:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:66:19-51
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:146:13-45
 activity#com.fbasegizi.statusgizi.BaseActivity
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:67:9-50
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:149:9-152:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:152:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:151:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:67:19-47
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:150:13-41
 activity#com.fbasegizi.statusgizi.count.BBUCount
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:68:9-52
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:153:9-156:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:156:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:155:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:68:19-49
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:154:13-43
 activity#com.fbasegizi.statusgizi.history.HistoryAnak
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:69:9-57
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:157:9-160:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:160:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:159:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:69:19-54
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:158:13-48
 activity#com.fbasegizi.statusgizi.history.HistoryChoose
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:70:9-59
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:161:9-164:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:164:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:163:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:70:19-56
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:162:13-50
 activity#com.fbasegizi.statusgizi.history.HistoryDetail
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:71:9-59
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:165:9-168:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:168:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:167:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:71:19-56
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:166:13-50
 activity#com.fbasegizi.statusgizi.count.TBUCount
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:72:9-52
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:169:9-172:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:172:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:171:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:72:19-49
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:170:13-43
 activity#com.fbasegizi.statusgizi.child.ListAnak
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:73:9-52
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:173:9-176:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:176:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:175:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:73:19-49
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:174:13-43
 activity#com.fbasegizi.statusgizi.count.BBTBCount
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:74:9-53
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:177:9-180:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:180:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:179:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:74:19-50
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:178:13-44
 activity#com.fbasegizi.statusgizi.count.IMTUCount
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:75:9-53
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:181:9-184:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:184:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:183:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:75:19-50
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:182:13-44
 activity#com.fbasegizi.statusgizi.graph.LineGraphChild
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:76:9-58
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:185:9-188:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:188:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:187:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:76:19-55
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:186:13-49
 activity#com.fbasegizi.statusgizi.graph.ChildGraph
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:77:9-54
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:189:9-192:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:192:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:191:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:77:19-51
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:190:13-45
 activity#com.fbasegizi.statusgizi.graph.GraphChoose
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:78:9-55
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:193:9-196:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:196:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:195:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:78:19-52
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:194:13-46
 activity#com.fbasegizi.statusgizi.graph.PieGraphChild
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:79:9-57
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:197:9-200:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:200:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:199:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:79:19-54
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:198:13-48
 activity#com.fbasegizi.statusgizi.child.EditAnak
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:80:9-52
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:201:9-204:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:204:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:203:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:80:19-49
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:202:13-43
 activity#com.fbasegizi.statusgizi.UbahPassword
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:81:9-50
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:205:9-208:52
+	android:screenOrientation
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:208:13-49
+	android:configChanges
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:207:13-48
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:81:19-47
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:206:13-41
 uses-sdk
 INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml
@@ -551,11 +723,11 @@ INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml
 		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml
 		INJECTED from D:\StatusGizi\app\src\main\AndroidManifest.xml
 meta-data#android.support.FILE_PROVIDER_PATHS
-ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:88:13-90:53
+ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:215:13-217:53
 	android:resource
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:90:17-50
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:217:17-50
 	android:name
-		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:89:17-67
+		ADDED from D:\StatusGizi\app\src\main\AndroidManifest.xml:216:17-67
 activity#pub.devrel.easypermissions.AppSettingsDialogHolderActivity
 ADDED from [pub.devrel:easypermissions:3.0.0] C:\Users\bonie\.gradle\caches\transforms-2\files-2.1\a79fd8a78f59701ba00b946b353398af\AndroidManifest.xml:12:9-16:66
 	android:label

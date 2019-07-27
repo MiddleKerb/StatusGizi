@@ -32,16 +32,16 @@
         "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\688dff0caa67ce38a5b289bb0908f358\\res\\drawable-ldrtl-xxhdpi-v17\\abc_ic_menu_copy_mtrl_am_alpha.png"
     },
     {
-        "merged": "D:\\StatusGizi\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_slide_in_top.xml.flat",
-        "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\688dff0caa67ce38a5b289bb0908f358\\res\\anim\\abc_slide_in_top.xml"
+        "merged": "D:\\StatusGizi\\app\\build\\intermediates\\res\\merged\\debug\\color_design_tint_password_toggle.xml.flat",
+        "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\9cc464dde20df84f824815cf8240dfbe\\res\\color\\design_tint_password_toggle.xml"
     },
     {
         "merged": "D:\\StatusGizi\\app\\build\\intermediates\\res\\merged\\debug\\interpolator-v21_mtrl_linear_out_slow_in.xml.flat",
         "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\9cc464dde20df84f824815cf8240dfbe\\res\\interpolator-v21\\mtrl_linear_out_slow_in.xml"
     },
     {
-        "merged": "D:\\StatusGizi\\app\\build\\intermediates\\res\\merged\\debug\\color_design_tint_password_toggle.xml.flat",
-        "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\9cc464dde20df84f824815cf8240dfbe\\res\\color\\design_tint_password_toggle.xml"
+        "merged": "D:\\StatusGizi\\app\\build\\intermediates\\res\\merged\\debug\\anim_abc_slide_in_top.xml.flat",
+        "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\688dff0caa67ce38a5b289bb0908f358\\res\\anim\\abc_slide_in_top.xml"
     },
     {
         "merged": "D:\\StatusGizi\\app\\build\\intermediates\\res\\merged\\debug\\drawable_ic_person_add_black_24dp.xml.flat",
@@ -76,12 +76,12 @@
         "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\f269e3486375d801b8a977dbfcafcf28\\res\\color\\common_google_signin_btn_tint.xml"
     },
     {
-        "merged": "D:\\StatusGizi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_googleg_disabled_color_18.png.flat",
-        "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\f269e3486375d801b8a977dbfcafcf28\\res\\drawable-xxhdpi-v4\\googleg_disabled_color_18.png"
-    },
-    {
         "merged": "D:\\StatusGizi\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_light.xml.flat",
         "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\f269e3486375d801b8a977dbfcafcf28\\res\\drawable\\common_google_signin_btn_icon_light.xml"
+    },
+    {
+        "merged": "D:\\StatusGizi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-xxhdpi-v4_googleg_disabled_color_18.png.flat",
+        "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\f269e3486375d801b8a977dbfcafcf28\\res\\drawable-xxhdpi-v4\\googleg_disabled_color_18.png"
     },
     {
         "merged": "D:\\StatusGizi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_abc_list_divider_material.xml.flat",
@@ -240,12 +240,12 @@
         "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\688dff0caa67ce38a5b289bb0908f358\\res\\drawable-xhdpi-v4\\abc_ic_menu_share_mtrl_alpha.png"
     },
     {
-        "merged": "D:\\StatusGizi\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_light_normal.xml.flat",
-        "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\f269e3486375d801b8a977dbfcafcf28\\res\\drawable\\common_google_signin_btn_icon_light_normal.xml"
-    },
-    {
         "merged": "D:\\StatusGizi\\app\\build\\intermediates\\res\\merged\\debug\\mipmap-xxhdpi_ic_launcher_foreground.png.flat",
         "source": "D:\\StatusGizi\\app\\src\\main\\res\\mipmap-xxhdpi\\ic_launcher_foreground.png"
+    },
+    {
+        "merged": "D:\\StatusGizi\\app\\build\\intermediates\\res\\merged\\debug\\drawable_common_google_signin_btn_icon_light_normal.xml.flat",
+        "source": "C:\\Users\\bonie\\.gradle\\caches\\transforms-2\\files-2.1\\f269e3486375d801b8a977dbfcafcf28\\res\\drawable\\common_google_signin_btn_icon_light_normal.xml"
     },
     {
         "merged": "D:\\StatusGizi\\app\\build\\intermediates\\res\\merged\\debug\\drawable-v21_avd_hide_password.xml.flat",
