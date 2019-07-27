@@ -8,16 +8,18 @@ public class MenuMakan {
     public String menuJudul;
     public String menuBahan;
     public String menuProses;
+    public String menuUmur;
 
     public MenuMakan() {
 
     }
 
-    public MenuMakan(String menuId, String menuJudul, String menuBahan, String menuProses) {
+    public MenuMakan(String menuId, String menuJudul, String menuBahan, String menuProses, String menuUmur) {
         this.menuId = menuId;
         this.menuJudul = menuJudul;
         this.menuBahan = menuBahan;
         this.menuProses = menuProses;
+        this.menuUmur = menuUmur;
     }
 
     public String getMenuId() {
@@ -50,5 +52,13 @@ public class MenuMakan {
 
     public void setMenuProses(String menuProses) {
         this.menuProses = menuProses;
+    }
+
+    public String getMenuUmur() {
+        return menuUmur;
+    }
+
+    public void setMenuUmur(String menuUmur) {
+        this.menuUmur = menuUmur;
     }
 }

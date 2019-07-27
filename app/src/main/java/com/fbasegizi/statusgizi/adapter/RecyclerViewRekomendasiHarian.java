@@ -1,5 +1,6 @@
 package com.fbasegizi.statusgizi.adapter;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.view.LayoutInflater;
@@ -41,11 +42,15 @@ public class RecyclerViewRekomendasiHarian extends RecyclerView.Adapter<Recycler
         viewHolder.textViewDate.setText(rekomendasi.getRekomendasiTanggal());
         viewHolder.textViewBahan.setText(rekomendasi.getRekomendasiBahan());
 
+        Intent intent = ((Activity) context).getIntent();
+        final String tanggal = intent.getExtras().getString("tanggal");
+
         viewHolder.root.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, RekomendasiMakan.class);
                 intent.putExtra("bahan", rekomendasi.getRekomendasiBahan());
+                intent.putExtra("tanggal", tanggal);
                 context.startActivity(intent);
             }
         });

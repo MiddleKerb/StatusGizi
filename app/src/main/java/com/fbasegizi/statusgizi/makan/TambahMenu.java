@@ -28,8 +28,8 @@ import com.google.firebase.database.ValueEventListener;
 
 public class TambahMenu extends BaseActivity {
 
-    private TextInputLayout textInputLayoutNama, textInputLayoutBahan, textInputLayoutCara;
-    private EditText editTextNama, editTextBahan, editTextCara;
+    private TextInputLayout textInputLayoutNama, textInputLayoutBahan, textInputLayoutCara, textInputLayoutUmur;
+    private EditText editTextNama, editTextBahan, editTextCara, editTextUmur;
     private Button button;
     private DatabaseReference mDatabase;
 
@@ -43,9 +43,11 @@ public class TambahMenu extends BaseActivity {
         textInputLayoutNama = findViewById(R.id.FieldNamaMenu);
         textInputLayoutBahan = findViewById(R.id.FieldMenuBahan);
         textInputLayoutCara = findViewById(R.id.FieldMenuBuat);
+        textInputLayoutUmur = findViewById(R.id.FieldMenuUmur);
         editTextNama = findViewById(R.id.EditNamaMenu);
         editTextBahan = findViewById(R.id.EditMenuBahan);
         editTextCara = findViewById(R.id.EditMenuBuat);
+        editTextUmur = findViewById(R.id.EditMenuUmur);
         button = findViewById(R.id.ButtonAddMenu);
 
         button.setOnClickListener(new View.OnClickListener() {
@@ -75,8 +77,9 @@ public class TambahMenu extends BaseActivity {
         String judul = editTextNama.getText().toString().toLowerCase();
         String bahan = editTextBahan.getText().toString().toLowerCase();
         String proses = editTextCara.getText().toString();
+        String umur = editTextUmur.getText().toString();
 
-        final MenuMakan menuMakan = new MenuMakan(id, judul, bahan, proses);
+        final MenuMakan menuMakan = new MenuMakan(id, judul, bahan, proses, umur);
         mDatabase.child("MenuMakan").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
@@ -89,6 +92,7 @@ public class TambahMenu extends BaseActivity {
                 editTextNama.setText("");
                 editTextBahan.setText("");
                 editTextCara.setText("");
+                editTextUmur.setText("");
             }
 
             @Override

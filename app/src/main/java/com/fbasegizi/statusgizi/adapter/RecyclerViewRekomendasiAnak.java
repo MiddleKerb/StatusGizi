@@ -48,9 +48,7 @@ public class RecyclerViewRekomendasiAnak extends RecyclerView.Adapter<RecyclerVi
             public void onClick(View v) {
                 Intent intent = new Intent(context, RekomendasiHarian.class);
                 intent.putExtra("id", anak.getChildId());
-                /*intent.putExtra("nama", capitalize(anak.getChildname()));
                 intent.putExtra("tanggal", anak.getDateborn());
-                intent.putExtra("gender", anak.getGender());*/
                 context.startActivity(intent);
             }
         });
