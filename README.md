@@ -1,6 +1,9 @@
 # :zap: Status Gizi :zap:
 Android application for checking toddler nutritional status
+
 ![alt text](https://i.imgur.com/jnJRB5p.png)
+
+<a href='https://play.google.com/store/apps/details?id=com.fbasegizi.statusgizi&pcampaignid=pcampaignidMKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png'/></a>
 
 ## Function :fire:
 - Users can sign up using email/password.
